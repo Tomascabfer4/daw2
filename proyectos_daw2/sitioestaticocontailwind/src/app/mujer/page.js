@@ -1,13 +1,37 @@
-// app/mujer/page.js
+import ProductCard from "../components/ProductCard";
+import { products } from "../data/data.js"; 
 
-// 1. Define y exporta una función (el componente de React) por defecto.
-export default function MujerPage() {
+export default function MujerPage() { // <-- Nombre de la función cambiado
+  
+  const allProducts = Object.values(products);
+
+  // --- FILTRO PARA MUJER ---
+  // Filtramos SÓLO los productos cuya REF empieza por "4"
+  const womenProducts = allProducts.filter(
+    (product) => product.ref.startsWith("REF. 4")
+  );
+
+  const getSlugFromRef = (ref) => {
+    return Object.keys(products).find(key => products[key].ref === ref);
+  }
+
   return (
-    // 2. Retorna fragmentos (<>...</>) o un solo contenedor <div>
-    <>
-      {/* 3. Coloca aquí el contenido ÚNICO de esta página */}
-      <h1 className="text-4xl font-bold mt-8">Título de la Página</h1>
-      <p>Contenido específico...</p>
-    </>
+    <div className="p-4 md:p-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        {/* Mapeamos los productos de mujer */}
+        {womenProducts.map((product) => ( 
+          <ProductCard
+            key={product.ref}
+            title={product.title}
+            price={product.price}
+            image1={product.images[0]}
+            image2={product.images[1]}
+            slug={getSlugFromRef(product.ref)}
+          />
+        ))}
+
+      </div>
+    </div>
   );
 }

@@ -38,10 +38,6 @@ export default function ProductDetail() {
     );
   }
 
-  if (!mainImage && product.images.length > 0) {
-    setMainImage(product.images[0]);
-  }
-
   return (
     <div className="max-w-7xl mx-auto relative">
       {/* Alerta flotante */}
