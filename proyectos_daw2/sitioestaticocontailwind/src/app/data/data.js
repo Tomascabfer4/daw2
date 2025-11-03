@@ -4,7 +4,7 @@ export const products = {
     title: "Polo Retro Long Size",
     price: "29,99 €",
     description: "Polo con rayas anchas, estilo streetwear y corte oversize. Modelo: 180 cm de altura y talla M.",
-    images: ["/poloRayasCalle.png", "/poloRayas.png"], 
+    images: ["/hombre/poloRayasCalle.png", "/hombre/poloRayas.png"], 
     ref: "REF. 7001450020 Verde Bosque",
     colores: ["Verde/Blanco", "Azul/Blanco", "Negro/Gris"],
     fits: ["Oversize", "Regular"],
@@ -14,7 +14,7 @@ export const products = {
     title: "Camisa Beige Stressen",
     price: "19,99 €",
     description: "Camisa beige con diseño moderno y corte relajado, perfecta para un look casual o semi-formal.",
-    images: ["/camisaGuapaPie.png", "/camisaGuapaSentado.png"],
+    images: ["/hombre/camisaGuapaPie.png", "/hombre/camisaGuapaSentado.png"],
     ref: "REF. 6012990015 Beige Arena",
     colores: ["Beige", "Blanco", "Azul Marino", "Negro"],
     fits: ["Relaxed", "Regular"],
@@ -24,7 +24,7 @@ export const products = {
     title: "Camiseta Azul Retro",
     price: "14,99 €",
     description: "Camiseta azul con diseño minimalista y corte retro. Tejido grueso de alta calidad (200g).",
-    images: ["/camisetaAzul.png", "/camisetaAzulDetras.png"],
+    images: ["/hombre/camisetaAzul.png", "/hombre/camisetaAzulDetras.png"],
     ref: "REF. 5003110040 Azul Vintage",
     colores: ["Azul Vintage", "Blanco Roto", "Gris Antracita"],
     fits: ["Retro (Boxy)", "Regular"],
@@ -34,7 +34,7 @@ export const products = {
     title: "Special Edition Rambla",
     price: "39,99 €",
     description: "Camiseta edición especial inspirada en La Rambla, Córdoba. Impresión de alta calidad en pecho y espalda.",
-    images: ["/camisetaRamblaNegro.png", "/camisetaRamblaBlanco.png"],
+    images: ["/hombre/camisetaRamblaNegro.png", "/hombre/camisetaRamblaBlanco.png"],
     ref: "REF. 9010020001 Edición Limitada",
     colores: ["Negro", "Blanco"],
     fits: ["Regular", "Oversize"],
@@ -66,7 +66,7 @@ export const products = {
     title: "Stressen - Oud Leather Infusion",
     price: "64,99 €", // Precio de ejemplo
     description: "Una infusión rica y lujosa de oud y cuero. Una fragancia intensa y sofisticada para momentos especiales.",
-    images: ["/perfumes/oudLeather.png", "/perfumes/oudleatherCaja.png"], // Rutas de ejemplo
+    images: ["/perfumes/oudLeather.png", "/perfumes/oudLeatherCaja.png"], // Rutas de ejemplo
     ref: "REF. 8010030030 Ámbar",
     colores: ["Ámbar"],
     fits: ["Oud", "Cuero", "Amaderada"], // Familia Olfativa
