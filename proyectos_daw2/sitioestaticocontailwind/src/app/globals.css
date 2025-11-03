@@ -40,12 +40,19 @@ body {
     will-change: background-image; /* Para optimización */
 }
 
-/*
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -58,5 +65,5 @@ body {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-} */
+  font-family: var(--font-sans);
+} 

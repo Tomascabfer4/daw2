@@ -1,4 +1,5 @@
 export const products = {
+  // --- ROPA (Existente) ---
   "polo-retro-long-size": {
     title: "Polo Retro Long Size",
     price: "29,99 €",
@@ -38,5 +39,47 @@ export const products = {
     colores: ["Negro", "Blanco"],
     fits: ["Regular", "Oversize"],
     composicion: "100% algodón peinado. Impresión digital DTG. Lavar del revés a baja temperatura para proteger el estampado."
+  },
+
+  // --- PERFUMES (Nuevos) ---
+  "stressen-graffik-wood": {
+    title: "Stressen - 01 Graffik Wood",
+    price: "54,99 €", // Precio de ejemplo
+    description: "Creativity at our core. Una fragancia urbana y artística que captura el pulso de la ciudad. Edición 'Stressen Team'.",
+    images: ["/perfumes/graffikWood.png", "/perfumes/graffikWoodCaja.png"], // Rutas de ejemplo
+    ref: "REF. 8010010010 Grafito",
+    colores: ["Transparente"],
+    fits: ["Amaderada", "Especiada"], // Familia Olfativa
+    composicion: "100ml Eau de Parfum. TOP: Black Pepper, Bergamot, Basil. HEART: Coconut Wood, Cashmere Wood. BASE: Sandalwood, Cedarwood, Moss."
+  },
+  "stressen-noir-fusion": {
+    title: "Stressen - Noir Fusion",
+    price: "59,99 €", // Precio de ejemplo
+    description: "La fragancia más oscura y enigmática. Un diseño de botella único para un aroma potente y nocturno.",
+    images: ["/perfumes/noirFussion.png", "/perfumes/noirFussionCaja.png"], // Rutas de ejemplo
+    ref: "REF. 8010020020 Negro Intenso",
+    colores: ["Negro"],
+    fits: ["Oriental", "Especiada", "Nocturna"], // Familia Olfativa
+    composicion: "100ml Eau de Parfum. Notas principales: Pimienta negra, haba tonka, maderas oscuras." // Descripción de ejemplo
+  },
+  "stressen-oud-leather": {
+    title: "Stressen - Oud Leather Infusion",
+    price: "64,99 €", // Precio de ejemplo
+    description: "Una infusión rica y lujosa de oud y cuero. Una fragancia intensa y sofisticada para momentos especiales.",
+    images: ["/perfumes/oudLeather.png", "/perfumes/oudleatherCaja.png"], // Rutas de ejemplo
+    ref: "REF. 8010030030 Ámbar",
+    colores: ["Ámbar"],
+    fits: ["Oud", "Cuero", "Amaderada"], // Familia Olfativa
+    composicion: "100ml Eau de Parfum. Notas principales: Acordes de cuero, madera de Oud, ámbar." // Descripción de ejemplo
+  },
+  "stressen-eau-de-bate": {
+    title: "Stressen - Eau de Bate",
+    price: "49,99 €", // Precio de ejemplo
+    description: "Una fragancia fresca y limpia, inspirada en la naturaleza. Evoca un paisaje de bambú y cascadas.",
+    images: ["/perfumes/eauDeBate.jpeg", "/perfumes/eauDeBateCaja.png"], // Rutas de ejemplo
+    ref: "REF. 8010040040 Acuática",
+    colores: ["Verde Acuático"],
+    fits: ["Acuática", "Fougère", "Verde"], // Familia Olfativa
+    composicion: "100ml Eau de Parfum. Notas principales: Bambú, hojas verdes, agua de manantial." // Descripción de ejemplo
   }
 };

@@ -24,7 +24,7 @@ export default function ProductCard({ title, price, image1, image2, slug }) {
         />
       </figure>
 
-      <div className="card-body">
+      <div className="card-body text-base-content">
         <h2 className="card-title text-base font-medium">{title}</h2>
         <p className="text-sm">{price}</p>
       </div>
