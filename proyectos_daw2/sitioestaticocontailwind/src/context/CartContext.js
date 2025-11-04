@@ -1,6 +1,6 @@
-'use client'; // ¡Esencial! El contexto y el estado son del lado del cliente.
+"use client"; // ¡Esencial! El contexto y el estado son del lado del cliente.
 
-import { createContext, useState, useContext } from 'react';
+import { createContext, useState, useContext } from "react";
 
 // 1. Crear el Contexto
 const CartContext = createContext();
@@ -11,13 +11,13 @@ export function CartProvider({ children }) {
 
   // Función para añadir un producto al carrito
   const addToCart = (product) => {
-    setCart(prevCart => {
+    setCart((prevCart) => {
       // Revisa si el producto ya está en el carrito
-      const existingItem = prevCart.find(item => item.ref === product.ref);
+      const existingItem = prevCart.find((item) => item.ref === product.ref);
 
       if (existingItem) {
         // Si ya existe, actualiza la cantidad
-        return prevCart.map(item =>
+        return prevCart.map((item) =>
           item.ref === product.ref
             ? { ...item, quantity: item.quantity + 1 }
             : item
@@ -27,14 +27,21 @@ export function CartProvider({ children }) {
         return [...prevCart, { ...product, quantity: 1 }];
       }
     });
-    
+
     console.log("Producto añadido:", product.title);
   };
 
-  // Aquí podrías añadir más funciones: removeFromCart, clearCart, etc.
+  const removeFromCart = (productRef) => {
+    setCart((prevCart) => {
+      // Filtra el carrito, devolviendo un nuevo array SIN el producto
+      return prevCart.filter((item) => item.ref !== productRef);
+    });
+    console.log("Producto eliminado:", productRef);
+  };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart }}>
+    // --- 2. AÑADE LA FUNCIÓN AL 'value' ---
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );

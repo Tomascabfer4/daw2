@@ -1,13 +1,26 @@
-// app/novedades/page.js
+import NovedadesCarousel from '../components/NovedadesCarousel';
+import { products } from '../data/data.js';
 
-// 1. Define y exporta una función (el componente de React) por defecto.
+function getNovedadesData() {
+  const productEntries = Object.entries(products);
+  const newItems = productEntries.filter(([slug, product]) =>
+    product.ref.startsWith("REF. 4")
+  );
+
+  return newItems.map(([slug, product]) => ({
+    slug,
+    product,
+    basePath: "mujer",
+  }));
+}
+
 export default function NovedadesPage() {
+  const items = getNovedadesData();
+
   return (
-    // 2. Retorna fragmentos (<>...</>) o un solo contenedor <div>
-    <>
-      {/* 3. Coloca aquí el contenido ÚNICO de esta página */}
-      <h1 className="text-4xl font-bold mt-8">Título de la Página</h1>
-      <p>Contenido específico...</p>
-    </>
+    <div className="w-full py-12 md:py-16">
+      <h1 className="text-4xl font-bold text-center mb-10">Novedades</h1>
+      <NovedadesCarousel items={items} />
+    </div>
   );
 }
