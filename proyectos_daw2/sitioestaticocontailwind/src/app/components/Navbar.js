@@ -62,7 +62,7 @@ export default function Navbar({ onMenuClick }) {
 
       {/* DERECHA: Buscar / usuario / carrito */}
       <div className="navbar-end gap-4">
-        <form onSubmit={handleSearch} className="items-center border-b pb-1 text-black text-sm">
+        <form onSubmit={handleSearch} className="items-center border-b pb-1 text-black text-sm hidden lg:flex">
           <input
             type="text"
             placeholder="Buscar"
