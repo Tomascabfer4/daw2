@@ -1,0 +1,66 @@
+/* CSS para centrar y estilizar (Base) */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 1. Imagen (Sin cambios) */
+#imagen-filtrada {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  /* Transición suave para el cambio de filtro */
+  transition: filter 0.4s ease-in-out;
+}
+
+/* 2. Estilos para el Select (NUEVO) */
+.select-container {
+    display: flex;
+    flex-direction: column; /* Pone la etiqueta encima del select */
+    align-items: center;
+    gap: 8px; /* Espacio entre etiqueta y select */
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+#filtro-select {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  min-width: 220px; /* Ancho del desplegable */
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#filtro-select:hover {
+  border-color: #007bff;
+}
+
+#filtro-select:focus {
+  /* Estilo al hacer clic */
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}

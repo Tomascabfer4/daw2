@@ -1,0 +1,71 @@
+/* CSS para centrar y estilizar */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 1. Imagen centrada */
+#imagen-filtrada {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  /* Transición suave para el cambio de filtro */
+  transition: filter 0.4s ease-in-out;
+}
+
+/* 2. Contenedor de botones */
+.botones-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* Espacio entre botones */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Colores opcionales para botones */
+#btn-sepia {
+  background-color: #795548;
+}
+#btn-sepia:hover {
+  background-color: #5d4037;
+}
+#btn-invertir {
+  background-color: #607d8b;
+}
+#btn-invertir:hover {
+  background-color: #455a64;
+}
+#btn-original {
+  background-color: #4caf50;
+}
+#btn-original:hover {
+  background-color: #43a047;
+}

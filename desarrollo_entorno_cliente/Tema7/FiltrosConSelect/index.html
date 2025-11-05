@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtros de Imagen con Select</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Galería de Filtros</h2>
+        
+        <img id="imagen-filtrada" src="https://picsum.photos/500/350" alt="Imagen de ejemplo">
+        
+        <div class="select-container">
+            <label for="filtro-select">Elige un filtro:</label>
+            <select id="filtro-select">
+                <option value="none">Original</option>
+                <option value="grayscale(100%)">Escala de Grises</option>
+                <option value="sepia(100%)">Sepia</option>
+                <option value="invert(100%)">Invertir Color</option>
+                <option value="blur(5px)">Borroso (Blur)</option>
+                <option value="saturate(200%)">Saturado</option>
+            </select>
+        </div>
+    </div>
+
+</body>
+</html>
