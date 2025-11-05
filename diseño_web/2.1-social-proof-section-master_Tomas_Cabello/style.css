@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+:root {
+    --VeryDarkMagenta: hsl(300, 43%, 22%);
+    --SoftPink: hsl(333, 80%, 67%);
+    --DarkGrayishMagenta: hsl(303, 10%, 53%);
+    --LightGrayishMagenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    font-size: 15px;
+    min-height: 100vh;
+    display: grid;
+    justify-content: center; /* Mejor que place-content para centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    font-family: 'League Spartan', sans-serif; /* Usamos la fuente que importaste */
+    background-color: var(--White); /* Color de fondo general */
+    padding: 20px;
+}
+
+.parteAbajo {
+    display: flex;
+}
+
+.avatar {
+    display: grid;
+}
+
+#contenedoresPersonas {
+    margin: 20px;
+    border-radius: 8px;
+    color: var(--White);
+    padding: 20px;
+    background-color: var(--VeryDarkMagenta);
+}
+
+.personas1 {
+
+}
+
+.personas2 {
+   
+}
+
+.personas3 {
+    
+}
