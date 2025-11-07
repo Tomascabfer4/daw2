@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Primary */
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  /* Neutral */
+  --Grey500: hsl(234, 12%, 34%);
+  --Grey400: hsl(212, 6%, 44%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-size: 15px;
+  min-height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--White);
+  padding: 45px;
+}
+
+.titulosArriba {
+  justify-items: center;
+  padding: 0 420px;
+  text-align: center;
+}
+
+.titulosArriba h2 {
+  font-size: 35px;
+  font-weight: 200;
+  color: var(--Grey400);
+}
+
+.titulosArriba h1 {
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--Grey500);
+}
+
+.titulosArriba p {
+  color: var(--Grey500);
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.superVisor,
+.teamBuilder,
+.karma,
+.calculator {
+  border-radius: 6px;
+  box-shadow: 0px 10px 20px -10px rgba(3, 0, 180, 0.3);
+  padding: 40px 30px;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+.superVisor p,
+.teamBuilder p,
+.karma p,
+.calculator p {
+  color: var(--Grey400);
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.superVisor h3,
+.teamBuilder h3,
+.karma h3,
+.calculator h3 {
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--Grey500);
+}
+
+.superVisor img,
+.teamBuilder img,
+.karma img,
+.calculator img {
+  margin-left: auto;
+}
+
+.superVisor {
+  border-top: 5px solid var(--Cyan);
+  margin-right: 30px;
+  height: 261px;
+}
+
+.teamBuilder {
+  border-top: 5px solid var(--Red);
+}
+
+.karma {
+  border-top: 5px solid var(--Orange);
+  margin-top: 30px;
+}
+
+.calculator {
+  border-top: 5px solid var(--Blue);
+  margin-left: 30px;
+  height: 261px;
+}
+
+.tarjetas {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .tarjetas {
+    display: grid;
+  }
+
+  .titulosArriba {
+    padding: 0 0px;
+  }
+
+  .titulosArriba h2 {
+    font-size: 30px;
+  }
+
+  .titulosArriba h1 {
+    font-size: 30px;
+  }
+
+  .titulosArriba p {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 366px;
+    margin-bottom: 60px;
+  }
+
+  .superVisor {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .calculator {
+    margin-top: 30px;
+    margin-left: 0;
+  }
+
+  .superVisor,
+  .teamBuilder,
+  .karma,
+  .calculator {
+    width: 340px;
+  }
+}
+
