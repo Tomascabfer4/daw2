@@ -100,9 +100,7 @@ button {
 }
 
 button:hover {
-  background-color: var(
-    --Green700
-  ); /* Un azul más oscuro cuando el ratón está encima */
+  background-color: var(--Green700);
 }
 
 .imagen-perfume {
@@ -114,29 +112,25 @@ button:hover {
 }
 
 @media (max-width: 780px) {
-  /* 1. Ajustar el contenedor principal */
   .divTotal {
-    flex-direction: column; /* Apila los elementos verticalmente */
-    height: auto; /* La altura se ajusta al contenido */
-    width: 340px; /* Un ancho fijo para el móvil (o usa width: 90%) */
-    margin: 20px 0; /* Margen para que no pegue a los bordes */
+    flex-direction: column;
+    height: auto;
+    width: 340px;
+    margin: 20px 0;
   }
 
-  /* 2. Ajustar la imagen (LA PARTE CLAVE) */
   .imagen-perfume {
-    width: 380px; /* Sigue teniendo 380px en desktop */
-    height: 100%; /* Ocupa toda la altura del .divTotal (550px) */
-    object-fit: cover; /* Recorta la imagen alta para que se vea bien */
-    display: block; /* Buena práctica para imágenes */
+    width: 380px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
-  /* 3. Ajustar la sección de texto */
   .parteDerecha {
-    width: 100%; /* Ocupa todo el ancho */
-    padding: 25px; /* Un padding más pequeño para móvil */
+    width: 100%;
+    padding: 25px;
   }
 
-  /* 4. Ajustes de tipografía para móvil */
   .parteDerecha h1 {
     font-size: 32px;
     margin: 20px 0;
@@ -149,7 +143,7 @@ button:hover {
   }
 
   .precios {
-    margin-bottom: 20px; /* Espacio antes del botón */
+    margin-bottom: 20px;
   }
 
   button {
