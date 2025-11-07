@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npx json-server src/data/api.json -p 3001 & next dev --turbopack",
+    "api": "npx json-server src/data/api.json -p 3001",
+    "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start"
   },
