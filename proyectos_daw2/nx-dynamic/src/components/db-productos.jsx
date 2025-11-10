@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Buscar from '@/components/buscar'
-import { eliminarProductoDB } from '@/lib/action'
-import { obtenerProductosDB } from '@/lib/data'
+import { eliminarProductoDB } from '@/lib/actionProductos'
+import { obtenerProductosDB } from '@/lib/dataProductos'
 import ProductoEditarDB from './db-producto-editar'
 
 

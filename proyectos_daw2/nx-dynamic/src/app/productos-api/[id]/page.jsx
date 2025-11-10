@@ -1,4 +1,4 @@
-import { obtenerProductoAPI } from "@/lib/data";
+import { obtenerProductoAPI } from "@/lib/dataProductos";
 import Link from "next/link";
 import { notFound } from 'next/navigation'
 

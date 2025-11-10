@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { obtenerProductoDB } from "@/lib/data";
+import { obtenerProductoDB } from "@/lib/dataProductos";
 import { notFound } from 'next/navigation'
 
 

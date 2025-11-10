@@ -1,21 +1,47 @@
 {
+  "clientes": [
+    {
+      "id": 1,
+      "nombre": "Ana",
+      "apellido1": "García",
+      "apellido2": "López",
+      "dni": "12345678A",
+      "telefono": 600111222
+    },
+    {
+      "id": 2,
+      "nombre": "Javier",
+      "apellido1": "Rodríguez",
+      "apellido2": "Martínez",
+      "dni": "98765432B",
+      "telefono": 677333444
+    },
+    {
+      "id": 3,
+      "nombre": "María",
+      "apellido1": "Sánchez",
+      "apellido2": "Pérez",
+      "dni": "01010101C",
+      "telefono": 688555666
+    }
+  ],
   "productos": [
     {
-      "id": "1",
+      "id": 1,
       "nombre": "Monitor 17 pulgadas",
       "descripcion": "Monitor plano LCD",
       "precio": 110.22,
       "createdAt": "2024-10-23T10:56:35.101Z"
     },
     {
+      "id": 2,
       "nombre": "Teclado ergonomico",
       "descripcion": "Teclado USB en español",
       "precio": 20.15,
-      "createdAt": "2025-11-06T12:22:34.096Z",
-      "id": "2"
+      "createdAt": "2025-11-06T12:22:34.096Z"
     },
     {
-      "id": "3",
+      "id": 3,
       "nombre": "Impresora",
       "descripcion": "Impresora Epson",
       "precio": 44.99,

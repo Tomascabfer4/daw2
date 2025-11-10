@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Buscar from '@/components/buscar'
-import { obtenerProductosAPI } from '@/lib/data'
-import { eliminarProductoAPI } from '@/lib/action'
+import { obtenerProductosAPI } from '@/lib/dataProductos'
+import { eliminarProductoAPI } from '@/lib/actionProductos'
 import ProductoEditarAPI from './api-producto-editar'
 
 

@@ -1,5 +1,5 @@
 'use client'
-import { editarProductoAPI, editarProductoDB } from "@/lib/action";
+import { editarProductoAPI, editarProductoDB } from "@/lib/actionProductos";
 import { useState } from "react";
 
 

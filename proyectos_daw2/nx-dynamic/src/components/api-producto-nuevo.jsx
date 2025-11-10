@@ -1,4 +1,4 @@
-import { nuevoProductoAPI } from "@/lib/action";
+import { nuevoProductoAPI } from "@/lib/actionProductos";
 
 
 function ProductoNuevoAPI() {
