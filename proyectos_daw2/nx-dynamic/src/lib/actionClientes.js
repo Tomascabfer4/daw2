@@ -1,87 +1,89 @@
 'use server'
 
 import { db } from '@/lib/db'
-import { revalidatePath } from 'next/cache'
+import { revalidatePath, updateTag } from 'next/cache'
 
 
 
 // BASE DE DATOS
 
 
-export async function nuevoProductoDB(formData) {
+export async function nuevoClienteDB(formData) {
     const nombre = formData.get('nombre')
-    const descripcion = formData.get('descripcion')
-    const precio = formData.get('precio')
+    const apellido1 = formData.get('apellido1')
+    const apellido2 = formData.get('apellido2')
+    const dni = formData.get('dni')
+    const telefono = formData.get('telefono')
 
-    const sql = 'insert into `productos` (`nombre`, `descripcion`, `precio`) values (?, ?, ?)'
-    const values = [nombre, descripcion, precio];
+    const sql = 'insert into `clientes` (`nombre`, `apellido1`, `apellido2`, `dni`, `telefono`) values (?, ?, ?, ?,?)'
+    const values = [nombre, apellido1, apellido2, dni, telefono];
 
     const [result, fields] = await db.query(sql, values)
-    revalidatePath('/productos-db')
+    revalidatePath('/clientes-db')
 }
 
 
-export async function editarProductoDB(formData) {
+export async function editarClienteDB(formData) {
     const id = formData.get('id')
     const nombre = formData.get('nombre')
-    const descripcion = formData.get('descripcion')
-    const precio = formData.get('precio')
+    const apellido1 = formData.get('apellido1')
+    const apellido2 = formData.get('apellido2')
+    const dni = formData.get('dni')
+    const telefono = formData.get('telefono')
 
-    const sql = 'update productos set nombre=?, descripcion=?, precio=? where id=?'
-    const values = [nombre, descripcion, precio, id];
+    const sql = 'update clientes set nombre=?, apellido1=?, apellido2=?, dni=?, telefono=? where id=?'
+    const values = [nombre, apellido1, apellido2, dni, telefono, id];
 
     const [result, fields] = await db.query(sql, values)
-    revalidatePath('/productos-db')
+    revalidatePath('/clientes-db')
 }
 
 
 
 
-export async function eliminarProductoDB(formData) {
+export async function eliminarClienteDB(formData) {
     const id = formData.get('id')
 
-    const sql = 'delete from productos where id = ?'
+    const sql = 'delete from clientes where id = ?'
     const values = [id]
     await db.query(sql, values);
 
-    revalidatePath('/productos-db')
+    revalidatePath('/clientes-db')
 }
-
-
 
 
 
 // API
 
-export async function nuevoProductoAPI(formData) {
-    const [nombre, descripcion, precio] = formData.values()
+export async function nuevoClienteAPI(formData) {
+    const [nombre, apellido1, apellido2, dni, telefono] = formData.values()
 
-    const response = await fetch('http://localhost:3001/productos', {
+    const response = await fetch('http://localhost:3001/clientes', {
         method: 'POST',
-        body: JSON.stringify({ nombre, descripcion, precio: +precio, createdAt: new Date().toISOString() })
+        body: JSON.stringify({ nombre, apellido1, apellido2, dni, telefono, createdAt: new Date().toISOString() })
     })
     const data = await response.json()
 
-    revalidatePath('/productos-api')
+    revalidatePath('/clientes-api')
 }
 
 
-export async function editarProductoAPI(formData) {
-    const [id, nombre, descripcion, precio] = formData.values()
+export async function editarClienteAPI(formData) {
+    const [id, nombre, apellido1, apellido2, dni, telefono] = formData.values()
 
-    const response = await fetch('http://localhost:3001/productos/' + id, {
+    const response = await fetch('http://localhost:3001/clientes/' + id, {
         method: 'PUT',
-        body: JSON.stringify({ nombre, descripcion, precio: +precio, createdAt: new Date().toISOString() })
+        body: JSON.stringify({ nombre, apellido1, apellido2, dni, telefono, updatedAt: new Date().toISOString() })
     })
     const data = await response.json()
-    revalidatePath('/productos-api')
+    revalidatePath('/clientes-api')
 }
 
 
-export async function eliminarProductoAPI(formData) {
+export async function eliminarClienteAPI(formData) {
     const id = formData.get('id')
 
-    await fetch('http://localhost:3001/productos/' + id, { method: 'DELETE' })
+    await fetch('http://localhost:3001/clientes/' + id, { method: 'DELETE' })
 
-    revalidatePath('/productos-api')
+    revalidatePath('/clientes-api')
 }

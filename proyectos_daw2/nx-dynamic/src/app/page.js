@@ -54,7 +54,7 @@ async function Home() {
 
           <div className="flex flex-col items-center">
             <Link
-              href="/productos-db"
+              href="/clientes-db"
               className="block text-2xl text-blue-400 font-bold"
             >
               BASE DE DATOS
@@ -69,7 +69,7 @@ async function Home() {
 
           <div className="flex flex-col items-center">
             <Link
-              href="/productos-api"
+              href="/clientes-api"
               className="block text-2xl text-blue-400 font-bold"
             >
               API REST
