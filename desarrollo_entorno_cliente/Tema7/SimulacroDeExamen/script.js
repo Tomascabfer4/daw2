@@ -64,6 +64,9 @@ let Pedido = function () {
   labelTalla.textContent = "Talla";
   formulario.appendChild(labelTalla);
   let selectTalla = document.createElement("select");
+  let opcionVacia = document.createElement("option");
+  opcionVacia.textContent = "";
+  selectTalla.appendChild(opcionVacia);
   let opcionS = document.createElement("option");
   opcionS.value = "S";
   opcionS.textContent = "S";
