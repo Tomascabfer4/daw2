@@ -1,0 +1,139 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #007BFF;
+}
+
+/* Header */
+header {
+    background-color: #012142;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.menu h3 {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    margin: 2rem;
+    gap: 1rem;
+}
+
+/* Main Content */
+main {
+    flex: 6;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main h1, main h2 {
+    color: #03284f;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    padding: 1.5rem;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 1rem;
+}
+
+.sidebar a {
+    display: block;
+    padding: 0.5rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #021e3b;
+    color: white;
+    margin-top: 2rem;
+}
+
+/* Estilo para el contenedor de una imagen */
+.img-container {
+    width: 100%; 
+    height: 300px; 
+    position: relative; 
+    background-color: #f0f0f0; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para la imagen*/
+.img-container img {
+    width: 80%; 
+    height: 60%; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease; 
+}
+
+/* Efecto al pasar el ratón sobre la imagen */
+.img-container img:hover {
+    transform: scale(1.05); 
+}
+
+.drop-area {
+    width: 100%;
+    height: 100px;
+    border: 2px dashed #007BFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    margin: 20px auto;
+}

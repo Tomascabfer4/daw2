@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento Wheel</title>
+    <style>
+        #box {
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            margin: 50px auto;
+            text-align: center;
+            line-height: 150px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">Rueda del ratón</div>
+
+    <script>
+        const box = document.getElementById('box');
+
+        let size = 150; // Tamaño inicial del cuadro
+
+        box.addEventListener('wheel', (event) => {
+            // Previene el desplazamiento de la página
+            event.preventDefault();
+
+            // Ajusta el tamaño del cuadro según la dirección de la rueda
+            if (event.deltaY < 0) {
+                size += 10; // Mover la rueda hacia arriba aumenta el tamaño
+            } else {
+                size -= 10; // Mover la rueda hacia abajo disminuye el tamaño
+            }
+
+            // Limita el tamaño mínimo y máximo
+            size = Math.max(50, Math.min(size, 300));
+
+            // Aplica el nuevo tamaño al elemento
+            box.style.width = `${size}px`;
+            box.style.height = `${size}px`;
+            box.style.lineHeight = `${size}px`;
+            box.textContent = `Tamaño: ${size}px`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image {
+    max-width: 200px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}

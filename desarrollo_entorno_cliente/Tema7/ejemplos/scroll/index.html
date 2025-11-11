@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento Scroll</title>
+    <style>
+        body {
+            height: 2000px; /* Altura para permitir el desplazamiento */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            background: #007BFF;
+            width: 0;
+            z-index: 1000;
+        }
+        #content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="progress-bar"></div>
+    <div id="content">
+        <h1>Ejemplo de Scroll</h1>
+        <p>Desplázate hacia abajo para ver la barra de progreso en acción.</p>
+        <p>Este es un ejemplo sencillo del evento <code>scroll</code> en JavaScript.</p>
+    </div>
+
+    <script>
+        const progressBar = document.getElementById('progress-bar');
+
+        window.addEventListener('scroll', () => {
+            // Altura total desplazable (altura del documento - altura de la ventana)
+            const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+            // Distancia desplazada desde el inicio
+            const scrollTop = document.documentElement.scrollTop;
+
+            // Calcular el porcentaje desplazado
+            const scrollPercentage = (scrollTop / scrollableHeight) * 100;
+
+            // Actualizar la barra de progreso
+            progressBar.style.width = `${scrollPercentage}%`;
+        });
+    </script>
+</body>
+</html>

@@ -23,15 +23,6 @@
       "apellido2": "Pérez",
       "dni": "01010101C",
       "telefono": 688555666
-    },
-    {
-      "nombre": "Tomás",
-      "apellido1": "Cabello",
-      "apellido2": "Fernández",
-      "dni": "34456789H",
-      "telefono": "644969161",
-      "updatedAt": "2025-11-10T18:51:00.965Z",
-      "id": "92f1"
     }
   ],
   "productos": [

@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-container {
+    width: 60%;
+    max-width: 800px;
+    min-width: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-window {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9fafb;
+    position: relative;
+    overflow: hidden; /* Asegura que el contenedor principal no crezca */
+}
+
+.chat-messages {
+    max-height: 400px; /* Altura fija para la zona de mensajes */
+    overflow-y: auto;  /* Barra de desplazamiento vertical si el contenido excede */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 10px; /* Espacio para evitar superposición con la barra de scroll */
+}
+
+.message {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.message.user1 {
+    align-self: flex-start;
+    background-color: #4caf50;
+}
+
+.message.user2 {
+    align-self: flex-end;
+    background-color: #2196f3;
+}
+
+.typing-indicator {
+    font-size: 16px;
+    color: #aaa;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+}
+
+
+.user-inputs {
+    display: flex;
+    background-color: #f1f1f1;
+    padding: 10px;
+    gap: 10px;
+}
+
+.user1, .user2 {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}

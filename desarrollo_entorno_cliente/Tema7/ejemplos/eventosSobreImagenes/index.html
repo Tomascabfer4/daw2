@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación de Imágenes</title>
+    <link rel="stylesheet" href="estilos/estilo.css">
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <label for="img1-select">Imagen 1:</label>
+            <select id="img1-select"></select>
+
+            <label for="img2-select">Imagen 2:</label>
+            <select id="img2-select"></select>
+        </div>
+
+        <div class="images">
+            <img id="image1" src="imagenes/img1.jpg" alt="Imagen 1" class="image">
+            <img id="image2" src="imagenes/img2.jpg" alt="Imagen 2" class="image">
+        </div>
+
+        <div class="buttons">
+            <button id="swap-images">Intercambiar</button>
+            <button id="resize-image">Cambiar Tamaño</button>
+            <button id="filter-image">Cambiar Filtro</button>
+            <button id="hide-image">Ocultar Imagen</button>
+        </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

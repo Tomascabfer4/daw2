@@ -1,0 +1,145 @@
+/* --- Estilos Generales --- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h3, h5, p {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* --- Maquetación con CSS Grid --- */
+.gridContainer {
+    display: grid;
+    /* Define las áreas del grid */
+    grid-template-areas:
+        "navbar     navbar"
+        "menu       content"
+        "menu       infopanel"
+        "footer     footer";
+    
+    /* Define el tamaño de las columnas y filas */
+    grid-template-columns: 220px 1fr; /* Columna 1 (menú) y Columna 2 (flexible) */
+    grid-template-rows: 60px auto 1fr 50px; /* Filas para navbar, content, infopanel, footer */
+    min-height: 100vh;
+}
+
+/* --- Asignación de áreas --- */
+.navBar { grid-area: navbar; }
+.mainMenu { grid-area: menu; }
+.contentArea { grid-area: content; }
+.infoPanel { grid-area: infopanel; }
+.footer { grid-area: footer; }
+
+/* --- Estilos de las áreas --- */
+.navBar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navBar h1 {
+    font-size: 1.5rem;
+    color: #005a9c;
+}
+
+.mainMenu {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+}
+
+.mainMenu h3 {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #005a9c;
+    padding-bottom: 10px;
+}
+
+.mainMenu li {
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.mainMenu li:hover {
+    background-color: #005a9c;
+}
+
+.contentArea {
+    background-color: #ffffff;
+    padding: 25px;
+    margin: 20px 20px 0 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#sectionTitulo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.infoPanel {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px 20px 20px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.infoPanel h5 {
+    font-size: 1.1rem;
+    color: #003366;
+    border-bottom: 2px solid #f0f2f5;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
+/* --- ESTILOS REQUERIDOS DEL EXAMEN (copiados) --- */
+
+/* Estilo para el contenedor de una imagen */
+.img-container {
+    width: 100%; 
+    height: 350px; /* Un poco más alto para este layout */
+    margin-top: 20px;
+    position: relative; 
+    background-color: #f0f0f0; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+/* Estilo para la imagen */
+.img-container img {
+    width: 80%; /* Ancho base del examen */
+    height: 80%; /* Altura base */
+    object-fit: cover; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: width 0.3s ease; /* Transición para el zoom */
+}

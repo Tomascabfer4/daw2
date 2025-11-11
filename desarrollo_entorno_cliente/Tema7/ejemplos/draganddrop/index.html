@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrastrar y Soltar</title>
+    <style>
+        #drag-box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            margin: 20px;
+            cursor: grab;
+        }
+        #drop-area {
+            width: 300px;
+            height: 200px;
+            border: 2px dashed #007BFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            margin: 20px auto;
+        }
+        #drop-area.dragover {
+            border-color: #28A745;
+            color: #28A745;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo de Arrastrar y Soltar</h1>
+    <div id="drag-box" draggable="true">Arrástrame</div>
+    <div id="drop-area">Suelta aquí</div>
+
+    <script>
+        const dragBox = document.getElementById('drag-box');
+        const dropArea = document.getElementById('drop-area');
+
+        // Eventos en el elemento que se arrastra
+        dragBox.addEventListener('dragstart', (event) => {
+            event.dataTransfer.setData('text/plain', event.target.id); // Guardar el id del elemento arrastrado
+            console.log('Comenzó el arrastre');
+        });
+
+        dragBox.addEventListener('dragend', () => {
+            console.log('El arrastre terminó');
+        });
+
+        // Eventos en el área de destino
+        dropArea.addEventListener('dragover', (event) => {
+            event.preventDefault(); // Necesario para permitir soltar
+            dropArea.classList.add('dragover');
+        });
+
+        dropArea.addEventListener('dragleave', () => {
+            dropArea.classList.remove('dragover');
+        });
+
+        dropArea.addEventListener('drop', (event) => {
+            event.preventDefault();
+            dropArea.classList.remove('dragover');
+
+            const draggedElementId = event.dataTransfer.getData('text/plain'); // Recuperar el id del elemento
+            const draggedElement = document.getElementById(draggedElementId);
+
+            dropArea.appendChild(draggedElement); // Mover el elemento al área de destino
+            dropArea.textContent = '¡Elemento soltado!';
+            console.log('Elemento soltado con éxito');
+        });
+    </script>
+</body>
+</html>

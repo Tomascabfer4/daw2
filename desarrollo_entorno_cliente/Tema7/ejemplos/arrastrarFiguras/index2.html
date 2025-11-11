@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrastrar y Soltar - Figuras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .figuras {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px;
+        }
+        .figura {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: grab;
+        }
+        .círculo {
+            background-color: lightblue;
+            border-radius: 50%;
+        }
+        .cuadrado {
+            background-color: lightcoral;
+        }
+        .triángulo {
+            width: 0;
+            height: 0;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-bottom: 80px solid lightgreen;
+        }
+        .cajas {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .caja {
+            width: 100px;
+            height: 100px;
+            border: 2px dashed #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #666;
+            position: relative;
+        }
+        .caja.correcto {
+            border-color: #28a745;
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .caja.incorrecto {
+            border-color: #dc3545;
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .caja .figura {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            transform: translate(-10%, -10%);
+        }
+    </style>
+</head>
+<body>
+    <h1>Arrastra las figuras a las cajas correctas</h1>
+    <div class="figuras">
+        <div id="círculo" class="figura círculo" draggable="true"></div>
+        <div id="cuadrado" class="figura cuadrado" draggable="true"></div>
+        <div id="triángulo" class="figura triángulo" draggable="true"></div>
+    </div>
+    <div class="cajas">
+        <div class="caja" data-figura="círculo">Círculo</div>
+        <div class="caja" data-figura="cuadrado">Cuadrado</div>
+        <div class="caja" data-figura="triángulo">Triángulo</div>
+    </div>
+
+    <script>
+        const figuras = document.querySelectorAll('.figura');
+        const cajas = document.querySelectorAll('.caja');
+
+        figuras.forEach(figura => {
+            figura.addEventListener('dragstart', (event) => {
+                event.dataTransfer.setData('text/plain', event.target.id);
+            });
+        });
+
+        cajas.forEach(caja => {
+            caja.addEventListener('dragover', (event) => {
+                event.preventDefault(); // Necesario para permitir el drop
+            });
+
+            caja.addEventListener('drop', (event) => {
+                event.preventDefault();
+                const figuraId = event.dataTransfer.getData('text/plain');
+                const figura = document.getElementById(figuraId);
+
+                // Verificar si la figura coincide con la caja
+                if (caja.dataset.figura === figuraId) {
+                    caja.appendChild(figura); // Mover la figura dentro de la caja
+                    caja.classList.add('correcto');
+                } else {
+                    caja.classList.add('incorrecto');
+                    setTimeout(() => {
+                        caja.classList.remove('incorrecto');
+                    }, 1500);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
