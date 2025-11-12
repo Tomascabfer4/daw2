@@ -1,0 +1,75 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding-top: 40px;
+}
+
+/* Título */
+h1 {
+    color: #4a148c;
+    text-align: center;
+}
+
+/* Contenedor principal */
+#contenedor {
+    margin-top: 20px;
+    width: 80%;
+    min-height: 200px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Botones */
+.botones {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    background-color: #7b1fa2;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #9c27b0;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Clase que se usará en JS */
+.resaltado {
+    background-color: #ffe082;
+    color: #4a148c;
+    font-weight: bold;
+}
+
+/* Animación opcional para cuando aparezcan los párrafos */
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+p {
+    animation: aparecer 0.5s ease;
+    margin: 10px 0;
+}
