@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+    font-family: sans-serif;
+}
+
+.reloj {
+    width: 300px;
+    height: 300px;
+    background-color: #2d2d2d;
+    border-radius: 50%;
+    border: 20px solid #d15f6a;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.centro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    background-color: #d15f6a;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.aguja {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: translateX(-50%) rotate(0deg);
+    border-radius: 6px 6px 0 0;
+}
+
+.aguja.hora {
+    width: 15px;
+    height: 55px;
+    background-color: azure;
+    z-index: 4;
+}
+
+.aguja.minuto {
+    width: 10px;
+    height: 70px;
+    background-color:#d4d8f1;
+    z-index: 3;
+}
+
+.aguja.segundo {
+    width: 5px;
+    height: 90px;
+    background-color: #3498db;
+    z-index: 5;
+    border-radius: 2px 2px 0 0; 
+}
+
+.marca {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate( calc(var(--n) * 30deg) );
+}
+
+.marca::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 20px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.marca.numero::before {
+    content: none;
+}
+
+.marca.numero {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.marca.numero b {
+    display: inline-block;
+    padding-top: 15px;
+    transform: rotate( calc(var(--n) * -30deg) );
+}
