@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Stats preview card component</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="divTotal">
+      <div class="parteIzquierda">
+        <h1>Get <span>insights</span> that help your business grow.</h1>
+
+        <p>
+          Discover the benefits of data analytics and make better decisions
+          regarding revenue, customer experience, and overall efficiency.
+        </p>
+        <div class="estadisticas">
+          <div>
+            <h2>10k+</h2>
+            <h3>companies</h3>
+          </div>
+          <div>
+            <h2>314</h2>
+            <h3>templates</h3>
+          </div>
+
+          <div>
+            <h2 class="mayusculas">12m+</h2>
+            <h3>queries</h3>
+          </div>
+        </div>
+      </div>
+      <div class="moradoTransparente">
+        <!-- Con este codigo se cambia entre la imagen de escritorio y la de movil -->
+        <picture>
+          <source
+            media="(max-width: 1370px)"
+            srcset="images/image-header-mobile.jpg"
+          />
+
+          <source
+            media="(min-width: 1371px)"
+            srcset="images/image-header-desktop.jpg"
+          />
+
+          <img
+            src="images/image-header-desktop.jpg"
+            alt="Iamgen Grande Derecha Personas"
+            class="imagen-grande"
+          />
+        </picture>
+      </div>
+    </div>
+  </body>
+</html>
