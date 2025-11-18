@@ -7,4 +7,4 @@
 - [Diseño de Aplicaciones Web](./diseño_web/README.md)
 - [Optativa](./optativa/README.md)
 - [Proyectos](./proyectos/README.md)
-- [Sostenibilidad](./sostenibilidad/README.md)
+- [Sostenibilidad](https://github.com/Tomascabfer4/daw2/tree/main/sostenibilidad#readme)
