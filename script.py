@@ -31,31 +31,27 @@ def fix_links(content, folder_path):
 def merge_readmes():
     root_dir = os.getcwd()
     
+    # TÍTULO PRINCIPAL (H1)
     full_content = "# Índice General de Asignaturas y Tareas\n\n"
     full_content += "> Índice generado automáticamente organizado por carpetas.\n\n"
 
     print("--- Iniciando proceso de organización ---")
 
-    # os.walk recorre el árbol de directorios
     for dirpath, dirnames, filenames in os.walk(root_dir):
-        # 1. Ignorar carpetas de sistema (.git, .github)
+        # 1. Ignorar carpetas de sistema
         if '.git' in dirpath:
             continue
             
         # 2. Procesar solo si hay un README.md
         if 'README.md' in filenames:
-            # Ignorar el propio archivo raíz donde escribimos
             if dirpath == root_dir:
                 continue
 
             readme_path = os.path.join(dirpath, "README.md")
             folder_name = os.path.basename(dirpath)
             
-            # Calculamos la ruta relativa y la profundidad
+            # Calculamos profundidad
             relative_path = os.path.relpath(dirpath, root_dir)
-            
-            # Dividimos la ruta por las barras separadoras para saber el nivel
-            # Ejemplo: 'asignatura/tema1' -> ['asignatura', 'tema1'] -> Nivel 2
             path_parts = relative_path.split(os.sep)
             depth = len(path_parts)
             
@@ -63,32 +59,30 @@ def merge_readmes():
                 with open(readme_path, 'r', encoding='utf-8') as f:
                     content = f.read()
 
-                    # --- FILTRO ANTI-BASURA ---
+                    # Filtro Anti-Basura
                     if any(phrase in content for phrase in IGNORE_PHRASES):
                         print(f"[SKIP] Ignorado (Frontend Mentor): {folder_name}")
                         continue
-                    # --------------------------
 
                     content = fix_links(content, relative_path)
 
-                    # --- LÓGICA DE JERARQUÍA Y FORMATO ---
-                    
-                    # Creamos los hashtags según la profundidad (#, ##, ###, etc.)
-                    # Si es profundidad 1 (Asignatura), usamos #. Si es 2 (Tema), ##.
-                    header_hashes = "#" * depth
+                    # --- CAMBIO CLAVE AQUÍ ---
+                    # Sumamos 1 a la profundidad.
+                    # Asignatura (depth 1) -> ## (H2)
+                    # Tema (depth 2) -> ### (H3)
+                    header_hashes = "#" * (depth + 1)
                     
                     # Si es una Asignatura principal (Nivel 1), ponemos separador grande antes
                     if depth == 1:
                         full_content += "\n\n---\n\n"
                     else:
-                        # Si es subcarpeta, solo un salto de línea para que quede agrupado
                         full_content += "\n\n"
 
-                    # Título LIMPIO (sin paréntesis de ruta)
+                    # Título
                     full_content += f"{header_hashes} 📂 {folder_name.upper()}\n\n"
                     full_content += content
                     
-                    print(f"[OK] Nivel {depth}: {folder_name}")
+                    print(f"[OK] Nivel {depth} -> H{depth+1}: {folder_name}")
 
             except Exception as e:
                 print(f"[ERROR] Fallo en {relative_path}: {e}")
@@ -96,7 +90,7 @@ def merge_readmes():
     try:
         with open(OUTPUT_FILENAME, 'w', encoding='utf-8') as f:
             f.write(full_content)
-        print(f"\n✨ README.md actualizado y organizado correctamente.")
+        print(f"\n✨ README.md actualizado. Estructura H1 -> H2 -> H3 lista.")
     except Exception as e:
         print(f"[ERROR] No se pudo guardar el archivo final: {e}")
 
