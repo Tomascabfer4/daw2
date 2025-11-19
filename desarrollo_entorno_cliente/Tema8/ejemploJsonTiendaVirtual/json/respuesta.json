@@ -1,0 +1,22 @@
+[
+  {
+    "imagen": "imagenes/imagen1.jpg", 
+    "nombre": "Balón oficial", 
+    "caracteristicas":{
+                        "precio":20, 
+                        "modelo":"Modelo1"
+                      } 
+  },
+  {
+    "imagen": "imagenes/imagen2.jpg", "nombre": "Raqueta", 
+    "caracteristicas":
+        {
+            "precio":15,
+            "modelo":"Modelo antiguo"
+        }  
+   },
+  {"imagen": "imagenes/imagen3.jpg", "nombre": "Botas", "caracteristicas": {
+                        "precio":10, 
+                        "modelo":"Nuevo"
+                      } }
+]

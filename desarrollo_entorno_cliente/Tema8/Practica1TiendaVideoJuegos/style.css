@@ -1,0 +1,156 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos de la Navbar */
+.navbar {
+  background-color: #e60012; /* Rojo estilo gaming */
+  height: 70px;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between; /* Separa izquierda y derecha */
+  align-items: center; /* Centra verticalmente */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor del lado izquierdo (Logo + Select) */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espacio entre el texto y el select */
+}
+
+/* Estilo del texto "Videojuegos" */
+.brand {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* Estilo del Select */
+.platform-select {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  font-weight: 600;
+}
+
+.platform-select:hover {
+  background-color: #f0f0f0;
+}
+
+/* Contenedor del lado derecho (Buscador) */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Input de búsqueda */
+.search-input {
+  padding: 8px 40px 8px 15px; /* Padding derecho extra para el icono */
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 250px;
+  transition: width 0.3s ease;
+}
+
+.search-input:focus {
+  width: 300px; /* Efecto de expansión al hacer click */
+}
+
+/* Icono de lupa (usando SVG para no depender de librerías externas) */
+.search-icon {
+  position: absolute;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+  fill: #666;
+  cursor: pointer;
+}
+
+/* --- ESTILOS DEL CONTENEDOR CENTRAL (La Rejilla/Grid) --- */
+.contenedorCentral {
+    /* Centramos el contenedor en la página y le damos un ancho máximo */
+    max-width: 1200px;
+    margin: 40px auto; /* 40px arriba/abajo, auto a los lados */
+    padding: 0 20px;
+
+    /* MAGIA: Creamos una rejilla (Grid) */
+    display: grid;
+    /* Esto crea columnas automáticas. Si no caben, bajan de línea.
+       Mínimo 250px de ancho, máximo lo que sobre (1fr) */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    
+    /* Espacio entre las tarjetas */
+    gap: 30px;
+}
+
+/* --- ESTILOS DE LA TARJETA DE VIDEOJUEGO --- */
+/* Nota: Esta clase se la debes poner a los divs que generes con JS */
+.card-videojuego {
+    background-color: white;
+    border-radius: 12px; /* Bordes redondeados */
+    overflow: hidden; /* Para que la imagen no se salga de los bordes */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+    cursor: pointer;
+    
+    display: flex;
+    flex-direction: column; /* Para apilar imagen y texto */
+}
+
+/* Efecto Hover: Al pasar el ratón, la tarjeta sube un poco */
+.card-videojuego:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(230, 0, 18, 0.2); /* Sombra rojiza al pasar el mouse */
+}
+
+/* Estilo para la imagen del juego */
+.card-videojuego img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Recorta la imagen para que llene el hueco sin deformarse */
+    border-bottom: 1px solid #eee;
+}
+
+/* Contenedor del texto dentro de la tarjeta */
+.card-info {
+    padding: 20px;
+}
+
+/* Título del juego */
+.card-info h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+    /* Limitar a 2 líneas si el título es muy largo */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Etiqueta de la plataforma */
+.card-info .plataformas {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: #f0f0f0;
+    color: #555;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}

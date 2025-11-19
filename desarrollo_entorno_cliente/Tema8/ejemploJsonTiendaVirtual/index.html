@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos en filas</title>
+
+  <!-- Cargamos la hoja de estilos, os presento dos formas de hacerlo. La primera permite
+   cargar hojas de estilos externas a nuestro alojamiento-->
+  <!-- <link rel="stylesheet" type="text/css" href="estilos/estilo.css"> -->
+  <style>
+    @import url("estilos/estilo.css");
+  </style>
+  <!-- Cargamos el script, al añadir defer, el script no se cargará
+   hasta que se genere completamente todo el DOM -->
+   <script src="scripts/generarProductos3.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <button id="mostrar">
+      Mostrar productos
+    </button>
+  </header>
+<div class="products-container" id="contenedorCentral">
+  <!-- aquí iran todos los productos que seleccionemos desde 1 hasta 100 -->
+ 
+</div>
+
+</body>
+</html>
