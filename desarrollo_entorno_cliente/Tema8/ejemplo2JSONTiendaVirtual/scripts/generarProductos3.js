@@ -1,20 +1,6 @@
-const vectorProductos = [
-  {
-    imagen: "imagenes/imagen1.jpg",
-    nombre: "Balón",
-    caracteristicas: { precio: 20, modelo: "Modelo1" },
-  },
-  {
-    imagen: "imagenes/imagen2.jpg",
-    nombre: "Raqueta",
-    caracteristicas: { precio: 20, modelo: "Modelo Antiguo" },
-  },
-  {
-    imagen: "imagenes/imagen3.jpg",
-    nombre: "Botas",
-    caracteristicas: { precio: 20, modelo: "Nuevo" },
-  },
-];
+fetch('json/respuesta.json')
+  .then(response)
+
 
 const botonMostrar = document.getElementById("mostrar");
 botonMostrar.addEventListener("click", () => {
