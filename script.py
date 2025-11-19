@@ -1,13 +1,13 @@
 import os
 import re
-import urllib.parse # Para arreglar los enlaces con espacios
+import urllib.parse
 
 # --- CONFIGURACIÓN ---
 OUTPUT_FILENAME = "README.md"
 
-# MARCAS PARA EL ROBOT
+# IMPORTANTE: Estas variables NO pueden estar vacías
 HIDDEN_MARKER = ""
-OLD_HEADER_TO_DELETE = "## 📑 Índice de Archivos (Automático)" # Lo que queremos borrar
+OLD_HEADER_TO_DELETE = "## 📑 Índice de Archivos (Automático)"
 
 IGNORE_DIRS = ['.git', '.github', '__pycache__', 'node_modules', '.next', 'images', 'img', 'assets', 'design']
 IGNORE_FILES = ['README.md', 'script.py', '.DS_Store', 'Thumbs.db', '.gitignore', 'LICENSE', 'style-guide.md']
@@ -20,13 +20,11 @@ IGNORE_PHRASES_MERGE = [
 # ---------------------
 
 def get_clean_folder_name(dirpath):
-    """ Convierte 'desarrollo_entorno_cliente' en 'DESARROLLO ENTORNO CLIENTE' """
     raw_name = os.path.basename(dirpath)
     clean_name = raw_name.replace("_", " ").replace("-", " ")
     return clean_name.upper()
 
 def get_file_list_markdown(dirpath):
-    """ Genera la lista de archivos (arreglando espacios en enlaces) """
     items = []
     try:
         for entry in os.listdir(dirpath):
@@ -37,12 +35,10 @@ def get_file_list_markdown(dirpath):
             if entry.startswith('.'): continue
             
             display_name = entry
-            # IMPORTANTE: Codificamos los espacios como %20 para que no se rompa el link
             link_safe = urllib.parse.quote(entry)
             link = f"./{link_safe}"
             
             icon = "📂" if os.path.isdir(full_path) else "📄"
-            
             items.append(f"- {icon} [{display_name}]({link})")
             
     except Exception as e:
@@ -52,7 +48,7 @@ def get_file_list_markdown(dirpath):
     return "\n".join(sorted(items))
 
 def update_sub_readmes():
-    """ FASE 1: Actualiza READMEs y BORRA el título viejo """
+    """ FASE 1: Actualiza READMEs interiores """
     root_dir = os.getcwd()
     print("--- FASE 1: Actualizando sub-READMEs ---")
     
@@ -64,43 +60,43 @@ def update_sub_readmes():
         readme_path = os.path.join(dirpath, "README.md")
         new_list_content = get_file_list_markdown(dirpath)
         
-        # Si la carpeta está vacía (solo readme), no escribimos nada
         if not new_list_content: continue
 
         current_content = ""
         if os.path.exists(readme_path):
-            with open(readme_path, 'r', encoding='utf-8') as f:
+            # 'errors=ignore' para evitar fallos de codificación en Windows/Linux
+            with open(readme_path, 'r', encoding='utf-8', errors='ignore') as f:
                 current_content = f.read()
 
-        # --- LÓGICA DE LIMPIEZA ---
+        # --- LÓGICA DE LIMPIEZA SEGURA ---
         manual_content = current_content
 
-        # 1. Si existe la marca nueva, cortamos por ahí
-        if HIDDEN_MARKER in manual_content:
+        # PROTECCIÓN 1: Solo cortamos si la marca existe y NO está vacía
+        if HIDDEN_MARKER and HIDDEN_MARKER in manual_content:
             manual_content = manual_content.split(HIDDEN_MARKER)[0]
         
-        # 2. IMPERATIVO: Si existe el título viejo, cortamos por ahí TAMBIÉN
-        # Esto asegura que borramos el rastro del script anterior
-        if OLD_HEADER_TO_DELETE in manual_content:
+        # PROTECCIÓN 2: Limpiamos el título viejo si existe
+        if OLD_HEADER_TO_DELETE and OLD_HEADER_TO_DELETE in manual_content:
              manual_content = manual_content.split(OLD_HEADER_TO_DELETE)[0]
 
         manual_content = manual_content.strip()
 
-        # Si después de limpiar no queda nada, ponemos título por defecto
         clean_name = get_clean_folder_name(dirpath)
         if not manual_content:
              manual_content = f"# {clean_name}"
 
-        # Título dinámico
         dynamic_header = f"## MATERIAL DE {clean_name}"
+        
+        # Aseguramos que marker no sea None
+        marker_safe = HIDDEN_MARKER if HIDDEN_MARKER else ""
 
-        final_content = f"{manual_content}\n\n{HIDDEN_MARKER}\n\n{dynamic_header}\n\n{new_list_content}\n"
+        final_content = f"{manual_content}\n\n{marker_safe}\n\n{dynamic_header}\n\n{new_list_content}\n"
 
         with open(readme_path, 'w', encoding='utf-8') as f:
             f.write(final_content)
 
 # ---------------------------------------------------------
-# FASE 2: FUSIÓN AL PRINCIPAL
+# FASE 2
 # ---------------------------------------------------------
 
 def fix_links(content, folder_path):
@@ -109,14 +105,10 @@ def fix_links(content, folder_path):
         link_part = match.group(2)
         if link_part.startswith("http") or link_part.startswith("/") or link_part.startswith("#"):
             return match.group(0)
-        # Limpiamos ./
         clean_link = link_part.replace("./", "")
-        # Nos aseguramos de que folder_path usa barras normales
         folder_path_clean = folder_path.replace("\\", "/")
-        # Construimos ruta: carpeta/archivo
         new_path = f"{folder_path_clean}/{clean_link}"
         return f"{text_part}({new_path})"
-        
     pattern = r'(\[.*?\]|\!\[.*?\])\((.*?)\)'
     return re.sub(pattern, replace_match, content)
 
@@ -139,17 +131,17 @@ def merge_readmes():
             if dirpath == root_dir: continue
 
             readme_path = os.path.join(dirpath, "README.md")
-            folder_name = os.path.basename(dirpath)
             relative_path = os.path.relpath(dirpath, root_dir)
             path_parts = relative_path.split(os.sep)
             depth = len(path_parts)
+            folder_name = os.path.basename(dirpath) # Necesario para el log
             
             try:
-                with open(readme_path, 'r', encoding='utf-8') as f:
+                with open(readme_path, 'r', encoding='utf-8', errors='ignore') as f:
                     content = f.read()
 
                     if any(phrase in content for phrase in IGNORE_PHRASES_MERGE):
-                        print(f"[SKIP] Ignorado: {folder_name}")
+                        # print(f"[SKIP] Ignorado: {folder_name}")
                         continue
 
                     content = fix_links(content, relative_path)
