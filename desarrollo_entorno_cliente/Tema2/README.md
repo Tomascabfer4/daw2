@@ -1,4 +1,7 @@
 # TEMA2
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE TEMA2
+
 - 📄 [ADT2Practica1.pdf](./ADT2Practica1.pdf)

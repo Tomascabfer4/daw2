@@ -1,4 +1,7 @@
 # SCRIPTS
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE SCRIPTS
+
 - 📄 [script.js](./script.js)

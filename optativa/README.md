@@ -3,7 +3,10 @@
 - [Unidad 1](https://github.com/Tomascabfer4/daw2/tree/main/optativa/U1)
 - [Unidad 2](https://github.com/Tomascabfer4/daw2/tree/main/optativa/U2)
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE OPTATIVA
+
 - 📂 [U1](./U1)
 - 📂 [U2](./U2)
 - 📄 [manual_python.pdf](./manual_python.pdf)

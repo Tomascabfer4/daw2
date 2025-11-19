@@ -1,4 +1,7 @@
 # ESTILOS
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE ESTILOS
+
 - 📄 [estilo.css](./estilo.css)

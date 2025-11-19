@@ -1,5 +1,8 @@
 # T6E2NAVIGATOR
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE T6E2NAVIGATOR
+
 - 📂 [scripts](./scripts)
 - 📄 [index.html](./index.html)

@@ -1,5 +1,8 @@
 # SCRIPTS
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE SCRIPTS
+
 - 📄 [bom.js](./bom.js)
 - 📄 [location.js](./location.js)

@@ -1,5 +1,8 @@
 # EJEMPLO1 JSON
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE EJEMPLO1 JSON
+
 - 📄 [index.html](./index.html)
 - 📄 [script.js](./script.js)

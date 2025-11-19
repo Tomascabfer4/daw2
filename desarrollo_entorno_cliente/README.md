@@ -8,7 +8,10 @@
 - [Tema 7](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema7)
 - [Tema 8](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema8)
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE DESARROLLO ENTORNO CLIENTE
+
 - 📂 [PracticaEjemplo](./PracticaEjemplo)
 - 📂 [Tema2](./Tema2)
 - 📂 [Tema3](./Tema3)

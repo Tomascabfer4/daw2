@@ -1,6 +1,6 @@
 # Índice General de Asignaturas y Tareas
 
-> Índice y enlaces actualizados automáticamente.
+> Repositorio actualizado automáticamente.
 
 
 
@@ -13,7 +13,10 @@
 - [Unidad 1](https://github.com/Tomascabfer4/daw2/tree/main/optativa/U1)
 - [Unidad 2](https://github.com/Tomascabfer4/daw2/tree/main/optativa/U2)
 
-#### 📑 Índice de Archivos (Automático)
+
+
+#### MATERIAL DE OPTATIVA
+
 - 📂 [U1](optativa/U1)
 - 📂 [U2](optativa/U2)
 - 📄 [manual_python.pdf](optativa/manual_python.pdf)
@@ -27,7 +30,10 @@
 - [Actividad 3](https://github.com/Tomascabfer4/daw2/tree/main/optativa/U2/U21A3)
 - [Actividad 4](https://github.com/Tomascabfer4/daw2/tree/main/optativa/U2/U21A4)
 
-##### 📑 Índice de Archivos (Automático)
+
+
+##### MATERIAL DE U2
+
 - 📂 [U21A1](optativa/U2/U21A1)
 - 📂 [U21A2](optativa/U2/U21A2)
 - 📂 [U21A3](optativa/U2/U21A3)
@@ -38,7 +44,10 @@
 
 ##### U21A1
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE U21A1
+
 - 📄 [U21A1.pdf](optativa/U2/U21A1/U21A1.pdf)
 - 📄 [UT2A1_1.py](optativa/U2/U21A1/UT2A1_1.py)
 - 📄 [UT2A1_2.py](optativa/U2/U21A1/UT2A1_2.py)
@@ -50,7 +59,10 @@
 
 ##### U21A3
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE U21A3
+
 - 📄 [U2A3.pdf](optativa/U2/U21A3/U2A3.pdf)
 - 📄 [UT2A3_1.py](optativa/U2/U21A3/UT2A3_1.py)
 - 📄 [UT2A3_2.py](optativa/U2/U21A3/UT2A3_2.py)
@@ -60,7 +72,10 @@
 
 ##### U21A2
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE U21A2
+
 - 📄 [U21A2.pdf](optativa/U2/U21A2/U21A2.pdf)
 - 📄 [UT2A2_1.py](optativa/U2/U21A2/UT2A2_1.py)
 - 📄 [UT2A2_2.py](optativa/U2/U21A2/UT2A2_2.py)
@@ -74,7 +89,10 @@
 
 ##### U21A4
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE U21A4
+
 - 📄 [UT2A3_1.py](optativa/U2/U21A4/UT2A3_1.py)
 
 
@@ -85,7 +103,10 @@
 - [Actividad 2](https://github.com/Tomascabfer4/daw2/tree/main/optativa/U1/Ut1A2)
 - [Actividad 3](https://github.com/Tomascabfer4/daw2/tree/main/optativa/U1/Ut1A3)
 
-##### 📑 Índice de Archivos (Automático)
+
+
+##### MATERIAL DE U1
+
 - 📂 [Ut1A1](optativa/U1/Ut1A1)
 - 📂 [Ut1A2](optativa/U1/Ut1A2)
 - 📂 [Ut1A3](optativa/U1/Ut1A3)
@@ -95,7 +116,10 @@
 
 ##### UT1A2
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE UT1A2
+
 - 📄 [Ut1A2.pdf](optativa/U1/Ut1A2/Ut1A2.pdf)
 - 📄 [Ut1A2_1.py](optativa/U1/Ut1A2/Ut1A2_1.py)
 - 📄 [Ut1A2_10.py](optativa/U1/Ut1A2/Ut1A2_10.py)
@@ -114,7 +138,10 @@
 
 ##### UT1A3
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE UT1A3
+
 - 📄 [UT1A2_1.py](optativa/U1/Ut1A3/UT1A2_1.py)
 - 📄 [UT1A2_10.py](optativa/U1/Ut1A3/UT1A2_10.py)
 - 📄 [UT1A2_11.py](optativa/U1/Ut1A3/UT1A2_11.py)
@@ -133,7 +160,10 @@
 
 ##### UT1A1
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE UT1A1
+
 - 📄 [UT1A1_1.py](optativa/U1/Ut1A1/UT1A1_1.py)
 - 📄 [UT1A1_2.py](optativa/U1/Ut1A1/UT1A1_2.py)
 - 📄 [Ut1A1.pdf](optativa/U1/Ut1A1/Ut1A1.pdf)
@@ -146,7 +176,10 @@
 ### MATERIAL DE SOSTENIBILIDAD
 - [Poster ODS](https://github.com/Tomascabfer4/daw2/blob/main/sostenibilidad/Poster_ODS_Tomas_Cabello.png)
 
-#### 📑 Índice de Archivos (Automático)
+
+
+#### MATERIAL DE SOSTENIBILIDAD
+
 - 📄 [Poster_ODS_Tomas_Cabello.png](sostenibilidad/Poster_ODS_Tomas_Cabello.png)
 
 
@@ -166,14 +199,17 @@
 
 ---
 
-## 📂 DESARROLLO_ENTORNO_SERVIDOR
+## 📂 DESARROLLO ENTORNO SERVIDOR
 
 ### MATERIAL DE DESARROLLO WEB EN ENTORNO SERVIDOR
 
 - [TEMA 1](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_servidor/Tema1)
 - [TEMA 2](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_servidor/Tema2)
 
-#### 📑 Índice de Archivos (Automático)
+
+
+#### MATERIAL DE DESARROLLO ENTORNO SERVIDOR
+
 - 📂 [Tema1](desarrollo_entorno_servidor/Tema1)
 - 📂 [Tema2](desarrollo_entorno_servidor/Tema2)
 
@@ -185,11 +221,14 @@
 - [MVC vs SPA](https://github.com/Tomascabfer4/daw2/blob/main/desarrollo_entorno_servidor/Tema1/MVC_vs_SPA_Cabello_Tom%C3%A1s.pdf)
 - [Protocolo HTTP/HTTPS](https://github.com/Tomascabfer4/daw2/blob/main/desarrollo_entorno_servidor/Tema1/Protocolo_HTTP_HTTPS_Cabello_Tom%C3%A1s.pdf)
 
-##### 📑 Índice de Archivos (Automático)
-- 📄 [MVC_vs_SPA_Cabello_Tomás.docx](desarrollo_entorno_servidor/Tema1/MVC_vs_SPA_Cabello_Tomás.docx)
-- 📄 [MVC_vs_SPA_Cabello_Tomás.pdf](desarrollo_entorno_servidor/Tema1/MVC_vs_SPA_Cabello_Tomás.pdf)
-- 📄 [Protocolo_HTTP_HTTPS_Cabello_Tomás.docx](desarrollo_entorno_servidor/Tema1/Protocolo_HTTP_HTTPS_Cabello_Tomás.docx)
-- 📄 [Protocolo_HTTP_HTTPS_Cabello_Tomás.pdf](desarrollo_entorno_servidor/Tema1/Protocolo_HTTP_HTTPS_Cabello_Tomás.pdf)
+
+
+##### MATERIAL DE TEMA1
+
+- 📄 [MVC_vs_SPA_Cabello_Tomás.docx](desarrollo_entorno_servidor/Tema1/MVC_vs_SPA_Cabello_Tom%C3%A1s.docx)
+- 📄 [MVC_vs_SPA_Cabello_Tomás.pdf](desarrollo_entorno_servidor/Tema1/MVC_vs_SPA_Cabello_Tom%C3%A1s.pdf)
+- 📄 [Protocolo_HTTP_HTTPS_Cabello_Tomás.docx](desarrollo_entorno_servidor/Tema1/Protocolo_HTTP_HTTPS_Cabello_Tom%C3%A1s.docx)
+- 📄 [Protocolo_HTTP_HTTPS_Cabello_Tomás.pdf](desarrollo_entorno_servidor/Tema1/Protocolo_HTTP_HTTPS_Cabello_Tom%C3%A1s.pdf)
 
 
 ### 📂 TEMA2
@@ -202,56 +241,74 @@
 - [Operador Spread](https://github.com/Tomascabfer4/daw2/blob/main/desarrollo_entorno_servidor/Tema2/Operador%20Spread_2.4/DWES_2.4_Cabello_Tom%C3%A1s.pdf)
 - [Parametros Rest](https://github.com/Tomascabfer4/daw2/blob/main/desarrollo_entorno_servidor/Tema2/Parametros%20Rest_2.5/DWES_2.5_Cabello_Tom%C3%A1s.pdf)
 
-##### 📑 Índice de Archivos (Automático)
-- 📂 [Desestructuración_2.3](desarrollo_entorno_servidor/Tema2/Desestructuración_2.3)
-- 📂 [Metodos de Arrays_2.6](desarrollo_entorno_servidor/Tema2/Metodos de Arrays_2.6)
-- 📂 [Operador Spread_2.4](desarrollo_entorno_servidor/Tema2/Operador Spread_2.4)
-- 📂 [Parametros Rest_2.5](desarrollo_entorno_servidor/Tema2/Parametros Rest_2.5)
-- 📂 [Valores vs Referencias_2.2](desarrollo_entorno_servidor/Tema2/Valores vs Referencias_2.2)
 
 
-#### 📂 PARAMETROS REST_2.5
+##### MATERIAL DE TEMA2
+
+- 📂 [Desestructuración_2.3](desarrollo_entorno_servidor/Tema2/Desestructuraci%C3%B3n_2.3)
+- 📂 [Metodos de Arrays_2.6](desarrollo_entorno_servidor/Tema2/Metodos%20de%20Arrays_2.6)
+- 📂 [Operador Spread_2.4](desarrollo_entorno_servidor/Tema2/Operador%20Spread_2.4)
+- 📂 [Parametros Rest_2.5](desarrollo_entorno_servidor/Tema2/Parametros%20Rest_2.5)
+- 📂 [Valores vs Referencias_2.2](desarrollo_entorno_servidor/Tema2/Valores%20vs%20Referencias_2.2)
+
+
+#### 📂 PARAMETROS REST 2.5
 
 ##### PARAMETROS REST_2.5
 
-###### 📑 Índice de Archivos (Automático)
-- 📄 [DWES_2.5_Cabello_Tomás.docx](desarrollo_entorno_servidor/Tema2/Parametros Rest_2.5/DWES_2.5_Cabello_Tomás.docx)
-- 📄 [DWES_2.5_Cabello_Tomás.pdf](desarrollo_entorno_servidor/Tema2/Parametros Rest_2.5/DWES_2.5_Cabello_Tomás.pdf)
 
 
-#### 📂 DESESTRUCTURACIÓN_2.3
+###### MATERIAL DE PARAMETROS REST 2.5
+
+- 📄 [DWES_2.5_Cabello_Tomás.docx](desarrollo_entorno_servidor/Tema2/Parametros Rest_2.5/DWES_2.5_Cabello_Tom%C3%A1s.docx)
+- 📄 [DWES_2.5_Cabello_Tomás.pdf](desarrollo_entorno_servidor/Tema2/Parametros Rest_2.5/DWES_2.5_Cabello_Tom%C3%A1s.pdf)
+
+
+#### 📂 DESESTRUCTURACIÓN 2.3
 
 ##### DESESTRUCTURACIÓN_2.3
 
-###### 📑 Índice de Archivos (Automático)
-- 📄 [DWES_2.3_Cabello_Tomás.docx](desarrollo_entorno_servidor/Tema2/Desestructuración_2.3/DWES_2.3_Cabello_Tomás.docx)
-- 📄 [DWES_2.3_Cabello_Tomás.pdf](desarrollo_entorno_servidor/Tema2/Desestructuración_2.3/DWES_2.3_Cabello_Tomás.pdf)
 
 
-#### 📂 METODOS DE ARRAYS_2.6
+###### MATERIAL DE DESESTRUCTURACIÓN 2.3
+
+- 📄 [DWES_2.3_Cabello_Tomás.docx](desarrollo_entorno_servidor/Tema2/Desestructuración_2.3/DWES_2.3_Cabello_Tom%C3%A1s.docx)
+- 📄 [DWES_2.3_Cabello_Tomás.pdf](desarrollo_entorno_servidor/Tema2/Desestructuración_2.3/DWES_2.3_Cabello_Tom%C3%A1s.pdf)
+
+
+#### 📂 METODOS DE ARRAYS 2.6
 
 ##### METODOS DE ARRAYS_2.6
 
-###### 📑 Índice de Archivos (Automático)
-- 📄 [DWES_2.6_Cabello_Tomás.docx](desarrollo_entorno_servidor/Tema2/Metodos de Arrays_2.6/DWES_2.6_Cabello_Tomás.docx)
-- 📄 [DWES_2.6_Cabello_Tomás.pdf](desarrollo_entorno_servidor/Tema2/Metodos de Arrays_2.6/DWES_2.6_Cabello_Tomás.pdf)
 
 
-#### 📂 VALORES VS REFERENCIAS_2.2
+###### MATERIAL DE METODOS DE ARRAYS 2.6
+
+- 📄 [DWES_2.6_Cabello_Tomás.docx](desarrollo_entorno_servidor/Tema2/Metodos de Arrays_2.6/DWES_2.6_Cabello_Tom%C3%A1s.docx)
+- 📄 [DWES_2.6_Cabello_Tomás.pdf](desarrollo_entorno_servidor/Tema2/Metodos de Arrays_2.6/DWES_2.6_Cabello_Tom%C3%A1s.pdf)
+
+
+#### 📂 VALORES VS REFERENCIAS 2.2
 
 ##### VALORES VS REFERENCIAS_2.2
 
-###### 📑 Índice de Archivos (Automático)
-- 📄 [DWES_2.2_Cabello_Tomás.excalidraw](desarrollo_entorno_servidor/Tema2/Valores vs Referencias_2.2/DWES_2.2_Cabello_Tomás.excalidraw)
 
 
-#### 📂 OPERADOR SPREAD_2.4
+###### MATERIAL DE VALORES VS REFERENCIAS 2.2
+
+- 📄 [DWES_2.2_Cabello_Tomás.excalidraw](desarrollo_entorno_servidor/Tema2/Valores vs Referencias_2.2/DWES_2.2_Cabello_Tom%C3%A1s.excalidraw)
+
+
+#### 📂 OPERADOR SPREAD 2.4
 
 ##### OPERADOR SPREAD_2.4
 
-###### 📑 Índice de Archivos (Automático)
-- 📄 [DWES_2.4_Cabello_Tomás.docx](desarrollo_entorno_servidor/Tema2/Operador Spread_2.4/DWES_2.4_Cabello_Tomás.docx)
-- 📄 [DWES_2.4_Cabello_Tomás.pdf](desarrollo_entorno_servidor/Tema2/Operador Spread_2.4/DWES_2.4_Cabello_Tomás.pdf)
+
+
+###### MATERIAL DE OPERADOR SPREAD 2.4
+
+- 📄 [DWES_2.4_Cabello_Tomás.docx](desarrollo_entorno_servidor/Tema2/Operador Spread_2.4/DWES_2.4_Cabello_Tom%C3%A1s.docx)
+- 📄 [DWES_2.4_Cabello_Tomás.pdf](desarrollo_entorno_servidor/Tema2/Operador Spread_2.4/DWES_2.4_Cabello_Tom%C3%A1s.pdf)
 
 
 ---
@@ -264,10 +321,13 @@
 - [Actividad 22, 23](https://github.com/Tomascabfer4/daw2/blob/main/digitalizacion/Actividad22%2C23.docx)
 - [Tema 2 F](https://github.com/Tomascabfer4/daw2/blob/main/digitalizacion/Tema%202%20F.pdf)
 
-#### 📑 Índice de Archivos (Automático)
-- 📂 [RETO PROFESIONAL TEMA 2](digitalizacion/RETO PROFESIONAL TEMA 2)
-- 📄 [Actividad22,23.docx](digitalizacion/Actividad22,23.docx)
-- 📄 [Tema 2 F.pdf](digitalizacion/Tema 2 F.pdf)
+
+
+#### MATERIAL DE DIGITALIZACION
+
+- 📂 [RETO PROFESIONAL TEMA 2](digitalizacion/RETO%20PROFESIONAL%20TEMA%202)
+- 📄 [Actividad22,23.docx](digitalizacion/Actividad22%2C23.docx)
+- 📄 [Tema 2 F.pdf](digitalizacion/Tema%202%20F.pdf)
 
 
 ### 📂 RETO PROFESIONAL TEMA 2
@@ -277,14 +337,17 @@
 - [Infografía Reto Profesional](https://github.com/Tomascabfer4/daw2/blob/main/digitalizacion/RETO%20PROFESIONA%20TEMA%202/INFOGRAFIA%20RETO%20PROFESIONAL.pdf)
 - [Reto Profesional Tema 2](https://github.com/Tomascabfer4/daw2/blob/main/digitalizacion/RETO%20PROFESIONA%20TEMA%202/RETO%20PROFESIONAL%20TEMA%202.pdf)
 
-##### 📑 Índice de Archivos (Automático)
-- 📄 [INFOGRAFIA RETO PROFESIONAL.pdf](digitalizacion/RETO PROFESIONAL TEMA 2/INFOGRAFIA RETO PROFESIONAL.pdf)
-- 📄 [RETO PROFESIONAL TEMA 2.pdf](digitalizacion/RETO PROFESIONAL TEMA 2/RETO PROFESIONAL TEMA 2.pdf)
+
+
+##### MATERIAL DE RETO PROFESIONAL TEMA 2
+
+- 📄 [INFOGRAFIA RETO PROFESIONAL.pdf](digitalizacion/RETO PROFESIONAL TEMA 2/INFOGRAFIA%20RETO%20PROFESIONAL.pdf)
+- 📄 [RETO PROFESIONAL TEMA 2.pdf](digitalizacion/RETO PROFESIONAL TEMA 2/RETO%20PROFESIONAL%20TEMA%202.pdf)
 
 
 ---
 
-## 📂 DISEÑO_WEB
+## 📂 DISEÑO WEB
 
 ### MATERIAL DE DISEÑO DE INTERFACES WEB
 
@@ -311,7 +374,10 @@
 - [position-css](https://github.com/Tomascabfer4/daw2/tree/main/dise%C3%B1o_web/position-css)
 - [reloj-analogico](https://github.com/Tomascabfer4/daw2/tree/main/dise%C3%B1o_web/reloj-analogico_Tomas_Cabello)
 
-#### 📑 Índice de Archivos (Automático)
+
+
+#### MATERIAL DE DISEÑO WEB
+
 - 📂 [1.3-qr-code-component_Tomas_Cabello](diseño_web/1.3-qr-code-component_Tomas_Cabello)
 - 📂 [1.3bis-blog-preview-card_Tomas_Cabello](diseño_web/1.3bis-blog-preview-card_Tomas_Cabello)
 - 📂 [1.4-order-summary-component-Tomas_Cabello](diseño_web/1.4-order-summary-component-Tomas_Cabello)
@@ -363,7 +429,10 @@
 
 ##### .VSCODE
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE .VSCODE
+
 - 📄 [settings.json](diseño_web/1.3-qr-code-component_Tomas_Cabello/.vscode/settings.json)
 
 
@@ -396,11 +465,14 @@
 - 📄 [mobile-design.jpg](diseño_web/2.1-social-proof-section-master_Tomas_Cabello/design/mobile-design.jpg)
 
 
-### 📂 POSITION-CSS
+### 📂 POSITION CSS
 
 #### POSITION-CSS
 
-##### 📑 Índice de Archivos (Automático)
+
+
+##### MATERIAL DE POSITION CSS
+
 - 📄 [index.html](diseño_web/position-css/index.html)
 - 📄 [style.css](diseño_web/position-css/style.css)
 
@@ -425,11 +497,14 @@
 - 📄 [mobile-design.jpg](diseño_web/four-card-feature-section-master_Tomas_Cabello/design/mobile-design.jpg)
 
 
-### 📂 RELOJ-ANALOGICO_TOMAS_CABELLO
+### 📂 RELOJ ANALOGICO TOMAS CABELLO
 
 #### RELOJ-ANALOGICO_TOMAS_CABELLO
 
-##### 📑 Índice de Archivos (Automático)
+
+
+##### MATERIAL DE RELOJ ANALOGICO TOMAS CABELLO
+
 - 📄 [index.html](diseño_web/reloj-analogico_Tomas_Cabello/index.html)
 - 📄 [script.js](diseño_web/reloj-analogico_Tomas_Cabello/script.js)
 - 📄 [style.css](diseño_web/reloj-analogico_Tomas_Cabello/style.css)
@@ -474,14 +549,17 @@
 
 ---
 
-## 📂 DESPLIEGUE_WEB
+## 📂 DESPLIEGUE WEB
 
 ### MATERIAL DE DESPLIEGUE WEB
 
 - [APACHE](https://github.com/Tomascabfer4/daw2/tree/main/despliegue_web/Apache)
 - [FTP](https://github.com/Tomascabfer4/daw2/tree/main/despliegue_web/Ftp)
 
-#### 📑 Índice de Archivos (Automático)
+
+
+#### MATERIAL DE DESPLIEGUE WEB
+
 - 📂 [Apache](despliegue_web/Apache)
 - 📂 [Ftp](despliegue_web/Ftp)
 
@@ -494,8 +572,11 @@
 - [Tutorial de la Practica](https://github.com/Tomascabfer4/daw2/blob/main/despliegue_web/Apache/A1_Instalacion_Configuracion_apache.pdf)
 - [Practica Desarrollada](https://github.com/Tomascabfer4/daw2/blob/main/despliegue_web/Apache/2DAW_U2_A1_Cabello_Fern%C3%A1ndez_Tom%C3%A1s.pdf)
 
-##### 📑 Índice de Archivos (Automático)
-- 📄 [2DAW_U2_A1_Cabello_Fernández_Tomás.pdf](despliegue_web/Apache/2DAW_U2_A1_Cabello_Fernández_Tomás.pdf)
+
+
+##### MATERIAL DE APACHE
+
+- 📄 [2DAW_U2_A1_Cabello_Fernández_Tomás.pdf](despliegue_web/Apache/2DAW_U2_A1_Cabello_Fern%C3%A1ndez_Tom%C3%A1s.pdf)
 - 📄 [A1_Instalacion_Configuracion_apache.pdf](despliegue_web/Apache/A1_Instalacion_Configuracion_apache.pdf)
 - 📄 [apache.pdf](despliegue_web/Apache/apache.pdf)
 
@@ -508,17 +589,20 @@
 - [Tutorial de la Practica](https://github.com/Tomascabfer4/daw2/blob/main/despliegue_web/Ftp/A1_Instalacion_Configuracion_servidor_ftp.pdf)
 - [Practica Desarrollada](https://github.com/Tomascabfer4/daw2/blob/main/despliegue_web/Ftp/2DAW_DAW_U3_A1_Cabello_Fern%C3%A1ndez_Tom%C3%A1s.pdf)
 
-##### 📑 Índice de Archivos (Automático)
-- 📄 [2DAW_DAW_U3_A1_Cabello_Fernández_Tomás.pdf](despliegue_web/Ftp/2DAW_DAW_U3_A1_Cabello_Fernández_Tomás.pdf)
+
+
+##### MATERIAL DE FTP
+
+- 📄 [2DAW_DAW_U3_A1_Cabello_Fernández_Tomás.pdf](despliegue_web/Ftp/2DAW_DAW_U3_A1_Cabello_Fern%C3%A1ndez_Tom%C3%A1s.pdf)
 - 📄 [A1_Instalacion_Configuracion_servidor_ftp.pdf](despliegue_web/Ftp/A1_Instalacion_Configuracion_servidor_ftp.pdf)
 - 📄 [Servidor_FTP.docx](despliegue_web/Ftp/Servidor_FTP.docx)
 - 📄 [servidor_ftp.pdf](despliegue_web/Ftp/servidor_ftp.pdf)
-- 📄 [~$rvidor_FTP.docx](despliegue_web/Ftp/~$rvidor_FTP.docx)
+- 📄 [~$rvidor_FTP.docx](despliegue_web/Ftp/~%24rvidor_FTP.docx)
 
 
 ---
 
-## 📂 DESARROLLO_ENTORNO_CLIENTE
+## 📂 DESARROLLO ENTORNO CLIENTE
 
 ### MATERIAL DE DESARROLLO WEB EN ENTORNO CLIENTE
 
@@ -530,7 +614,10 @@
 - [Tema 7](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema7)
 - [Tema 8](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema8)
 
-#### 📑 Índice de Archivos (Automático)
+
+
+#### MATERIAL DE DESARROLLO ENTORNO CLIENTE
+
 - 📂 [PracticaEjemplo](desarrollo_entorno_cliente/PracticaEjemplo)
 - 📂 [Tema2](desarrollo_entorno_cliente/Tema2)
 - 📂 [Tema3](desarrollo_entorno_cliente/Tema3)
@@ -549,7 +636,10 @@
 - [PRACTICA BINGO](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema4/PRACTICABINGO)
 - [PRACTICA JUEGO](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema4/PRACTICAJUEGO)
 
-##### 📑 Índice de Archivos (Automático)
+
+
+##### MATERIAL DE TEMA4
+
 - 📂 [EjercicioCarton](desarrollo_entorno_cliente/Tema4/EjercicioCarton)
 - 📂 [EjercicioCuantasVecesRepiteUnNumero](desarrollo_entorno_cliente/Tema4/EjercicioCuantasVecesRepiteUnNumero)
 - 📂 [PRACTICA1_TEMA4](desarrollo_entorno_cliente/Tema4/PRACTICA1_TEMA4)
@@ -557,11 +647,14 @@
 - 📂 [PRACTICAJUEGO](desarrollo_entorno_cliente/Tema4/PRACTICAJUEGO)
 
 
-#### 📂 PRACTICA1_TEMA4
+#### 📂 PRACTICA1 TEMA4
 
 ##### PRACTICA1_TEMA4
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE PRACTICA1 TEMA4
+
 - 📄 [PRACTICA1TEMA4.html](desarrollo_entorno_cliente/Tema4/PRACTICA1_TEMA4/PRACTICA1TEMA4.html)
 - 📄 [PRACTICA1TEMA4.js](desarrollo_entorno_cliente/Tema4/PRACTICA1_TEMA4/PRACTICA1TEMA4.js)
 
@@ -570,7 +663,10 @@
 
 ##### EJERCICIOCUANTASVECESREPITEUNNUMERO
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE EJERCICIOCUANTASVECESREPITEUNNUMERO
+
 - 📄 [RepiteNumero.html](desarrollo_entorno_cliente/Tema4/EjercicioCuantasVecesRepiteUnNumero/RepiteNumero.html)
 - 📄 [RepiteNumero.js](desarrollo_entorno_cliente/Tema4/EjercicioCuantasVecesRepiteUnNumero/RepiteNumero.js)
 
@@ -579,7 +675,10 @@
 
 ##### EJERCICIOCARTON
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE EJERCICIOCARTON
+
 - 📄 [Carton.html](desarrollo_entorno_cliente/Tema4/EjercicioCarton/Carton.html)
 - 📄 [Carton.js](desarrollo_entorno_cliente/Tema4/EjercicioCarton/Carton.js)
 
@@ -588,7 +687,10 @@
 
 ##### PRACTICAJUEGO
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE PRACTICAJUEGO
+
 - 📄 [PRACTICAJUEGO.html](desarrollo_entorno_cliente/Tema4/PRACTICAJUEGO/PRACTICAJUEGO.html)
 - 📄 [PRACTICAJUEGO.js](desarrollo_entorno_cliente/Tema4/PRACTICAJUEGO/PRACTICAJUEGO.js)
 
@@ -597,7 +699,10 @@
 
 ##### PRACTICABINGO
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE PRACTICABINGO
+
 - 📄 [PRACTICABINGO.html](desarrollo_entorno_cliente/Tema4/PRACTICABINGO/PRACTICABINGO.html)
 - 📄 [PRACTICABINGO.js](desarrollo_entorno_cliente/Tema4/PRACTICABINGO/PRACTICABINGO.js)
 
@@ -606,8 +711,11 @@
 
 #### PRACTICAEJEMPLO
 
-##### 📑 Índice de Archivos (Automático)
-- 📄 [Ejemplo(Matrices).html](desarrollo_entorno_cliente/PracticaEjemplo/Ejemplo(Matrices).html)
+
+
+##### MATERIAL DE PRACTICAEJEMPLO
+
+- 📄 [Ejemplo(Matrices).html](desarrollo_entorno_cliente/PracticaEjemplo/Ejemplo%28Matrices%29.html)
 - 📄 [script.js](desarrollo_entorno_cliente/PracticaEjemplo/script.js)
 
 
@@ -619,7 +727,10 @@
 - [PRACTICA 3](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema3/PRACTICA3)
 - [PRACTICA 4](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema3/PRACTICA4)
 
-##### 📑 Índice de Archivos (Automático)
+
+
+##### MATERIAL DE TEMA3
+
 - 📂 [PRACTICA1](desarrollo_entorno_cliente/Tema3/PRACTICA1)
 - 📂 [PRACTICA2](desarrollo_entorno_cliente/Tema3/PRACTICA2)
 - 📂 [PRACTICA3](desarrollo_entorno_cliente/Tema3/PRACTICA3)
@@ -630,7 +741,10 @@
 
 ##### PRACTICA4
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE PRACTICA4
+
 - 📄 [DWT3Practica4.pdf](desarrollo_entorno_cliente/Tema3/PRACTICA4/DWT3Practica4.pdf)
 - 📄 [PRACTICA4.html](desarrollo_entorno_cliente/Tema3/PRACTICA4/PRACTICA4.html)
 - 📄 [PRACTICA4.js](desarrollo_entorno_cliente/Tema3/PRACTICA4/PRACTICA4.js)
@@ -640,7 +754,10 @@
 
 ##### PRACTICA1
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE PRACTICA1
+
 - 📄 [DWT3Practica1.pdf](desarrollo_entorno_cliente/Tema3/PRACTICA1/DWT3Practica1.pdf)
 - 📄 [PRACTICA1.html](desarrollo_entorno_cliente/Tema3/PRACTICA1/PRACTICA1.html)
 - 📄 [PRACTICA1.js](desarrollo_entorno_cliente/Tema3/PRACTICA1/PRACTICA1.js)
@@ -650,7 +767,10 @@
 
 ##### PRACTICA2
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE PRACTICA2
+
 - 📄 [DWT3Practica2.pdf](desarrollo_entorno_cliente/Tema3/PRACTICA2/DWT3Practica2.pdf)
 - 📄 [PRACTICA2.html](desarrollo_entorno_cliente/Tema3/PRACTICA2/PRACTICA2.html)
 - 📄 [PRACTICA2.js](desarrollo_entorno_cliente/Tema3/PRACTICA2/PRACTICA2.js)
@@ -660,7 +780,10 @@
 
 ##### PRACTICA3
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE PRACTICA3
+
 - 📄 [DWT3Practica3.pdf](desarrollo_entorno_cliente/Tema3/PRACTICA3/DWT3Practica3.pdf)
 - 📄 [PRACTICA3.html](desarrollo_entorno_cliente/Tema3/PRACTICA3/PRACTICA3.html)
 - 📄 [PRACTICA3.js](desarrollo_entorno_cliente/Tema3/PRACTICA3/PRACTICA3.js)
@@ -679,9 +802,12 @@
 - [SIMULACRO DE EXAMEN](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema7/SimulacroDeExamen)
 - [SIMULACRO DE EXAMEN 2](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema7/SimulacroDeExamen2)
 
-##### 📑 Índice de Archivos (Automático)
+
+
+##### MATERIAL DE TEMA7
+
 - 📂 [Cronometro](desarrollo_entorno_cliente/Tema7/Cronometro)
-- 📂 [Examen Tema 7](desarrollo_entorno_cliente/Tema7/Examen Tema 7)
+- 📂 [Examen Tema 7](desarrollo_entorno_cliente/Tema7/Examen%20Tema%207)
 - 📂 [FiltrosConSelect](desarrollo_entorno_cliente/Tema7/FiltrosConSelect)
 - 📂 [Filtros](desarrollo_entorno_cliente/Tema7/Filtros)
 - 📂 [SimulacroDeExamen2](desarrollo_entorno_cliente/Tema7/SimulacroDeExamen2)
@@ -695,7 +821,10 @@
 
 ##### SIMULACRODEEXAMEN
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE SIMULACRODEEXAMEN
+
 - 📂 [imagenes](desarrollo_entorno_cliente/Tema7/SimulacroDeExamen/imagenes)
 - 📄 [SimulacroDeExamen.pdf](desarrollo_entorno_cliente/Tema7/SimulacroDeExamen/SimulacroDeExamen.pdf)
 - 📄 [index.html](desarrollo_entorno_cliente/Tema7/SimulacroDeExamen/index.html)
@@ -707,7 +836,10 @@
 
 ###### IMAGENES
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE IMAGENES
+
 - 📄 [img1.jpg](desarrollo_entorno_cliente/Tema7/SimulacroDeExamen/imagenes/img1.jpg)
 - 📄 [img2.jpg](desarrollo_entorno_cliente/Tema7/SimulacroDeExamen/imagenes/img2.jpg)
 - 📄 [img3.jpg](desarrollo_entorno_cliente/Tema7/SimulacroDeExamen/imagenes/img3.jpg)
@@ -717,7 +849,10 @@
 
 ##### EXAMEN2023
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE EXAMEN2023
+
 - 📂 [Examen](desarrollo_entorno_cliente/Tema7/examen2023/Examen)
 - 📂 [Resuelto](desarrollo_entorno_cliente/Tema7/examen2023/Resuelto)
 
@@ -726,7 +861,10 @@
 
 ###### EXAMEN
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE EXAMEN
+
 - 📂 [estilos](desarrollo_entorno_cliente/Tema7/examen2023/Examen/estilos)
 - 📂 [imagenes](desarrollo_entorno_cliente/Tema7/examen2023/Examen/imagenes)
 - 📄 [examen2023.pdf](desarrollo_entorno_cliente/Tema7/examen2023/Examen/examen2023.pdf)
@@ -738,7 +876,10 @@
 
 ####### IMAGENES
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE IMAGENES
+
 - 📄 [imagen1.jpg](desarrollo_entorno_cliente/Tema7/examen2023/Examen/imagenes/imagen1.jpg)
 - 📄 [imagen2.jpg](desarrollo_entorno_cliente/Tema7/examen2023/Examen/imagenes/imagen2.jpg)
 - 📄 [imagen3.jpg](desarrollo_entorno_cliente/Tema7/examen2023/Examen/imagenes/imagen3.jpg)
@@ -752,7 +893,10 @@
 
 ####### ESTILOS
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE ESTILOS
+
 - 📄 [estilos.css](desarrollo_entorno_cliente/Tema7/examen2023/Examen/estilos/estilos.css)
 
 
@@ -760,7 +904,10 @@
 
 ###### RESUELTO
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE RESUELTO
+
 - 📂 [estilos](desarrollo_entorno_cliente/Tema7/examen2023/Resuelto/estilos)
 - 📂 [imagenes](desarrollo_entorno_cliente/Tema7/examen2023/Resuelto/imagenes)
 - 📂 [scripts](desarrollo_entorno_cliente/Tema7/examen2023/Resuelto/scripts)
@@ -772,7 +919,10 @@
 
 ####### SCRIPTS
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE SCRIPTS
+
 - 📄 [script1.js](desarrollo_entorno_cliente/Tema7/examen2023/Resuelto/scripts/script1.js)
 - 📄 [script2.js](desarrollo_entorno_cliente/Tema7/examen2023/Resuelto/scripts/script2.js)
 - 📄 [script3.js](desarrollo_entorno_cliente/Tema7/examen2023/Resuelto/scripts/script3.js)
@@ -784,7 +934,10 @@
 
 ####### IMAGENES
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE IMAGENES
+
 - 📄 [imagen1.jpg](desarrollo_entorno_cliente/Tema7/examen2023/Resuelto/imagenes/imagen1.jpg)
 - 📄 [imagen2.jpg](desarrollo_entorno_cliente/Tema7/examen2023/Resuelto/imagenes/imagen2.jpg)
 - 📄 [imagen3.jpg](desarrollo_entorno_cliente/Tema7/examen2023/Resuelto/imagenes/imagen3.jpg)
@@ -798,7 +951,10 @@
 
 ####### ESTILOS
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE ESTILOS
+
 - 📄 [estilos.css](desarrollo_entorno_cliente/Tema7/examen2023/Resuelto/estilos/estilos.css)
 
 
@@ -806,7 +962,10 @@
 
 ##### SIMULACRODEEXAMEN2
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE SIMULACRODEEXAMEN2
+
 - 📄 [index.html](desarrollo_entorno_cliente/Tema7/SimulacroDeExamen2/index.html)
 - 📄 [script.js](desarrollo_entorno_cliente/Tema7/SimulacroDeExamen2/script.js)
 - 📄 [style.css](desarrollo_entorno_cliente/Tema7/SimulacroDeExamen2/style.css)
@@ -816,7 +975,10 @@
 
 ##### FILTROS
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE FILTROS
+
 - 📄 [index.html](desarrollo_entorno_cliente/Tema7/Filtros/index.html)
 - 📄 [script.js](desarrollo_entorno_cliente/Tema7/Filtros/script.js)
 - 📄 [styles.css](desarrollo_entorno_cliente/Tema7/Filtros/styles.css)
@@ -826,17 +988,23 @@
 
 ##### FILTROSCONSELECT
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE FILTROSCONSELECT
+
 - 📄 [index.html](desarrollo_entorno_cliente/Tema7/FiltrosConSelect/index.html)
 - 📄 [script.js](desarrollo_entorno_cliente/Tema7/FiltrosConSelect/script.js)
 - 📄 [styles.css](desarrollo_entorno_cliente/Tema7/FiltrosConSelect/styles.css)
 
 
-#### 📂 EXAMENUNID1-7-CURSO24-25
+#### 📂 EXAMENUNID1 7 CURSO24 25
 
 ##### EXAMENUNID1-7-CURSO24-25
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE EXAMENUNID1 7 CURSO24 25
+
 - 📂 [webDelExamenResuelta](desarrollo_entorno_cliente/Tema7/examenUnid1-7-curso24-25/webDelExamenResuelta)
 - 📂 [webDelExamen](desarrollo_entorno_cliente/Tema7/examenUnid1-7-curso24-25/webDelExamen)
 - 📄 [examenUnidades6-7.pdf](desarrollo_entorno_cliente/Tema7/examenUnid1-7-curso24-25/examenUnidades6-7.pdf)
@@ -848,7 +1016,10 @@
 
 ###### WEBDELEXAMEN
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE WEBDELEXAMEN
+
 - 📂 [estilos](desarrollo_entorno_cliente/Tema7/examenUnid1-7-curso24-25/webDelExamen/estilos)
 - 📂 [imagenes](desarrollo_entorno_cliente/Tema7/examenUnid1-7-curso24-25/webDelExamen/imagenes)
 - 📂 [scripts](desarrollo_entorno_cliente/Tema7/examenUnid1-7-curso24-25/webDelExamen/scripts)
@@ -859,7 +1030,10 @@
 
 ####### SCRIPTS
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE SCRIPTS
+
 - 📄 [script.js](desarrollo_entorno_cliente/Tema7/examenUnid1-7-curso24-25/webDelExamen/scripts/script.js)
 
 
@@ -867,7 +1041,10 @@
 
 ####### IMAGENES
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE IMAGENES
+
 - 📄 [img1.jpg](desarrollo_entorno_cliente/Tema7/examenUnid1-7-curso24-25/webDelExamen/imagenes/img1.jpg)
 - 📄 [img2.jpg](desarrollo_entorno_cliente/Tema7/examenUnid1-7-curso24-25/webDelExamen/imagenes/img2.jpg)
 - 📄 [img3.jpg](desarrollo_entorno_cliente/Tema7/examenUnid1-7-curso24-25/webDelExamen/imagenes/img3.jpg)
@@ -877,7 +1054,10 @@
 
 ####### ESTILOS
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE ESTILOS
+
 - 📄 [estilo.css](desarrollo_entorno_cliente/Tema7/examenUnid1-7-curso24-25/webDelExamen/estilos/estilo.css)
 
 
@@ -885,7 +1065,10 @@
 
 ###### WEBDELEXAMENRESUELTA
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE WEBDELEXAMENRESUELTA
+
 - 📂 [estilos](desarrollo_entorno_cliente/Tema7/examenUnid1-7-curso24-25/webDelExamenResuelta/estilos)
 - 📂 [imagenes](desarrollo_entorno_cliente/Tema7/examenUnid1-7-curso24-25/webDelExamenResuelta/imagenes)
 - 📂 [scripts](desarrollo_entorno_cliente/Tema7/examenUnid1-7-curso24-25/webDelExamenResuelta/scripts)
@@ -896,7 +1079,10 @@
 
 ####### SCRIPTS
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE SCRIPTS
+
 - 📄 [script.js](desarrollo_entorno_cliente/Tema7/examenUnid1-7-curso24-25/webDelExamenResuelta/scripts/script.js)
 
 
@@ -904,7 +1090,10 @@
 
 ####### IMAGENES
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE IMAGENES
+
 - 📄 [img1.jpg](desarrollo_entorno_cliente/Tema7/examenUnid1-7-curso24-25/webDelExamenResuelta/imagenes/img1.jpg)
 - 📄 [img2.jpg](desarrollo_entorno_cliente/Tema7/examenUnid1-7-curso24-25/webDelExamenResuelta/imagenes/img2.jpg)
 - 📄 [img3.jpg](desarrollo_entorno_cliente/Tema7/examenUnid1-7-curso24-25/webDelExamenResuelta/imagenes/img3.jpg)
@@ -914,7 +1103,10 @@
 
 ####### ESTILOS
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE ESTILOS
+
 - 📄 [estilo.css](desarrollo_entorno_cliente/Tema7/examenUnid1-7-curso24-25/webDelExamenResuelta/estilos/estilo.css)
 
 
@@ -922,7 +1114,10 @@
 
 ##### EJEMPLOS
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE EJEMPLOS
+
 - 📂 [arrastrarFiguras](desarrollo_entorno_cliente/Tema7/ejemplos/arrastrarFiguras)
 - 📂 [draganddrop](desarrollo_entorno_cliente/Tema7/ejemplos/draganddrop)
 - 📂 [ejemploFormulario](desarrollo_entorno_cliente/Tema7/ejemplos/ejemploFormulario)
@@ -936,7 +1131,10 @@
 
 ###### WHEEL
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE WHEEL
+
 - 📄 [index.html](desarrollo_entorno_cliente/Tema7/ejemplos/wheel/index.html)
 
 
@@ -944,7 +1142,10 @@
 
 ###### SCROLL
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE SCROLL
+
 - 📄 [index.html](desarrollo_entorno_cliente/Tema7/ejemplos/scroll/index.html)
 
 
@@ -952,7 +1153,10 @@
 
 ###### EVENTOSSOBREIMAGENES
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE EVENTOSSOBREIMAGENES
+
 - 📂 [estilos](desarrollo_entorno_cliente/Tema7/ejemplos/eventosSobreImagenes/estilos)
 - 📂 [imagenes](desarrollo_entorno_cliente/Tema7/ejemplos/eventosSobreImagenes/imagenes)
 - 📂 [scripts](desarrollo_entorno_cliente/Tema7/ejemplos/eventosSobreImagenes/scripts)
@@ -963,7 +1167,10 @@
 
 ####### SCRIPTS
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE SCRIPTS
+
 - 📄 [script.js](desarrollo_entorno_cliente/Tema7/ejemplos/eventosSobreImagenes/scripts/script.js)
 
 
@@ -971,7 +1178,10 @@
 
 ####### IMAGENES
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE IMAGENES
+
 - 📄 [img1.jpg](desarrollo_entorno_cliente/Tema7/ejemplos/eventosSobreImagenes/imagenes/img1.jpg)
 - 📄 [img2.jpg](desarrollo_entorno_cliente/Tema7/ejemplos/eventosSobreImagenes/imagenes/img2.jpg)
 - 📄 [img3.jpg](desarrollo_entorno_cliente/Tema7/ejemplos/eventosSobreImagenes/imagenes/img3.jpg)
@@ -983,7 +1193,10 @@
 
 ####### ESTILOS
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE ESTILOS
+
 - 📄 [estilo.css](desarrollo_entorno_cliente/Tema7/ejemplos/eventosSobreImagenes/estilos/estilo.css)
 
 
@@ -991,7 +1204,10 @@
 
 ###### SIMULACIONDECHAT
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE SIMULACIONDECHAT
+
 - 📂 [estilos](desarrollo_entorno_cliente/Tema7/ejemplos/simulacionDeChat/estilos)
 - 📂 [imagenes](desarrollo_entorno_cliente/Tema7/ejemplos/simulacionDeChat/imagenes)
 - 📂 [scripts](desarrollo_entorno_cliente/Tema7/ejemplos/simulacionDeChat/scripts)
@@ -1002,7 +1218,10 @@
 
 ####### SCRIPTS
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE SCRIPTS
+
 - 📄 [script.js](desarrollo_entorno_cliente/Tema7/ejemplos/simulacionDeChat/scripts/script.js)
 
 
@@ -1010,7 +1229,10 @@
 
 ####### IMAGENES
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE IMAGENES
+
 - 📄 [img1.jpg](desarrollo_entorno_cliente/Tema7/ejemplos/simulacionDeChat/imagenes/img1.jpg)
 - 📄 [img2.jpg](desarrollo_entorno_cliente/Tema7/ejemplos/simulacionDeChat/imagenes/img2.jpg)
 - 📄 [img3.jpg](desarrollo_entorno_cliente/Tema7/ejemplos/simulacionDeChat/imagenes/img3.jpg)
@@ -1022,7 +1244,10 @@
 
 ####### ESTILOS
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE ESTILOS
+
 - 📄 [estilo.css](desarrollo_entorno_cliente/Tema7/ejemplos/simulacionDeChat/estilos/estilo.css)
 
 
@@ -1030,7 +1255,10 @@
 
 ###### EJEMPLOFORMULARIO
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE EJEMPLOFORMULARIO
+
 - 📂 [estilos](desarrollo_entorno_cliente/Tema7/ejemplos/ejemploFormulario/estilos)
 - 📂 [imagenes](desarrollo_entorno_cliente/Tema7/ejemplos/ejemploFormulario/imagenes)
 - 📂 [scripts](desarrollo_entorno_cliente/Tema7/ejemplos/ejemploFormulario/scripts)
@@ -1041,7 +1269,10 @@
 
 ####### SCRIPTS
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE SCRIPTS
+
 - 📄 [script.js](desarrollo_entorno_cliente/Tema7/ejemplos/ejemploFormulario/scripts/script.js)
 
 
@@ -1049,7 +1280,10 @@
 
 ####### IMAGENES
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE IMAGENES
+
 - 📄 [img1.jpg](desarrollo_entorno_cliente/Tema7/ejemplos/ejemploFormulario/imagenes/img1.jpg)
 - 📄 [img2.jpg](desarrollo_entorno_cliente/Tema7/ejemplos/ejemploFormulario/imagenes/img2.jpg)
 - 📄 [img3.jpg](desarrollo_entorno_cliente/Tema7/ejemplos/ejemploFormulario/imagenes/img3.jpg)
@@ -1061,7 +1295,10 @@
 
 ####### ESTILOS
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE ESTILOS
+
 - 📄 [estilo.css](desarrollo_entorno_cliente/Tema7/ejemplos/ejemploFormulario/estilos/estilo.css)
 
 
@@ -1069,7 +1306,10 @@
 
 ###### ARRASTRARFIGURAS
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE ARRASTRARFIGURAS
+
 - 📄 [index.html](desarrollo_entorno_cliente/Tema7/ejemplos/arrastrarFiguras/index.html)
 - 📄 [index2.html](desarrollo_entorno_cliente/Tema7/ejemplos/arrastrarFiguras/index2.html)
 
@@ -1078,7 +1318,10 @@
 
 ###### DRAGANDDROP
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE DRAGANDDROP
+
 - 📄 [index.html](desarrollo_entorno_cliente/Tema7/ejemplos/draganddrop/index.html)
 
 
@@ -1086,15 +1329,21 @@
 
 ##### EXAMEN TEMA 7
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE EXAMEN TEMA 7
+
 - 📂 [webExamenUnid1-7-curso25-26-Tomas-Cabello](desarrollo_entorno_cliente/Tema7/Examen Tema 7/webExamenUnid1-7-curso25-26-Tomas-Cabello)
 
 
-##### 📂 WEBEXAMENUNID1-7-CURSO25-26-TOMAS-CABELLO
+##### 📂 WEBEXAMENUNID1 7 CURSO25 26 TOMAS CABELLO
 
 ###### WEBEXAMENUNID1-7-CURSO25-26-TOMAS-CABELLO
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE WEBEXAMENUNID1 7 CURSO25 26 TOMAS CABELLO
+
 - 📂 [estilo](desarrollo_entorno_cliente/Tema7/Examen Tema 7/webExamenUnid1-7-curso25-26-Tomas-Cabello/estilo)
 - 📂 [imagenes](desarrollo_entorno_cliente/Tema7/Examen Tema 7/webExamenUnid1-7-curso25-26-Tomas-Cabello/imagenes)
 - 📄 [index.html](desarrollo_entorno_cliente/Tema7/Examen Tema 7/webExamenUnid1-7-curso25-26-Tomas-Cabello/index.html)
@@ -1105,7 +1354,10 @@
 
 ####### ESTILO
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE ESTILO
+
 - 📄 [estilos1.css](desarrollo_entorno_cliente/Tema7/Examen Tema 7/webExamenUnid1-7-curso25-26-Tomas-Cabello/estilo/estilos1.css)
 
 
@@ -1113,7 +1365,10 @@
 
 ####### IMAGENES
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE IMAGENES
+
 - 📄 [imagen1.jpg](desarrollo_entorno_cliente/Tema7/Examen Tema 7/webExamenUnid1-7-curso25-26-Tomas-Cabello/imagenes/imagen1.jpg)
 - 📄 [imagen2.jpg](desarrollo_entorno_cliente/Tema7/Examen Tema 7/webExamenUnid1-7-curso25-26-Tomas-Cabello/imagenes/imagen2.jpg)
 - 📄 [imagen3.jpg](desarrollo_entorno_cliente/Tema7/Examen Tema 7/webExamenUnid1-7-curso25-26-Tomas-Cabello/imagenes/imagen3.jpg)
@@ -1124,7 +1379,10 @@
 
 ##### CRONOMETRO
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE CRONOMETRO
+
 - 📄 [index.html](desarrollo_entorno_cliente/Tema7/Cronometro/index.html)
 - 📄 [script.js](desarrollo_entorno_cliente/Tema7/Cronometro/script.js)
 - 📄 [style.css](desarrollo_entorno_cliente/Tema7/Cronometro/style.css)
@@ -1134,7 +1392,10 @@
 
 #### TEMA2
 
-##### 📑 Índice de Archivos (Automático)
+
+
+##### MATERIAL DE TEMA2
+
 - 📄 [ADT2Practica1.pdf](desarrollo_entorno_cliente/Tema2/ADT2Practica1.pdf)
 
 
@@ -1148,7 +1409,10 @@
 - [PRACTICA 2 TEMA 6](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema6/practica2Tema6)
 - [WEB DE COMPRAS](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema6/webDeCompras)
 
-##### 📑 Índice de Archivos (Automático)
+
+
+##### MATERIAL DE TEMA6
+
 - 📂 [PrimerosEjemplosDOM](desarrollo_entorno_cliente/Tema6/PrimerosEjemplosDOM)
 - 📂 [ejemploIntervalClase](desarrollo_entorno_cliente/Tema6/ejemploIntervalClase)
 - 📂 [ejemploVectorConImagenes](desarrollo_entorno_cliente/Tema6/ejemploVectorConImagenes)
@@ -1161,7 +1425,10 @@
 
 ##### PRIMEROSEJEMPLOSDOM
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE PRIMEROSEJEMPLOSDOM
+
 - 📄 [ejercicio1.html](desarrollo_entorno_cliente/Tema6/PrimerosEjemplosDOM/ejercicio1.html)
 - 📄 [ejercicio1.js](desarrollo_entorno_cliente/Tema6/PrimerosEjemplosDOM/ejercicio1.js)
 - 📄 [ejercicio2.html](desarrollo_entorno_cliente/Tema6/PrimerosEjemplosDOM/ejercicio2.html)
@@ -1173,7 +1440,10 @@
 
 ##### WEBDECOMPRAS
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE WEBDECOMPRAS
+
 - 📄 [carrito.png](desarrollo_entorno_cliente/Tema6/webDeCompras/carrito.png)
 - 📄 [webDeCompras.css](desarrollo_entorno_cliente/Tema6/webDeCompras/webDeCompras.css)
 - 📄 [webDeCompras.html](desarrollo_entorno_cliente/Tema6/webDeCompras/webDeCompras.html)
@@ -1184,7 +1454,10 @@
 
 ##### PRACTICA2TEMA6
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE PRACTICA2TEMA6
+
 - 📄 [index.html](desarrollo_entorno_cliente/Tema6/practica2Tema6/index.html)
 - 📄 [practica2Tema6.pdf](desarrollo_entorno_cliente/Tema6/practica2Tema6/practica2Tema6.pdf)
 - 📄 [script.js](desarrollo_entorno_cliente/Tema6/practica2Tema6/script.js)
@@ -1195,7 +1468,10 @@
 
 ##### EJEMPLOINTERVALCLASE
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE EJEMPLOINTERVALCLASE
+
 - 📄 [index.html](desarrollo_entorno_cliente/Tema6/ejemploIntervalClase/index.html)
 - 📄 [script.js](desarrollo_entorno_cliente/Tema6/ejemploIntervalClase/script.js)
 
@@ -1204,7 +1480,10 @@
 
 ##### EJEMPLOVECTORCONIMAGENES
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE EJEMPLOVECTORCONIMAGENES
+
 - 📄 [alicuecano.jpeg](desarrollo_entorno_cliente/Tema6/ejemploVectorConImagenes/alicuecano.jpeg)
 - 📄 [gambling.jpg](desarrollo_entorno_cliente/Tema6/ejemploVectorConImagenes/gambling.jpg)
 - 📄 [images.jpg](desarrollo_entorno_cliente/Tema6/ejemploVectorConImagenes/images.jpg)
@@ -1219,7 +1498,10 @@
 
 ##### EJEMPLOS
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE EJEMPLOS
+
 - 📂 [T6E1Window](desarrollo_entorno_cliente/Tema6/ejemplos/T6E1Window)
 - 📂 [T6E2Navigator](desarrollo_entorno_cliente/Tema6/ejemplos/T6E2Navigator)
 - 📂 [T6E3Screen](desarrollo_entorno_cliente/Tema6/ejemplos/T6E3Screen)
@@ -1232,7 +1514,10 @@
 
 ###### T6E2NAVIGATOR
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE T6E2NAVIGATOR
+
 - 📂 [scripts](desarrollo_entorno_cliente/Tema6/ejemplos/T6E2Navigator/scripts)
 - 📄 [index.html](desarrollo_entorno_cliente/Tema6/ejemplos/T6E2Navigator/index.html)
 
@@ -1241,7 +1526,10 @@
 
 ####### .VSCODE
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE .VSCODE
+
 - 📄 [launch.json](desarrollo_entorno_cliente/Tema6/ejemplos/T6E2Navigator/.vscode/launch.json)
 
 
@@ -1249,7 +1537,10 @@
 
 ####### SCRIPTS
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE SCRIPTS
+
 - 📄 [navigator.js](desarrollo_entorno_cliente/Tema6/ejemplos/T6E2Navigator/scripts/navigator.js)
 
 
@@ -1257,7 +1548,10 @@
 
 ###### T6E6TEMPORIZADORES
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE T6E6TEMPORIZADORES
+
 - 📂 [scripts](desarrollo_entorno_cliente/Tema6/ejemplos/T6E6Temporizadores/scripts)
 - 📄 [index.html](desarrollo_entorno_cliente/Tema6/ejemplos/T6E6Temporizadores/index.html)
 
@@ -1266,7 +1560,10 @@
 
 ####### .VSCODE
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE .VSCODE
+
 - 📄 [launch.json](desarrollo_entorno_cliente/Tema6/ejemplos/T6E6Temporizadores/.vscode/launch.json)
 
 
@@ -1274,7 +1571,10 @@
 
 ####### SCRIPTS
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE SCRIPTS
+
 - 📄 [temporizadores.js](desarrollo_entorno_cliente/Tema6/ejemplos/T6E6Temporizadores/scripts/temporizadores.js)
 
 
@@ -1282,7 +1582,10 @@
 
 ###### T6E3SCREEN
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE T6E3SCREEN
+
 - 📂 [scripts](desarrollo_entorno_cliente/Tema6/ejemplos/T6E3Screen/scripts)
 - 📄 [index.html](desarrollo_entorno_cliente/Tema6/ejemplos/T6E3Screen/index.html)
 
@@ -1291,7 +1594,10 @@
 
 ####### .VSCODE
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE .VSCODE
+
 - 📄 [launch.json](desarrollo_entorno_cliente/Tema6/ejemplos/T6E3Screen/.vscode/launch.json)
 
 
@@ -1299,7 +1605,10 @@
 
 ####### SCRIPTS
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE SCRIPTS
+
 - 📄 [screen.js](desarrollo_entorno_cliente/Tema6/ejemplos/T6E3Screen/scripts/screen.js)
 
 
@@ -1307,7 +1616,10 @@
 
 ###### T6E4LOCATION
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE T6E4LOCATION
+
 - 📂 [scripts](desarrollo_entorno_cliente/Tema6/ejemplos/T6E4Location/scripts)
 - 📄 [index.html](desarrollo_entorno_cliente/Tema6/ejemplos/T6E4Location/index.html)
 
@@ -1316,7 +1628,10 @@
 
 ####### .VSCODE
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE .VSCODE
+
 - 📄 [launch.json](desarrollo_entorno_cliente/Tema6/ejemplos/T6E4Location/.vscode/launch.json)
 
 
@@ -1324,7 +1639,10 @@
 
 ####### SCRIPTS
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE SCRIPTS
+
 - 📄 [location.js](desarrollo_entorno_cliente/Tema6/ejemplos/T6E4Location/scripts/location.js)
 
 
@@ -1332,7 +1650,10 @@
 
 ###### T6E1WINDOW
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE T6E1WINDOW
+
 - 📂 [scripts](desarrollo_entorno_cliente/Tema6/ejemplos/T6E1Window/scripts)
 - 📄 [index.html](desarrollo_entorno_cliente/Tema6/ejemplos/T6E1Window/index.html)
 
@@ -1341,7 +1662,10 @@
 
 ####### .VSCODE
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE .VSCODE
+
 - 📄 [launch.json](desarrollo_entorno_cliente/Tema6/ejemplos/T6E1Window/.vscode/launch.json)
 
 
@@ -1349,7 +1673,10 @@
 
 ####### SCRIPTS
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE SCRIPTS
+
 - 📄 [bom.js](desarrollo_entorno_cliente/Tema6/ejemplos/T6E1Window/scripts/bom.js)
 - 📄 [location.js](desarrollo_entorno_cliente/Tema6/ejemplos/T6E1Window/scripts/location.js)
 
@@ -1358,7 +1685,10 @@
 
 ###### T6E5HISTORY
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE T6E5HISTORY
+
 - 📂 [scripts](desarrollo_entorno_cliente/Tema6/ejemplos/T6E5History/scripts)
 - 📄 [index.html](desarrollo_entorno_cliente/Tema6/ejemplos/T6E5History/index.html)
 
@@ -1367,7 +1697,10 @@
 
 ####### .VSCODE
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE .VSCODE
+
 - 📄 [launch.json](desarrollo_entorno_cliente/Tema6/ejemplos/T6E5History/.vscode/launch.json)
 
 
@@ -1375,7 +1708,10 @@
 
 ####### SCRIPTS
 
-######## 📑 Índice de Archivos (Automático)
+
+
+######## MATERIAL DE SCRIPTS
+
 - 📄 [history.js](desarrollo_entorno_cliente/Tema6/ejemplos/T6E5History/scripts/history.js)
 
 
@@ -1385,8 +1721,11 @@
 - [EJEMPLO 1 JSON](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema8/ejemplo1)
 - [EJEMPLO 2 JSON TIENDA VIRTUAL](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema8/ejemplo2JSONTiendaVirtual)
 
-##### 📑 Índice de Archivos (Automático)
-- 📂 [ejemplo1 JSON](desarrollo_entorno_cliente/Tema8/ejemplo1 JSON)
+
+
+##### MATERIAL DE TEMA8
+
+- 📂 [ejemplo1 JSON](desarrollo_entorno_cliente/Tema8/ejemplo1%20JSON)
 - 📂 [ejemplo2JSONTiendaVirtual](desarrollo_entorno_cliente/Tema8/ejemplo2JSONTiendaVirtual)
 
 
@@ -1394,7 +1733,10 @@
 
 ##### EJEMPLO2JSONTIENDAVIRTUAL
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE EJEMPLO2JSONTIENDAVIRTUAL
+
 - 📂 [estilos](desarrollo_entorno_cliente/Tema8/ejemplo2JSONTiendaVirtual/estilos)
 - 📂 [imagenes](desarrollo_entorno_cliente/Tema8/ejemplo2JSONTiendaVirtual/imagenes)
 - 📂 [json](desarrollo_entorno_cliente/Tema8/ejemplo2JSONTiendaVirtual/json)
@@ -1406,7 +1748,10 @@
 
 ###### SCRIPTS
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE SCRIPTS
+
 - 📄 [generarProductos.js](desarrollo_entorno_cliente/Tema8/ejemplo2JSONTiendaVirtual/scripts/generarProductos.js)
 - 📄 [generarProductos2.js](desarrollo_entorno_cliente/Tema8/ejemplo2JSONTiendaVirtual/scripts/generarProductos2.js)
 - 📄 [generarProductos3.js](desarrollo_entorno_cliente/Tema8/ejemplo2JSONTiendaVirtual/scripts/generarProductos3.js)
@@ -1416,7 +1761,10 @@
 
 ###### JSON
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE JSON
+
 - 📄 [respuesta.json](desarrollo_entorno_cliente/Tema8/ejemplo2JSONTiendaVirtual/json/respuesta.json)
 
 
@@ -1424,7 +1772,10 @@
 
 ###### IMAGENES
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE IMAGENES
+
 - 📄 [imagen1.jpg](desarrollo_entorno_cliente/Tema8/ejemplo2JSONTiendaVirtual/imagenes/imagen1.jpg)
 - 📄 [imagen2.jpg](desarrollo_entorno_cliente/Tema8/ejemplo2JSONTiendaVirtual/imagenes/imagen2.jpg)
 - 📄 [imagen3.jpg](desarrollo_entorno_cliente/Tema8/ejemplo2JSONTiendaVirtual/imagenes/imagen3.jpg)
@@ -1434,7 +1785,10 @@
 
 ###### ESTILOS
 
-####### 📑 Índice de Archivos (Automático)
+
+
+####### MATERIAL DE ESTILOS
+
 - 📄 [estilo.css](desarrollo_entorno_cliente/Tema8/ejemplo2JSONTiendaVirtual/estilos/estilo.css)
 
 
@@ -1442,6 +1796,9 @@
 
 ##### EJEMPLO1 JSON
 
-###### 📑 Índice de Archivos (Automático)
+
+
+###### MATERIAL DE EJEMPLO1 JSON
+
 - 📄 [index.html](desarrollo_entorno_cliente/Tema8/ejemplo1 JSON/index.html)
 - 📄 [script.js](desarrollo_entorno_cliente/Tema8/ejemplo1 JSON/script.js)

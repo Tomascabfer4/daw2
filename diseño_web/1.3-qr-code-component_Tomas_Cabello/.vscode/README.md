@@ -1,4 +1,7 @@
 # .VSCODE
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE .VSCODE
+
 - 📄 [settings.json](./settings.json)

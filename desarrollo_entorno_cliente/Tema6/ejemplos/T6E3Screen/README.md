@@ -1,5 +1,8 @@
 # T6E3SCREEN
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE T6E3SCREEN
+
 - 📂 [scripts](./scripts)
 - 📄 [index.html](./index.html)

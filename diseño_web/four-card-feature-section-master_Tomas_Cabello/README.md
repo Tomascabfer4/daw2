@@ -90,9 +90,10 @@ This challenge is completely free. Please share it with anyone who will find it 
 
 **Have fun building!** 🚀
 
-## 📑 Índice de Archivos (Automático)
-- 📂 [design](./design)
+
+
+## MATERIAL DE FOUR CARD FEATURE SECTION MASTER TOMAS CABELLO
+
 - 📄 [README-template.md](./README-template.md)
 - 📄 [index.html](./index.html)
-- 📄 [style-guide.md](./style-guide.md)
 - 📄 [style.css](./style.css)

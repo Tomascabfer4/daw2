@@ -1,5 +1,8 @@
 # PRACTICABINGO
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE PRACTICABINGO
+
 - 📄 [PRACTICABINGO.html](./PRACTICABINGO.html)
 - 📄 [PRACTICABINGO.js](./PRACTICABINGO.js)

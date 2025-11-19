@@ -1,6 +1,9 @@
 # EJEMPLO2JSONTIENDAVIRTUAL
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE EJEMPLO2JSONTIENDAVIRTUAL
+
 - 📂 [estilos](./estilos)
 - 📂 [imagenes](./imagenes)
 - 📂 [json](./json)

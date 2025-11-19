@@ -90,10 +90,11 @@ This challenge is completely free. Please share it with anyone who will find it 
 
 **Have fun building!** 🚀
 
-## 📑 Índice de Archivos (Automático)
-- 📂 [design](./design)
+
+
+## MATERIAL DE 1.4 ORDER SUMMARY COMPONENT TOMAS CABELLO
+
 - 📄 [README-template.md](./README-template.md)
 - 📄 [index.html](./index.html)
 - 📄 [preview.jpg](./preview.jpg)
-- 📄 [style-guide.md](./style-guide.md)
 - 📄 [styles.css](./styles.css)

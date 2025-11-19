@@ -1,4 +1,7 @@
 # SCRIPTS
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE SCRIPTS
+
 - 📄 [screen.js](./screen.js)

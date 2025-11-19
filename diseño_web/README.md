@@ -23,7 +23,10 @@
 - [position-css](https://github.com/Tomascabfer4/daw2/tree/main/dise%C3%B1o_web/position-css)
 - [reloj-analogico](https://github.com/Tomascabfer4/daw2/tree/main/dise%C3%B1o_web/reloj-analogico_Tomas_Cabello)
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE DISEÑO WEB
+
 - 📂 [1.3-qr-code-component_Tomas_Cabello](./1.3-qr-code-component_Tomas_Cabello)
 - 📂 [1.3bis-blog-preview-card_Tomas_Cabello](./1.3bis-blog-preview-card_Tomas_Cabello)
 - 📂 [1.4-order-summary-component-Tomas_Cabello](./1.4-order-summary-component-Tomas_Cabello)

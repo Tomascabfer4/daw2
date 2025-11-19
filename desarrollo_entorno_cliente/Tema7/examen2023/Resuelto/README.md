@@ -1,6 +1,9 @@
 # RESUELTO
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE RESUELTO
+
 - 📂 [estilos](./estilos)
 - 📂 [imagenes](./imagenes)
 - 📂 [scripts](./scripts)

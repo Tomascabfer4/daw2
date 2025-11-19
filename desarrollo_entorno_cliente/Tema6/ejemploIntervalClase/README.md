@@ -1,5 +1,8 @@
 # EJEMPLOINTERVALCLASE
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE EJEMPLOINTERVALCLASE
+
 - 📄 [index.html](./index.html)
 - 📄 [script.js](./script.js)

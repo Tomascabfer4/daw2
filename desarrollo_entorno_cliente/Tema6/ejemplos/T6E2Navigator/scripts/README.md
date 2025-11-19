@@ -1,4 +1,7 @@
 # SCRIPTS
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE SCRIPTS
+
 - 📄 [navigator.js](./navigator.js)

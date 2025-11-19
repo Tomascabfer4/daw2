@@ -1,6 +1,9 @@
 # WEBDECOMPRAS
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE WEBDECOMPRAS
+
 - 📄 [carrito.png](./carrito.png)
 - 📄 [webDeCompras.css](./webDeCompras.css)
 - 📄 [webDeCompras.html](./webDeCompras.html)

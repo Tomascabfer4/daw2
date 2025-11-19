@@ -1,5 +1,8 @@
 # T6E6TEMPORIZADORES
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE T6E6TEMPORIZADORES
+
 - 📂 [scripts](./scripts)
 - 📄 [index.html](./index.html)

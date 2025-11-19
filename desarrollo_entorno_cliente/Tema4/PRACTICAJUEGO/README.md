@@ -1,5 +1,8 @@
 # PRACTICAJUEGO
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE PRACTICAJUEGO
+
 - 📄 [PRACTICAJUEGO.html](./PRACTICAJUEGO.html)
 - 📄 [PRACTICAJUEGO.js](./PRACTICAJUEGO.js)

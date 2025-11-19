@@ -1,5 +1,8 @@
 # T6E1WINDOW
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE T6E1WINDOW
+
 - 📂 [scripts](./scripts)
 - 📄 [index.html](./index.html)

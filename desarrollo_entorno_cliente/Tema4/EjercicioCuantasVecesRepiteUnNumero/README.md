@@ -1,5 +1,8 @@
 # EJERCICIOCUANTASVECESREPITEUNNUMERO
 
-## 📑 Índice de Archivos (Automático)
+
+
+## MATERIAL DE EJERCICIOCUANTASVECESREPITEUNNUMERO
+
 - 📄 [RepiteNumero.html](./RepiteNumero.html)
 - 📄 [RepiteNumero.js](./RepiteNumero.js)
