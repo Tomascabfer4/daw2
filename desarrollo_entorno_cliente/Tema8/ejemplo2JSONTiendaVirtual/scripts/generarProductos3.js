@@ -1,6 +1,4 @@
-fetch('json/respuesta.json')
-  .then(response)
-
+fetch("json/respuesta.json").then(response);
 
 const botonMostrar = document.getElementById("mostrar");
 botonMostrar.addEventListener("click", () => {
@@ -29,7 +27,7 @@ const cargarProductos = () => {
     nuevoProducto.children[0].src = producto.imagen;
     nuevoProducto.children[1].innerText = producto.nombre;
     nuevoProducto.children[2].innerText = producto.caracteristicas.precio;
-    nuevoProducto.children[3].innerText = producto.caracteristicas.modelo
+    nuevoProducto.children[3].innerText = producto.caracteristicas.modelo;
     contenedorCentral.appendChild(nuevoProducto);
   });
 };

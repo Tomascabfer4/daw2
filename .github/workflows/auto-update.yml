@@ -1,0 +1,43 @@
+name: Actualizar Todo (READMEs Interiores y Principal)
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md' 
+      # Ignoramos el README principal para no hacer bucle, 
+      # pero el script sí detectará cambios en los interiores.
+
+permissions:
+  contents: write
+
+jobs:
+  update-structure:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Ejecutar Script Maestro
+        run: python script.py
+
+      - name: Guardar cambios (Commit & Push)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # AÑADIMOS TODO (Nuevos readmes, imagenes, cambios en principal, etc)
+          git add .
+          
+          # Si no hay cambios, no falla. Si los hay, los sube.
+          git commit -m "Auto-update: Estructura y READMEs actualizados 🤖 [skip ci]" || exit 0
+          git push
