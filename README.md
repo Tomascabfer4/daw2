@@ -6,7 +6,7 @@
 
 ---
 
-# 📂 DESARROLLO_ENTORNO_CLIENTE
+## 📂 DESARROLLO_ENTORNO_CLIENTE
 
 # MATERIAL DE DESARROLLO WEB EN ENTORNO CLIENTE
 
@@ -18,7 +18,7 @@
 - [Tema 7](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema7)
 - [Tema 8](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema8)
 
-## 📂 TEMA3
+### 📂 TEMA3
 
 # MATERIAL DEL TEMA 3
 - [PRACTICA 1](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema3/PRACTICA1)
@@ -26,7 +26,7 @@
 - [PRACTICA 3](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema3/PRACTICA3)
 - [PRACTICA 4](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema3/PRACTICA4)
 
-## 📂 TEMA4
+### 📂 TEMA4
 
 # MATERIAL DEL TEMA 4
 - [EJERCICIO CARTON](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema4/EjercicioCarton)
@@ -35,7 +35,7 @@
 - [PRACTICA BINGO](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema4/PRACTICABINGO)
 - [PRACTICA JUEGO](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema4/PRACTICAJUEGO)
 
-## 📂 TEMA6
+### 📂 TEMA6
 
 # MATERIAL DEL TEMA 6
 - [PRIMEROS EJEMPLOS DOM](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema6/PrimerosEjemplosDOM)
@@ -45,7 +45,7 @@
 - [PRACTICA 2 TEMA 6](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema6/practica2Tema6)
 - [WEB DE COMPRAS](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema6/webDeCompras)
 
-## 📂 TEMA7
+### 📂 TEMA7
 
 # MATERIAL DEL TEMA 7
 - [CRONOMETRO](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema7/Cronometro)
@@ -58,7 +58,7 @@
 - [SIMULACRO DE EXAMEN](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema7/SimulacroDeExamen)
 - [SIMULACRO DE EXAMEN 2](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema7/SimulacroDeExamen2)
 
-## 📂 TEMA8
+### 📂 TEMA8
 
 # MATERIAL DEL TEMA 8
 - [EJEMPLO 1 JSON](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema8/ejemplo1)
@@ -66,7 +66,7 @@
 
 ---
 
-# 📂 DESARROLLO_ENTORNO_SERVIDOR
+## 📂 DESARROLLO_ENTORNO_SERVIDOR
 
 # MATERIAL DE DESARROLLO WEB EN ENTORNO SERVIDOR
 
@@ -74,7 +74,7 @@
 - [TEMA 2](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_servidor/Tema2)
 
 
-## 📂 TEMA1
+### 📂 TEMA1
 
 # Tema 1
 
@@ -82,7 +82,7 @@
 - [Protocolo HTTP/HTTPS](https://github.com/Tomascabfer4/daw2/blob/main/desarrollo_entorno_servidor/Tema1/Protocolo_HTTP_HTTPS_Cabello_Tom%C3%A1s.pdf)
 
 
-## 📂 TEMA2
+### 📂 TEMA2
 
 # MATERIAL DE DESARROLLO WEB EN ENTORNO SERVIDOR
 
@@ -95,7 +95,7 @@
 
 ---
 
-# 📂 DESPLIEGUE_WEB
+## 📂 DESPLIEGUE_WEB
 
 # MATERIAL DE DESPLIEGUE WEB
 
@@ -103,7 +103,7 @@
 - [FTP](https://github.com/Tomascabfer4/daw2/tree/main/despliegue_web/Ftp)
 
 
-## 📂 APACHE
+### 📂 APACHE
 
 # MATERIAL DE APACHE
 
@@ -111,7 +111,7 @@
 - [Tutorial de la Practica](https://github.com/Tomascabfer4/daw2/blob/main/despliegue_web/Apache/A1_Instalacion_Configuracion_apache.pdf)
 - [Practica Desarrollada](https://github.com/Tomascabfer4/daw2/blob/main/despliegue_web/Apache/2DAW_U2_A1_Cabello_Fern%C3%A1ndez_Tom%C3%A1s.pdf)
 
-## 📂 FTP
+### 📂 FTP
 
 # MATERIAL DE FTP
 
@@ -123,7 +123,7 @@
 
 ---
 
-# 📂 DIGITALIZACION
+## 📂 DIGITALIZACION
 
 # MATERIAL DE DIGITALIZACIÓN
 
@@ -132,7 +132,7 @@
 - [Tema 2 F](https://github.com/Tomascabfer4/daw2/blob/main/digitalizacion/Tema%202%20F.pdf)
 
 
-## 📂 RETO PROFESIONAL TEMA 2
+### 📂 RETO PROFESIONAL TEMA 2
 
 # RETO PROFESIONAL TEMA 2
 
@@ -143,7 +143,7 @@
 
 ---
 
-# 📂 DISEÑO_WEB
+## 📂 DISEÑO_WEB
 
 # MATERIAL DE DISEÑO DE INTERFACES WEB
 
@@ -172,21 +172,21 @@
 
 ---
 
-# 📂 OPTATIVA
+## 📂 OPTATIVA
 
 # MATERIAL DE OPTATIVA (PYTHON)
 - [Manual de Python](https://github.com/Tomascabfer4/daw2/blob/main/optativa/manual_python.pdf)
 - [Unidad 1](https://github.com/Tomascabfer4/daw2/tree/main/optativa/U1)
 - [Unidad 2](https://github.com/Tomascabfer4/daw2/tree/main/optativa/U2)
 
-## 📂 U1
+### 📂 U1
 
 # MATERIAL DE LA UNIDAD 1
 - [Actividad 1](https://github.com/Tomascabfer4/daw2/tree/main/optativa/U1/Ut1A1)
 - [Actividad 2](https://github.com/Tomascabfer4/daw2/tree/main/optativa/U1/Ut1A2)
 - [Actividad 3](https://github.com/Tomascabfer4/daw2/tree/main/optativa/U1/Ut1A3)
 
-## 📂 U2
+### 📂 U2
 
 # MATERIAL DE LA UNIDAD 2
 - [Actividad 1](https://github.com/Tomascabfer4/daw2/tree/main/optativa/U2/U21A1)
@@ -196,7 +196,7 @@
 
 ---
 
-# 📂 PROYECTOS
+## 📂 PROYECTOS
 
 # PROYECTOS DE DESARROLLO DE APLICACIONES WEB
 
@@ -210,7 +210,7 @@
 
 ---
 
-# 📂 SOSTENIBILIDAD
+## 📂 SOSTENIBILIDAD
 
 # MATERIAL DE SOSTENIBILIDAD
 - [Poster ODS](https://github.com/Tomascabfer4/daw2/blob/main/sostenibilidad/Poster_ODS_Tomas_Cabello.png)
