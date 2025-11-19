@@ -60,7 +60,7 @@ def get_file_list_markdown(dirpath):
     return "\n".join(sorted(items))
 
 def update_sub_readmes():
-    """ FASE 1: Actualiza READMEs y LIMPIA DUPLICADOS """
+    """ FASE 1: Actualiza READMEs y LIMPIA DUPLICADOS (Blindado) """
     root_dir = os.getcwd()
     print("--- FASE 1: Limpiando y Actualizando READMEs ---")
     
@@ -77,24 +77,34 @@ def update_sub_readmes():
 
         current_content = ""
         if os.path.exists(readme_path):
+            # errors='ignore' evita cuelgues por caracteres raros
             with open(readme_path, 'r', encoding='utf-8', errors='ignore') as f:
                 current_content = f.read()
 
         manual_content = current_content
 
-        # --- ✂️ LA PODADORA (LIMPIEZA DE DUPLICADOS) ✂️ ---
+        # --- ✂️ LA PODADORA SEGURA ✂️ ---
         
-        # 1. Cortar por la marca invisible (si existe)
-        if HIDDEN_MARKER in manual_content:
-            manual_content = manual_content.split(HIDDEN_MARKER)[0]
+        # 1. Cortar por la marca invisible (SOLO SI NO ESTÁ VACÍA)
+        # El cambio clave está aquí: "if HIDDEN_MARKER and ..."
+        if HIDDEN_MARKER and HIDDEN_MARKER in manual_content:
+            try:
+                manual_content = manual_content.split(HIDDEN_MARKER)[0]
+            except ValueError:
+                pass # Si falla, no hacemos nada
 
-        # 2. Cortar por el título antiguo
-        if OLD_HEADER_TO_DELETE in manual_content:
-             manual_content = manual_content.split(OLD_HEADER_TO_DELETE)[0]
+        # 2. Cortar por el título antiguo (SOLO SI NO ESTÁ VACÍO)
+        if OLD_HEADER_TO_DELETE and OLD_HEADER_TO_DELETE in manual_content:
+             try:
+                manual_content = manual_content.split(OLD_HEADER_TO_DELETE)[0]
+             except ValueError:
+                pass
         
         # 3. CRUCIAL: Cortar por CUALQUIER título "MATERIAL DE..." duplicado
-        # Esto busca "## MATERIAL DE loquesea" y corta el archivo justo antes
-        manual_content = re.split(r'^## MATERIAL DE .*', manual_content, flags=re.MULTILINE)[0]
+        try:
+            manual_content = re.split(r'^## MATERIAL DE .*', manual_content, flags=re.MULTILINE)[0]
+        except Exception:
+            pass
 
         # ----------------------------------------------------
 
@@ -104,7 +114,9 @@ def update_sub_readmes():
              manual_content = f"# {clean_name}"
 
         dynamic_header = f"## MATERIAL DE {clean_name}"
-        marker_safe = HIDDEN_MARKER
+        
+        # Aseguramos que siempre haya un marker, incluso si la variable falló
+        marker_safe = HIDDEN_MARKER if HIDDEN_MARKER else ""
         
         final_content = f"{manual_content}\n\n{marker_safe}\n\n{dynamic_header}\n\n{new_list_content}\n"
 
