@@ -85,3 +85,11 @@ We love receiving feedback! We're always looking to improve our challenges and o
 This challenge is completely free. Please share it with anyone who will find it useful for practice.
 
 **Have fun building!** 🚀
+
+## 📑 Índice de Archivos (Automático)
+- 📂 [design](./design)
+- 📄 [README-template.md](./README-template.md)
+- 📄 [index.html](./index.html)
+- 📄 [preview.jpg](./preview.jpg)
+- 📄 [style-guide.md](./style-guide.md)
+- 📄 [style.css](./style.css)
