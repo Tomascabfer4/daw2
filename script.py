@@ -13,8 +13,7 @@ OLD_HEADER_TO_DELETE = "## 📑 Índice de Archivos (Automático)"
 IGNORE_DIRS = ['.git', '.github', '__pycache__', 'node_modules', '.next', 'images', 'img', 'assets', 'design', '.vscode']
 IGNORE_FILES = ['README.md', 'script.py', '.DS_Store', 'Thumbs.db', '.gitignore', 'LICENSE', 'style-guide.md']
 
-# Si una carpeta contiene archivos con estas extensiones, SE CONSIDERA UN EJERCICIO
-# y NO se generará un apartado propio en el README principal.
+# Extensiones de ejercicios
 EXERCISE_EXTENSIONS = ['.html', '.js', '.css', '.py', '.java', '.php', '.ts', '.jsx', '.tsx', '.json', '.xml']
 
 IGNORE_PHRASES_MERGE = [
@@ -25,19 +24,13 @@ IGNORE_PHRASES_MERGE = [
 # ---------------------
 
 def is_exercise_folder(dirpath, filenames):
-    """
-    Detecta si una carpeta es un Ejercicio/Proyecto final (hoja)
-    mirando si contiene código directamente.
-    """
-    # Si la carpeta se llama "ejemplos" o "practicas", suele ser estructural, no un ejercicio en sí
+    """ Detecta si es carpeta de ejercicio para NO crearle README """
     folder_name = os.path.basename(dirpath).lower()
     if folder_name in ['ejemplos', 'practicas', 'ejercicios', 'projects']:
         return False
-
     for f in filenames:
         if f == 'script.py': continue
         _, ext = os.path.splitext(f)
-        # Si encontramos código (.html, .js...), asumimos que es una carpeta de tarea
         if ext.lower() in EXERCISE_EXTENSIONS:
             return True
     return False
@@ -52,7 +45,6 @@ def get_file_list_markdown(dirpath):
     try:
         for entry in os.listdir(dirpath):
             full_path = os.path.join(dirpath, entry)
-            
             if entry in IGNORE_FILES: continue
             if entry in IGNORE_DIRS: continue
             if entry.startswith('.'): continue
@@ -60,35 +52,27 @@ def get_file_list_markdown(dirpath):
             display_name = entry
             link_safe = urllib.parse.quote(entry)
             link = f"./{link_safe}"
-            
             icon = "📂" if os.path.isdir(full_path) else "📄"
             items.append(f"- {icon} [{display_name}]({link})")
-            
     except Exception as e:
         print(f"[ERROR] Listando {dirpath}: {e}")
         return ""
-    
     return "\n".join(sorted(items))
 
 def update_sub_readmes():
-    """ FASE 1: Actualiza READMEs, pero IGNORA las carpetas que parecen ejercicios """
+    """ FASE 1: Actualiza READMEs y LIMPIA DUPLICADOS """
     root_dir = os.getcwd()
-    print("--- FASE 1: Actualizando sub-READMEs ---")
+    print("--- FASE 1: Limpiando y Actualizando READMEs ---")
     
     for dirpath, dirnames, filenames in os.walk(root_dir):
         dirnames[:] = [d for d in dirnames if d not in IGNORE_DIRS]
-        
         if dirpath == root_dir: continue
 
-        # NUEVO FILTRO: Si es carpeta de ejercicio, NO creamos README dentro
-        # (A menos que ya exista uno manual, pero el robot no lo tocará)
         if is_exercise_folder(dirpath, filenames):
-            # print(f"[SKIP FASE 1] Detectado ejercicio: {os.path.basename(dirpath)}")
             continue
 
         readme_path = os.path.join(dirpath, "README.md")
         new_list_content = get_file_list_markdown(dirpath)
-        
         if not new_list_content: continue
 
         current_content = ""
@@ -97,10 +81,22 @@ def update_sub_readmes():
                 current_content = f.read()
 
         manual_content = current_content
-        if HIDDEN_MARKER and HIDDEN_MARKER in manual_content:
+
+        # --- ✂️ LA PODADORA (LIMPIEZA DE DUPLICADOS) ✂️ ---
+        
+        # 1. Cortar por la marca invisible (si existe)
+        if HIDDEN_MARKER in manual_content:
             manual_content = manual_content.split(HIDDEN_MARKER)[0]
-        if OLD_HEADER_TO_DELETE and OLD_HEADER_TO_DELETE in manual_content:
+
+        # 2. Cortar por el título antiguo
+        if OLD_HEADER_TO_DELETE in manual_content:
              manual_content = manual_content.split(OLD_HEADER_TO_DELETE)[0]
+        
+        # 3. CRUCIAL: Cortar por CUALQUIER título "MATERIAL DE..." duplicado
+        # Esto busca "## MATERIAL DE loquesea" y corta el archivo justo antes
+        manual_content = re.split(r'^## MATERIAL DE .*', manual_content, flags=re.MULTILINE)[0]
+
+        # ----------------------------------------------------
 
         manual_content = manual_content.strip()
         clean_name = get_clean_folder_name(dirpath)
@@ -108,7 +104,8 @@ def update_sub_readmes():
              manual_content = f"# {clean_name}"
 
         dynamic_header = f"## MATERIAL DE {clean_name}"
-        marker_safe = HIDDEN_MARKER if HIDDEN_MARKER else ""
+        marker_safe = HIDDEN_MARKER
+        
         final_content = f"{manual_content}\n\n{marker_safe}\n\n{dynamic_header}\n\n{new_list_content}\n"
 
         with open(readme_path, 'w', encoding='utf-8') as f:
@@ -147,9 +144,7 @@ def merge_readmes():
     for dirpath, dirnames, filenames in os.walk(root_dir):
         if '.git' in dirpath: continue
         
-        # NUEVO FILTRO: Si es ejercicio, NO lo añadimos al README principal
         if is_exercise_folder(dirpath, filenames):
-            # print(f"[SKIP FASE 2] Saltando ejercicio: {os.path.basename(dirpath)}")
             continue
 
         if 'README.md' in filenames:
