@@ -1,0 +1,15 @@
+# UT1A2
+
+## 📑 Índice de Archivos (Automático)
+- 📄 [Ut1A2.pdf](./Ut1A2.pdf)
+- 📄 [Ut1A2_1.py](./Ut1A2_1.py)
+- 📄 [Ut1A2_10.py](./Ut1A2_10.py)
+- 📄 [Ut1A2_11.py](./Ut1A2_11.py)
+- 📄 [Ut1A2_2.py](./Ut1A2_2.py)
+- 📄 [Ut1A2_3.py](./Ut1A2_3.py)
+- 📄 [Ut1A2_4.py](./Ut1A2_4.py)
+- 📄 [Ut1A2_5.py](./Ut1A2_5.py)
+- 📄 [Ut1A2_6.py](./Ut1A2_6.py)
+- 📄 [Ut1A2_7.py](./Ut1A2_7.py)
+- 📄 [Ut1A2_8.py](./Ut1A2_8.py)
+- 📄 [Ut1A2_9.py](./Ut1A2_9.py)

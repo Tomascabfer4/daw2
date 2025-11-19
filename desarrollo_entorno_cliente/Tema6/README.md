@@ -5,3 +5,11 @@
 - [EJEMPLOS](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema6/ejemplos)
 - [PRACTICA 2 TEMA 6](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema6/practica2Tema6)
 - [WEB DE COMPRAS](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_cliente/Tema6/webDeCompras)
+
+## 📑 Índice de Archivos (Automático)
+- 📂 [PrimerosEjemplosDOM](./PrimerosEjemplosDOM)
+- 📂 [ejemploIntervalClase](./ejemploIntervalClase)
+- 📂 [ejemploVectorConImagenes](./ejemploVectorConImagenes)
+- 📂 [ejemplos](./ejemplos)
+- 📂 [practica2Tema6](./practica2Tema6)
+- 📂 [webDeCompras](./webDeCompras)
