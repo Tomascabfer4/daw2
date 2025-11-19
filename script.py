@@ -5,12 +5,17 @@ import urllib.parse
 # --- CONFIGURACIÓN ---
 OUTPUT_FILENAME = "README.md"
 
-# IMPORTANTE: Estas variables NO pueden estar vacías
+# Marcas para el robot
 HIDDEN_MARKER = ""
 OLD_HEADER_TO_DELETE = "## 📑 Índice de Archivos (Automático)"
 
-IGNORE_DIRS = ['.git', '.github', '__pycache__', 'node_modules', '.next', 'images', 'img', 'assets', 'design']
+# Carpetas a ignorar
+IGNORE_DIRS = ['.git', '.github', '__pycache__', 'node_modules', '.next', 'images', 'img', 'assets', 'design', '.vscode']
 IGNORE_FILES = ['README.md', 'script.py', '.DS_Store', 'Thumbs.db', '.gitignore', 'LICENSE', 'style-guide.md']
+
+# Si una carpeta contiene archivos con estas extensiones, SE CONSIDERA UN EJERCICIO
+# y NO se generará un apartado propio en el README principal.
+EXERCISE_EXTENSIONS = ['.html', '.js', '.css', '.py', '.java', '.php', '.ts', '.jsx', '.tsx', '.json', '.xml']
 
 IGNORE_PHRASES_MERGE = [
     "Frontend Mentor",
@@ -18,6 +23,24 @@ IGNORE_PHRASES_MERGE = [
     "Welcome! 👋"
 ]
 # ---------------------
+
+def is_exercise_folder(dirpath, filenames):
+    """
+    Detecta si una carpeta es un Ejercicio/Proyecto final (hoja)
+    mirando si contiene código directamente.
+    """
+    # Si la carpeta se llama "ejemplos" o "practicas", suele ser estructural, no un ejercicio en sí
+    folder_name = os.path.basename(dirpath).lower()
+    if folder_name in ['ejemplos', 'practicas', 'ejercicios', 'projects']:
+        return False
+
+    for f in filenames:
+        if f == 'script.py': continue
+        _, ext = os.path.splitext(f)
+        # Si encontramos código (.html, .js...), asumimos que es una carpeta de tarea
+        if ext.lower() in EXERCISE_EXTENSIONS:
+            return True
+    return False
 
 def get_clean_folder_name(dirpath):
     raw_name = os.path.basename(dirpath)
@@ -48,7 +71,7 @@ def get_file_list_markdown(dirpath):
     return "\n".join(sorted(items))
 
 def update_sub_readmes():
-    """ FASE 1: Actualiza READMEs interiores """
+    """ FASE 1: Actualiza READMEs, pero IGNORA las carpetas que parecen ejercicios """
     root_dir = os.getcwd()
     print("--- FASE 1: Actualizando sub-READMEs ---")
     
@@ -57,6 +80,12 @@ def update_sub_readmes():
         
         if dirpath == root_dir: continue
 
+        # NUEVO FILTRO: Si es carpeta de ejercicio, NO creamos README dentro
+        # (A menos que ya exista uno manual, pero el robot no lo tocará)
+        if is_exercise_folder(dirpath, filenames):
+            # print(f"[SKIP FASE 1] Detectado ejercicio: {os.path.basename(dirpath)}")
+            continue
+
         readme_path = os.path.join(dirpath, "README.md")
         new_list_content = get_file_list_markdown(dirpath)
         
@@ -64,32 +93,22 @@ def update_sub_readmes():
 
         current_content = ""
         if os.path.exists(readme_path):
-            # 'errors=ignore' para evitar fallos de codificación en Windows/Linux
             with open(readme_path, 'r', encoding='utf-8', errors='ignore') as f:
                 current_content = f.read()
 
-        # --- LÓGICA DE LIMPIEZA SEGURA ---
         manual_content = current_content
-
-        # PROTECCIÓN 1: Solo cortamos si la marca existe y NO está vacía
         if HIDDEN_MARKER and HIDDEN_MARKER in manual_content:
             manual_content = manual_content.split(HIDDEN_MARKER)[0]
-        
-        # PROTECCIÓN 2: Limpiamos el título viejo si existe
         if OLD_HEADER_TO_DELETE and OLD_HEADER_TO_DELETE in manual_content:
              manual_content = manual_content.split(OLD_HEADER_TO_DELETE)[0]
 
         manual_content = manual_content.strip()
-
         clean_name = get_clean_folder_name(dirpath)
         if not manual_content:
              manual_content = f"# {clean_name}"
 
         dynamic_header = f"## MATERIAL DE {clean_name}"
-        
-        # Aseguramos que marker no sea None
         marker_safe = HIDDEN_MARKER if HIDDEN_MARKER else ""
-
         final_content = f"{manual_content}\n\n{marker_safe}\n\n{dynamic_header}\n\n{new_list_content}\n"
 
         with open(readme_path, 'w', encoding='utf-8') as f:
@@ -127,6 +146,12 @@ def merge_readmes():
 
     for dirpath, dirnames, filenames in os.walk(root_dir):
         if '.git' in dirpath: continue
+        
+        # NUEVO FILTRO: Si es ejercicio, NO lo añadimos al README principal
+        if is_exercise_folder(dirpath, filenames):
+            # print(f"[SKIP FASE 2] Saltando ejercicio: {os.path.basename(dirpath)}")
+            continue
+
         if 'README.md' in filenames:
             if dirpath == root_dir: continue
 
@@ -134,14 +159,13 @@ def merge_readmes():
             relative_path = os.path.relpath(dirpath, root_dir)
             path_parts = relative_path.split(os.sep)
             depth = len(path_parts)
-            folder_name = os.path.basename(dirpath) # Necesario para el log
+            folder_name = os.path.basename(dirpath)
             
             try:
                 with open(readme_path, 'r', encoding='utf-8', errors='ignore') as f:
                     content = f.read()
 
                     if any(phrase in content for phrase in IGNORE_PHRASES_MERGE):
-                        # print(f"[SKIP] Ignorado: {folder_name}")
                         continue
 
                     content = fix_links(content, relative_path)
