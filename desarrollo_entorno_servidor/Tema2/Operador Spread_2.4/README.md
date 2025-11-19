@@ -1,4 +1,4 @@
-# OPERADOR SPREAD 2.4
+
 
 
 
