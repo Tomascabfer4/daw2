@@ -3,13 +3,16 @@ import re
 
 # --- CONFIGURACIÓN ---
 OUTPUT_FILENAME = "README.md"
-HEADER_AUTO_SECTION = "\n\n## 📑 Índice de Archivos (Automático)\n"
 
-# Carpetas y archivos que NO queremos listar en los índices
+# MARCA INVISIBLE: Esto permite al robot saber dónde escribir sin depender del texto del título
+# (No se ve en GitHub, pero está en el código del archivo)
+HIDDEN_MARKER = ""
+
+# Carpetas y archivos a ignorar
 IGNORE_DIRS = ['.git', '.github', '__pycache__', 'node_modules', '.next', 'images', 'img', 'assets']
-IGNORE_FILES = ['README.md', 'script.py', '.DS_Store', 'Thumbs.db', '.gitignore']
+IGNORE_FILES = ['README.md', 'script.py', '.DS_Store', 'Thumbs.db', '.gitignore', 'LICENSE']
 
-# Frases para ignorar en la fusión final (Frontend Mentor)
+# Frases a ignorar en la fusión final
 IGNORE_PHRASES_MERGE = [
     "Frontend Mentor",
     "Thanks for checking out this front-end coding challenge",
@@ -17,87 +20,89 @@ IGNORE_PHRASES_MERGE = [
 ]
 # ---------------------
 
+def get_clean_folder_name(dirpath):
+    """ Convierte 'desarrollo_entorno_cliente' en 'DESARROLLO ENTORNO CLIENTE' """
+    raw_name = os.path.basename(dirpath)
+    # Reemplazamos guiones bajos y guiones por espacios
+    clean_name = raw_name.replace("_", " ").replace("-", " ")
+    return clean_name.upper()
+
 def get_file_list_markdown(dirpath):
-    """ Genera una lista en Markdown de los archivos de la carpeta """
+    """ Genera la lista de archivos """
     items = []
     try:
-        # Listamos todo lo que hay en la carpeta
         for entry in os.listdir(dirpath):
             full_path = os.path.join(dirpath, entry)
             
-            # Filtros de exclusión
             if entry in IGNORE_FILES: continue
             if entry in IGNORE_DIRS: continue
-            if entry.startswith('.'): continue # Ignorar ocultos
+            if entry.startswith('.'): continue
             
-            # Crear enlace Markdown
-            # Si es carpeta, ponemos barra al final para distinguirlo
             display_name = entry
             link = f"./{entry}"
-            
-            # Iconos opcionales según tipo
             icon = "📂" if os.path.isdir(full_path) else "📄"
             
             items.append(f"- {icon} [{display_name}]({link})")
             
     except Exception as e:
-        print(f"[ERROR] Listando archivos de {dirpath}: {e}")
+        print(f"[ERROR] Listando {dirpath}: {e}")
         return ""
-        
-    return "\n".join(sorted(items)) # Ordenado alfabéticamente
+    
+    return "\n".join(sorted(items))
 
 def update_sub_readmes():
-    """ FASE 1: Recorre carpetas y actualiza sus README individuales """
+    """ FASE 1: Actualiza READMEs individuales con título dinámico """
     root_dir = os.getcwd()
-    print("--- FASE 1: Actualizando READMEs de subcarpetas ---")
+    print("--- FASE 1: Actualizando sub-READMEs ---")
     
     for dirpath, dirnames, filenames in os.walk(root_dir):
-        # Ignorar carpetas del sistema para no entrar en bucle
         dirnames[:] = [d for d in dirnames if d not in IGNORE_DIRS]
         
-        if dirpath == root_dir:
-            continue # No tocamos el raíz en esta fase
+        if dirpath == root_dir: continue
 
         readme_path = os.path.join(dirpath, "README.md")
         new_list_content = get_file_list_markdown(dirpath)
         
-        # Si la carpeta está vacía de archivos relevantes, pasamos
-        if not new_list_content:
-            continue
+        if not new_list_content: continue
 
         current_content = ""
-        
-        # Leemos el contenido actual si existe
         if os.path.exists(readme_path):
             with open(readme_path, 'r', encoding='utf-8') as f:
                 current_content = f.read()
 
-        # LOGICA DE REEMPLAZO INTELIGENTE
-        # Buscamos si ya existe nuestra sección automática
-        if "## 📑 Índice de Archivos (Automático)" in current_content:
-            # Cortamos el contenido justo antes del encabezado automático
-            # Mantenemos todo lo que el usuario escribió antes
+        # --- LÓGICA DEL CORTE ---
+        # 1. Buscamos la marca invisible nueva
+        if HIDDEN_MARKER in current_content:
+            parts = current_content.split(HIDDEN_MARKER)
+            manual_content = parts[0].strip()
+        
+        # 2. Compatibilidad: Si no hay marca, buscamos el título antiguo para borrarlo
+        elif "## 📑 Índice de Archivos (Automático)" in current_content:
             parts = current_content.split("## 📑 Índice de Archivos (Automático)")
             manual_content = parts[0].strip()
+        
+        # 3. Si es nuevo o no tiene nada
         else:
-            # Si no existe, asumimos que todo es manual
             manual_content = current_content.strip()
 
-        # Si no hay título manual, ponemos el nombre de la carpeta por defecto
+        # Si no hay contenido manual, ponemos título H1 por defecto
+        clean_name = get_clean_folder_name(dirpath)
         if not manual_content.strip():
-             folder_name = os.path.basename(dirpath).upper()
-             manual_content = f"# {folder_name}"
+             manual_content = f"# {clean_name}"
 
-        # Reconstruimos el archivo: Manual + Cabecera Auto + Lista Nueva
-        final_content = f"{manual_content}{HEADER_AUTO_SECTION}{new_list_content}\n"
+        # GENERAMOS EL TÍTULO DINÁMICO "MATERIAL DE..."
+        # Usamos ## para que sea un subtítulo dentro del README de la carpeta
+        dynamic_header = f"## MATERIAL DE {clean_name}"
 
-        # Guardamos
+        # Construimos el archivo final
+        # Manual + Marca Oculta + Título Dinámico + Lista
+        final_content = f"{manual_content}\n\n{HIDDEN_MARKER}\n\n{dynamic_header}\n\n{new_list_content}\n"
+
         with open(readme_path, 'w', encoding='utf-8') as f:
             f.write(final_content)
-            # print(f"[UPDATED] {os.path.relpath(readme_path)}")
 
 # ---------------------------------------------------------
-# FASE 2: EL CÓDIGO DE FUSIÓN QUE YA TENÍAMOS (MODIFICADO)
+# FASE 2: FUSIÓN AL PRINCIPAL
 # ---------------------------------------------------------
 
 def fix_links(content, folder_path):
@@ -116,15 +121,15 @@ def adjust_headers(content, depth):
     def replace_header(match):
         hashes = match.group(1)
         text = match.group(2)
+        # El contenido será siempre más pequeño que la carpeta contenedora
         new_hashes = "#" * (len(hashes) + depth + 1)
         return f"{new_hashes} {text}"
     return re.sub(r'^(#+)\s+(.*)', replace_header, content, flags=re.MULTILINE)
 
 def merge_readmes():
-    """ FASE 2: Genera el README principal """
     print("\n--- FASE 2: Generando README Principal ---")
     root_dir = os.getcwd()
-    full_content = "# Índice General de Asignaturas y Tareas\n\n> Índice y enlaces actualizados automáticamente.\n\n"
+    full_content = "# Índice General de Asignaturas y Tareas\n\n> Repositorio actualizado automáticamente.\n\n"
 
     for dirpath, dirnames, filenames in os.walk(root_dir):
         if '.git' in dirpath: continue
@@ -145,14 +150,20 @@ def merge_readmes():
                         print(f"[SKIP] Ignorado: {folder_name}")
                         continue
 
+                    # Procesamos contenido
                     content = fix_links(content, relative_path)
                     content = adjust_headers(content, depth)
 
+                    # Estructura del Índice Principal
                     header_hashes = "#" * (depth + 1)
                     if depth == 1: full_content += "\n\n---\n\n"
                     else: full_content += "\n\n"
 
-                    full_content += f"{header_hashes} 📂 {folder_name.upper()}\n\n"
+                    # Título de la carpeta
+                    # .replace para quitar guiones bajos en el título principal también
+                    display_folder_name = folder_name.replace("_", " ").upper()
+                    full_content += f"{header_hashes} 📂 {display_folder_name}\n\n"
+                    
                     full_content += content
                     print(f"[OK] Integrado: {folder_name}")
 
@@ -164,6 +175,5 @@ def merge_readmes():
     print(f"\n✨ PROCESO COMPLETADO.")
 
 if __name__ == "__main__":
-    # Ejecutamos las dos fases
-    update_sub_readmes() # 1. Crear enlaces en sub-readmes
-    merge_readmes()      # 2. Crear el readme gordo
+    update_sub_readmes()
+    merge_readmes()
