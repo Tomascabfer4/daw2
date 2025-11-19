@@ -5,194 +5,147 @@ import urllib.parse
 # --- CONFIGURACIÓN ---
 OUTPUT_FILENAME = "README.md"
 
-# Marcas para el robot
-HIDDEN_MARKER = ""
-OLD_HEADER_TO_DELETE = "## 📑 Índice de Archivos (Automático)"
+# MARCAS QUE BUSCAREMOS PARA CORTAR EL ARCHIVO
+# El script cortará el archivo en cuanto encuentre la PRIMERA de estas frases
+MARKERS_TO_CUT = [
+    "",
+    "## 📑 Índice de Archivos (Automático)",
+    "## MATERIAL DE" # Cortará cualquier cosa que empiece así
+]
 
-# Carpetas a ignorar
 IGNORE_DIRS = ['.git', '.github', '__pycache__', 'node_modules', '.next', 'images', 'img', 'assets', 'design', '.vscode']
 IGNORE_FILES = ['README.md', 'script.py', '.DS_Store', 'Thumbs.db', '.gitignore', 'LICENSE', 'style-guide.md']
-
-# Extensiones de ejercicios
 EXERCISE_EXTENSIONS = ['.html', '.js', '.css', '.py', '.java', '.php', '.ts', '.jsx', '.tsx', '.json', '.xml']
+IGNORE_PHRASES_MERGE = ["Frontend Mentor", "Thanks for checking out", "Welcome! 👋"]
 
-IGNORE_PHRASES_MERGE = [
-    "Frontend Mentor",
-    "Thanks for checking out this front-end coding challenge",
-    "Welcome! 👋"
-]
 # ---------------------
 
 def is_exercise_folder(dirpath, filenames):
-    """ Detecta si es carpeta de ejercicio para NO crearle README """
     folder_name = os.path.basename(dirpath).lower()
-    if folder_name in ['ejemplos', 'practicas', 'ejercicios', 'projects']:
-        return False
+    if folder_name in ['ejemplos', 'practicas', 'ejercicios', 'projects']: return False
     for f in filenames:
         if f == 'script.py': continue
         _, ext = os.path.splitext(f)
-        if ext.lower() in EXERCISE_EXTENSIONS:
-            return True
+        if ext.lower() in EXERCISE_EXTENSIONS: return True
     return False
 
 def get_clean_folder_name(dirpath):
-    raw_name = os.path.basename(dirpath)
-    clean_name = raw_name.replace("_", " ").replace("-", " ")
-    return clean_name.upper()
+    return os.path.basename(dirpath).replace("_", " ").replace("-", " ").upper()
 
 def get_file_list_markdown(dirpath):
     items = []
     try:
         for entry in os.listdir(dirpath):
-            full_path = os.path.join(dirpath, entry)
-            if entry in IGNORE_FILES: continue
-            if entry in IGNORE_DIRS: continue
-            if entry.startswith('.'): continue
+            if entry in IGNORE_FILES or entry in IGNORE_DIRS or entry.startswith('.'): continue
             
+            full_path = os.path.join(dirpath, entry)
             display_name = entry
-            link_safe = urllib.parse.quote(entry)
-            link = f"./{link_safe}"
+            link = f"./{urllib.parse.quote(entry)}"
             icon = "📂" if os.path.isdir(full_path) else "📄"
             items.append(f"- {icon} [{display_name}]({link})")
-    except Exception as e:
-        print(f"[ERROR] Listando {dirpath}: {e}")
+    except Exception:
         return ""
     return "\n".join(sorted(items))
 
+def sanitize_content(content):
+    """
+    Busca la posición más temprana de cualquier marca automática
+    y corta el string ahí para eliminar duplicados antiguos.
+    """
+    cut_index = len(content) # Por defecto, al final
+    found_cut = False
+
+    for marker in MARKERS_TO_CUT:
+        # Buscamos la marca en el texto
+        idx = content.find(marker)
+        # Si existe y está antes que el corte actual, actualizamos
+        if idx != -1 and idx < cut_index:
+            cut_index = idx
+            found_cut = True
+    
+    # Si encontramos algo, cortamos y devolvemos la parte limpia (manual)
+    if found_cut:
+        return content[:cut_index].strip()
+    
+    # Si no encontramos nada, devolvemos todo (asumimos que es todo manual)
+    return content.strip()
+
 def update_sub_readmes():
-    """ FASE 1: Actualiza READMEs y LIMPIA DUPLICADOS (Blindado) """
     root_dir = os.getcwd()
-    print("--- FASE 1: Limpiando y Actualizando READMEs ---")
+    print("--- FASE 1: Limpieza Nuclear de READMEs ---")
     
     for dirpath, dirnames, filenames in os.walk(root_dir):
         dirnames[:] = [d for d in dirnames if d not in IGNORE_DIRS]
         if dirpath == root_dir: continue
-
-        if is_exercise_folder(dirpath, filenames):
-            continue
+        if is_exercise_folder(dirpath, filenames): continue
 
         readme_path = os.path.join(dirpath, "README.md")
-        new_list_content = get_file_list_markdown(dirpath)
-        if not new_list_content: continue
+        new_list = get_file_list_markdown(dirpath)
+        if not new_list: continue
 
         current_content = ""
         if os.path.exists(readme_path):
-            # errors='ignore' evita cuelgues por caracteres raros
             with open(readme_path, 'r', encoding='utf-8', errors='ignore') as f:
                 current_content = f.read()
 
-        manual_content = current_content
+        # 1. LIMPIEZA: Nos quedamos solo con lo que hay ANTES del primer título automático
+        manual_content = sanitize_content(current_content)
 
-        # --- ✂️ LA PODADORA SEGURA ✂️ ---
-        
-        # 1. Cortar por la marca invisible (SOLO SI NO ESTÁ VACÍA)
-        # El cambio clave está aquí: "if HIDDEN_MARKER and ..."
-        if HIDDEN_MARKER and HIDDEN_MARKER in manual_content:
-            try:
-                manual_content = manual_content.split(HIDDEN_MARKER)[0]
-            except ValueError:
-                pass # Si falla, no hacemos nada
-
-        # 2. Cortar por el título antiguo (SOLO SI NO ESTÁ VACÍO)
-        if OLD_HEADER_TO_DELETE and OLD_HEADER_TO_DELETE in manual_content:
-             try:
-                manual_content = manual_content.split(OLD_HEADER_TO_DELETE)[0]
-             except ValueError:
-                pass
-        
-        # 3. CRUCIAL: Cortar por CUALQUIER título "MATERIAL DE..." duplicado
-        try:
-            manual_content = re.split(r'^## MATERIAL DE .*', manual_content, flags=re.MULTILINE)[0]
-        except Exception:
-            pass
-
-        # ----------------------------------------------------
-
-        manual_content = manual_content.strip()
+        # 2. Si no queda nada (porque no había notas manuales), ponemos título por defecto
         clean_name = get_clean_folder_name(dirpath)
         if not manual_content:
              manual_content = f"# {clean_name}"
 
-        dynamic_header = f"## MATERIAL DE {clean_name}"
-        
-        # Aseguramos que siempre haya un marker, incluso si la variable falló
-        marker_safe = HIDDEN_MARKER if HIDDEN_MARKER else ""
-        
-        final_content = f"{manual_content}\n\n{marker_safe}\n\n{dynamic_header}\n\n{new_list_content}\n"
+        # 3. REGENERACIÓN
+        final_content = f"{manual_content}\n\n\n\n## MATERIAL DE {clean_name}\n\n{new_list}\n"
 
         with open(readme_path, 'w', encoding='utf-8') as f:
             f.write(final_content)
 
-# ---------------------------------------------------------
-# FASE 2
-# ---------------------------------------------------------
-
+# --- FASE 2 (Igual que antes) ---
 def fix_links(content, folder_path):
-    def replace_match(match):
-        text_part = match.group(1)
-        link_part = match.group(2)
-        if link_part.startswith("http") or link_part.startswith("/") or link_part.startswith("#"):
-            return match.group(0)
-        clean_link = link_part.replace("./", "")
-        folder_path_clean = folder_path.replace("\\", "/")
-        new_path = f"{folder_path_clean}/{clean_link}"
-        return f"{text_part}({new_path})"
-    pattern = r'(\[.*?\]|\!\[.*?\])\((.*?)\)'
-    return re.sub(pattern, replace_match, content)
+    def replace(m):
+        t, l = m.group(1), m.group(2)
+        if l.startswith(("http", "/", "#")): return m.group(0)
+        return f"{t}({folder_path.replace(os.sep, '/')}/{l.replace('./', '')})"
+    return re.sub(r'(\[.*?\]|\!\[.*?\])\((.*?)\)', replace, content)
 
 def adjust_headers(content, depth):
-    def replace_header(match):
-        hashes = match.group(1)
-        text = match.group(2)
-        new_hashes = "#" * (len(hashes) + depth + 1)
-        return f"{new_hashes} {text}"
-    return re.sub(r'^(#+)\s+(.*)', replace_header, content, flags=re.MULTILINE)
+    return re.sub(r'^(#+)\s+(.*)', lambda m: f"{'#' * (len(m.group(1)) + depth + 1)} {m.group(2)}", content, flags=re.MULTILINE)
 
 def merge_readmes():
     print("\n--- FASE 2: Generando README Principal ---")
     root_dir = os.getcwd()
-    full_content = "# Índice General de Asignaturas y Tareas\n\n> Repositorio actualizado automáticamente.\n\n"
+    full_content = "# Índice General de Asignaturas y Tareas\n\n> Índice actualizado automáticamente.\n\n"
 
     for dirpath, dirnames, filenames in os.walk(root_dir):
         if '.git' in dirpath: continue
+        if is_exercise_folder(dirpath, filenames): continue
         
-        if is_exercise_folder(dirpath, filenames):
-            continue
-
-        if 'README.md' in filenames:
-            if dirpath == root_dir: continue
-
+        if 'README.md' in filenames and dirpath != root_dir:
             readme_path = os.path.join(dirpath, "README.md")
-            relative_path = os.path.relpath(dirpath, root_dir)
-            path_parts = relative_path.split(os.sep)
-            depth = len(path_parts)
-            folder_name = os.path.basename(dirpath)
-            
             try:
                 with open(readme_path, 'r', encoding='utf-8', errors='ignore') as f:
                     content = f.read()
-
-                    if any(phrase in content for phrase in IGNORE_PHRASES_MERGE):
-                        continue
-
-                    content = fix_links(content, relative_path)
+                    if any(p in content for p in IGNORE_PHRASES_MERGE): continue
+                    
+                    # Ajustes para el principal
+                    rel_path = os.path.relpath(dirpath, root_dir)
+                    depth = len(rel_path.split(os.sep))
+                    
+                    content = fix_links(content, rel_path)
                     content = adjust_headers(content, depth)
-
-                    header_hashes = "#" * (depth + 1)
-                    if depth == 1: full_content += "\n\n---\n\n"
-                    else: full_content += "\n\n"
-
-                    display_folder_name = get_clean_folder_name(dirpath)
-                    full_content += f"{header_hashes} 📂 {display_folder_name}\n\n"
-                    full_content += content
-                    print(f"[OK] Integrado: {folder_name}")
-
-            except Exception as e:
-                print(f"[ERROR] {relative_path}: {e}")
+                    
+                    hashes = "#" * (depth + 1)
+                    sep = "\n\n---\n\n" if depth == 1 else "\n\n"
+                    
+                    full_content += f"{sep}{hashes} 📂 {get_clean_folder_name(dirpath)}\n\n{content}"
+                    print(f"[OK] {os.path.basename(dirpath)}")
+            except Exception: pass
 
     with open(OUTPUT_FILENAME, 'w', encoding='utf-8') as f:
         f.write(full_content)
-    print(f"\n✨ PROCESO COMPLETADO.")
+    print("\n✨ TODO LIMPIO Y ORDENADO.")
 
 if __name__ == "__main__":
     update_sub_readmes()
