@@ -16,7 +16,6 @@ IGNORE_PHRASES_MERGE = ["Frontend Mentor", "Thanks for checking out", "Welcome! 
 # ---------------------
 
 def is_exercise_folder(dirpath, filenames):
-    """ Detecta si es carpeta de ejercicio """
     folder_name = os.path.basename(dirpath).lower()
     if folder_name in ['ejemplos', 'practicas', 'ejercicios', 'projects']: return False
     for f in filenames:
@@ -26,19 +25,15 @@ def is_exercise_folder(dirpath, filenames):
     return False
 
 def get_clean_folder_name(dirpath):
-    """ Nombre limpio y en mayúsculas """
     return os.path.basename(dirpath).replace("_", " ").replace("-", " ").upper()
 
 def get_file_list_markdown(dirpath):
-    """ Genera lista de archivos con enlaces seguros """
     items = []
     try:
         for entry in os.listdir(dirpath):
             if entry in IGNORE_FILES or entry in IGNORE_DIRS or entry.startswith('.'): continue
-            
             full_path = os.path.join(dirpath, entry)
             display_name = entry
-            # Encodificamos espacios para que el link funcione
             link_safe = urllib.parse.quote(entry)
             link = f"./{link_safe}"
             icon = "📂" if os.path.isdir(full_path) else "📄"
@@ -48,19 +43,26 @@ def get_file_list_markdown(dirpath):
     return "\n".join(sorted(items))
 
 def sanitize_content(content, clean_name):
-    """ Limpia el contenido manual de residuos anteriores """
-    # 1. Cortar por marcas conocidas
-    for marker in [HIDDEN_MARKER, OLD_HEADER_TO_DELETE]:
-        if marker in content:
-            content = content.split(marker)[0]
+    """ Limpia el contenido manual de residuos anteriores (BLINDADA) """
     
-    # 2. Cortar por regex de títulos automáticos
-    content = re.split(r'^## MATERIAL DE .*', content, flags=re.MULTILINE)[0]
+    # 1. Cortar por marcas conocidas (SOLO SI LA MARCA NO ES VACÍA)
+    # Esta es la parte que fallaba antes. Ahora lleva protección.
+    for marker in [HIDDEN_MARKER, OLD_HEADER_TO_DELETE]:
+        if marker and marker in content: # <--- PROTECCIÓN AÑADIDA
+            try:
+                content = content.split(marker)[0]
+            except ValueError:
+                pass # Si falla, ignora y sigue
+    
+    # 2. Cortar por regex de títulos automáticos (duplicados)
+    try:
+        content = re.split(r'^## MATERIAL DE .*', content, flags=re.MULTILINE)[0]
+    except Exception:
+        pass
     
     content = content.strip()
 
-    # 3. LIMPIEZA FINA: Si el contenido manual es SOLO el título de la carpeta (residuo), borrarlo.
-    # Ejemplo: Si queda "# TEMA 1" y nada más, lo borramos para no duplicar.
+    # 3. Si solo queda el título de la carpeta (residuo), borrarlo
     if content.replace("#", "").strip().upper() == clean_name:
         return ""
 
@@ -87,13 +89,9 @@ def update_sub_readmes():
 
         clean_name = get_clean_folder_name(dirpath)
         
-        # Limpiamos contenido manual previo
+        # Limpiamos contenido previo
         manual_content = sanitize_content(current_content, clean_name)
         
-        # Si había notas manuales reales, las dejamos. Si no, queda vacío.
-        # NO forzamos un título H1 aquí si está vacío, para evitar duplicidad en el Principal.
-
-        # Construimos el contenido
         dynamic_header = f"## MATERIAL DE {clean_name}"
         marker = HIDDEN_MARKER
         
@@ -105,19 +103,16 @@ def update_sub_readmes():
 # --- FASE 2 ---
 
 def fix_links(content, folder_path):
-    """ Ajusta rutas relativas para el README principal """
     def replace(m):
         t, l = m.group(1), m.group(2)
         if l.startswith(("http", "/", "#")): return m.group(0)
         folder_clean = folder_path.replace("\\", "/")
-        # Codificamos también la ruta de la carpeta por si tiene espacios
         folder_encoded = urllib.parse.quote(folder_clean)
         link_clean = l.replace("./", "")
         return f"{t}({folder_encoded}/{link_clean})"
     return re.sub(r'(\[.*?\]|\!\[.*?\])\((.*?)\)', replace, content)
 
 def adjust_headers(content, depth):
-    """ Ajusta tamaño de headers """
     return re.sub(r'^(#+)\s+(.*)', lambda m: f"{'#' * (len(m.group(1)) + depth + 1)} {m.group(2)}", content, flags=re.MULTILINE)
 
 def merge_readmes():
@@ -139,37 +134,27 @@ def merge_readmes():
                     rel_path = os.path.relpath(dirpath, root_dir)
                     depth = len(rel_path.split(os.sep))
                     
-                    # 1. Ajustar enlaces
                     content = fix_links(content, rel_path)
                     
-                    # 2. ELIMINAR EL TÍTULO AUTOMÁTICO DEL CONTENIDO
-                    # (Para que no salga duplicado debajo del header principal)
+                    # QUITAMOS EL HEADER DUPLICADO
                     content = re.split(r'^## MATERIAL DE .*', content, flags=re.MULTILINE)
-                    # Cogemos la parte manual (si hay) y la parte de la lista (normalmente la última)
-                    # Unimos todo lo que no sea el título "MATERIAL DE..."
                     content_cleaned = "\n".join(content).replace(HIDDEN_MARKER, "").strip()
 
-                    # 3. Ajustar jerarquía de títulos restantes
                     content_final = adjust_headers(content_cleaned, depth)
                     
-                    # 4. CREAR HEADER CLICABLE (Aquí está la solución a "elementos sin enlace")
                     hashes = "#" * (depth + 1)
                     sep = "\n\n---\n\n" if depth == 1 else "\n\n"
                     clean_name = get_clean_folder_name(dirpath)
-                    
-                    # Codificamos la ruta para el enlace del título
                     link_path = urllib.parse.quote(rel_path.replace("\\", "/"))
                     
-                    # AQUI: Hacemos que el título sea un enlace a la carpeta
                     full_content += f"{sep}{hashes} [📂 {clean_name}](./{link_path})\n\n{content_final}"
-                    
                     print(f"[OK] {os.path.basename(dirpath)}")
             except Exception as e:
                 print(f"[ERROR] {e}")
 
     with open(OUTPUT_FILENAME, 'w', encoding='utf-8') as f:
         f.write(full_content)
-    print("\n✨ TODO LIMPIO Y ENLAZADO.")
+    print("\n✨ PROCESO COMPLETADO.")
 
 if __name__ == "__main__":
     update_sub_readmes()
