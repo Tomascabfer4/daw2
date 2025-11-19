@@ -9,7 +9,12 @@ OUTPUT_FILENAME = "README.md"
 HIDDEN_MARKER = ""
 OLD_HEADER_TO_DELETE = "## 📑 Índice de Archivos (Automático)"
 
-IGNORE_DIRS = ['.git', '.github', '__pycache__', 'node_modules', '.next', 'images', 'img', 'assets', 'design', '.vscode']
+# 🚫 LISTA NEGRA DE CARPETAS (Aquí añadimos 'design' para que no lo toque)
+IGNORE_DIRS = [
+    '.git', '.github', '__pycache__', 'node_modules', '.next', 
+    'images', 'img', 'assets', 'design', 'styles', 'fonts', '.vscode', 'dist', 'build'
+]
+
 IGNORE_FILES = ['README.md', 'script.py', '.DS_Store', 'Thumbs.db', '.gitignore', 'LICENSE', 'style-guide.md']
 EXERCISE_EXTENSIONS = ['.html', '.js', '.css', '.py', '.java', '.php', '.ts', '.jsx', '.tsx', '.json', '.xml']
 IGNORE_PHRASES_MERGE = ["Frontend Mentor", "Thanks for checking out", "Welcome! 👋"]
@@ -33,6 +38,10 @@ def get_file_list_markdown(dirpath):
         for entry in os.listdir(dirpath):
             if entry in IGNORE_FILES or entry in IGNORE_DIRS or entry.startswith('.'): continue
             full_path = os.path.join(dirpath, entry)
+            
+            # Filtro extra por si acaso hay una carpeta 'design' dentro
+            if os.path.isdir(full_path) and entry.lower() in IGNORE_DIRS: continue
+
             display_name = entry
             link_safe = urllib.parse.quote(entry)
             link = f"./{link_safe}"
@@ -43,40 +52,33 @@ def get_file_list_markdown(dirpath):
     return "\n".join(sorted(items))
 
 def sanitize_content(content, clean_name):
-    """ Limpia el contenido manual de residuos anteriores (BLINDADA) """
-    
-    # 1. Cortar por marcas conocidas (SOLO SI LA MARCA NO ES VACÍA)
-    # Esta es la parte que fallaba antes. Ahora lleva protección.
+    """ Limpia contenido viejo """
     for marker in [HIDDEN_MARKER, OLD_HEADER_TO_DELETE]:
-        if marker and marker in content: # <--- PROTECCIÓN AÑADIDA
-            try:
-                content = content.split(marker)[0]
-            except ValueError:
-                pass # Si falla, ignora y sigue
+        if marker and marker in content:
+            try: content = content.split(marker)[0]
+            except ValueError: pass
     
-    # 2. Cortar por regex de títulos automáticos (duplicados)
-    try:
-        content = re.split(r'^## MATERIAL DE .*', content, flags=re.MULTILINE)[0]
-    except Exception:
-        pass
+    try: content = re.split(r'^## MATERIAL DE .*', content, flags=re.MULTILINE)[0]
+    except Exception: pass
     
     content = content.strip()
-
-    # 3. Si solo queda el título de la carpeta (residuo), borrarlo
-    if content.replace("#", "").strip().upper() == clean_name:
-        return ""
-
+    if content.replace("#", "").strip().upper() == clean_name: return ""
     return content
 
 def update_sub_readmes():
-    """ FASE 1: Actualiza READMEs locales """
+    """ FASE 1 """
     root_dir = os.getcwd()
     print("--- FASE 1: Actualizando sub-READMEs ---")
     
     for dirpath, dirnames, filenames in os.walk(root_dir):
-        dirnames[:] = [d for d in dirnames if d not in IGNORE_DIRS]
+        # Esto evita que os.walk entre en carpetas prohibidas (como design)
+        dirnames[:] = [d for d in dirnames if d.lower() not in IGNORE_DIRS]
+        
         if dirpath == root_dir: continue
         if is_exercise_folder(dirpath, filenames): continue
+        
+        # DOBLE CHECK: Si la carpeta actual está en la lista negra, saltar
+        if os.path.basename(dirpath).lower() in IGNORE_DIRS: continue
 
         readme_path = os.path.join(dirpath, "README.md")
         new_list = get_file_list_markdown(dirpath)
@@ -88,13 +90,10 @@ def update_sub_readmes():
                 current_content = f.read()
 
         clean_name = get_clean_folder_name(dirpath)
-        
-        # Limpiamos contenido previo
         manual_content = sanitize_content(current_content, clean_name)
         
         dynamic_header = f"## MATERIAL DE {clean_name}"
         marker = HIDDEN_MARKER
-        
         final_content = f"{manual_content}\n\n{marker}\n\n{dynamic_header}\n\n{new_list}\n"
 
         with open(readme_path, 'w', encoding='utf-8') as f:
@@ -121,8 +120,14 @@ def merge_readmes():
     full_content = "# Índice General de Asignaturas y Tareas\n\n> Índice actualizado automáticamente. Haz clic en los títulos para ir a la carpeta.\n\n"
 
     for dirpath, dirnames, filenames in os.walk(root_dir):
+        # Bloqueo de carpetas prohibidas en Fase 2
+        dirnames[:] = [d for d in dirnames if d.lower() not in IGNORE_DIRS]
+        
         if '.git' in dirpath: continue
         if is_exercise_folder(dirpath, filenames): continue
+        
+        # TRIPLE CHECK: Si por lo que sea llegamos a una carpeta 'design', la ignoramos
+        if os.path.basename(dirpath).lower() in IGNORE_DIRS: continue
         
         if 'README.md' in filenames and dirpath != root_dir:
             readme_path = os.path.join(dirpath, "README.md")
@@ -135,11 +140,8 @@ def merge_readmes():
                     depth = len(rel_path.split(os.sep))
                     
                     content = fix_links(content, rel_path)
-                    
-                    # QUITAMOS EL HEADER DUPLICADO
                     content = re.split(r'^## MATERIAL DE .*', content, flags=re.MULTILINE)
                     content_cleaned = "\n".join(content).replace(HIDDEN_MARKER, "").strip()
-
                     content_final = adjust_headers(content_cleaned, depth)
                     
                     hashes = "#" * (depth + 1)
@@ -159,3 +161,4 @@ def merge_readmes():
 if __name__ == "__main__":
     update_sub_readmes()
     merge_readmes()
+    
