@@ -1,7 +1,4 @@
-# MATERIAL DE DESARROLLO WEB EN ENTORNO SERVIDOR
-
-- [TEMA 1](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_servidor/Tema1)
-- [TEMA 2](https://github.com/Tomascabfer4/daw2/tree/main/desarrollo_entorno_servidor/Tema2)
+# DESARROLLO ENTORNO SERVIDOR
 
 
 
