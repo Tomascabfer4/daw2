@@ -1,18 +1,17 @@
 import os
 import re
+import urllib.parse # Para arreglar los enlaces con espacios
 
 # --- CONFIGURACIÓN ---
 OUTPUT_FILENAME = "README.md"
 
-# MARCA INVISIBLE: Esto permite al robot saber dónde escribir sin depender del texto del título
-# (No se ve en GitHub, pero está en el código del archivo)
+# MARCAS PARA EL ROBOT
 HIDDEN_MARKER = ""
+OLD_HEADER_TO_DELETE = "## 📑 Índice de Archivos (Automático)" # Lo que queremos borrar
 
-# Carpetas y archivos a ignorar
-IGNORE_DIRS = ['.git', '.github', '__pycache__', 'node_modules', '.next', 'images', 'img', 'assets']
-IGNORE_FILES = ['README.md', 'script.py', '.DS_Store', 'Thumbs.db', '.gitignore', 'LICENSE']
+IGNORE_DIRS = ['.git', '.github', '__pycache__', 'node_modules', '.next', 'images', 'img', 'assets', 'design']
+IGNORE_FILES = ['README.md', 'script.py', '.DS_Store', 'Thumbs.db', '.gitignore', 'LICENSE', 'style-guide.md']
 
-# Frases a ignorar en la fusión final
 IGNORE_PHRASES_MERGE = [
     "Frontend Mentor",
     "Thanks for checking out this front-end coding challenge",
@@ -23,12 +22,11 @@ IGNORE_PHRASES_MERGE = [
 def get_clean_folder_name(dirpath):
     """ Convierte 'desarrollo_entorno_cliente' en 'DESARROLLO ENTORNO CLIENTE' """
     raw_name = os.path.basename(dirpath)
-    # Reemplazamos guiones bajos y guiones por espacios
     clean_name = raw_name.replace("_", " ").replace("-", " ")
     return clean_name.upper()
 
 def get_file_list_markdown(dirpath):
-    """ Genera la lista de archivos """
+    """ Genera la lista de archivos (arreglando espacios en enlaces) """
     items = []
     try:
         for entry in os.listdir(dirpath):
@@ -39,7 +37,10 @@ def get_file_list_markdown(dirpath):
             if entry.startswith('.'): continue
             
             display_name = entry
-            link = f"./{entry}"
+            # IMPORTANTE: Codificamos los espacios como %20 para que no se rompa el link
+            link_safe = urllib.parse.quote(entry)
+            link = f"./{link_safe}"
+            
             icon = "📂" if os.path.isdir(full_path) else "📄"
             
             items.append(f"- {icon} [{display_name}]({link})")
@@ -51,7 +52,7 @@ def get_file_list_markdown(dirpath):
     return "\n".join(sorted(items))
 
 def update_sub_readmes():
-    """ FASE 1: Actualiza READMEs individuales con título dinámico """
+    """ FASE 1: Actualiza READMEs y BORRA el título viejo """
     root_dir = os.getcwd()
     print("--- FASE 1: Actualizando sub-READMEs ---")
     
@@ -63,6 +64,7 @@ def update_sub_readmes():
         readme_path = os.path.join(dirpath, "README.md")
         new_list_content = get_file_list_markdown(dirpath)
         
+        # Si la carpeta está vacía (solo readme), no escribimos nada
         if not new_list_content: continue
 
         current_content = ""
@@ -70,32 +72,28 @@ def update_sub_readmes():
             with open(readme_path, 'r', encoding='utf-8') as f:
                 current_content = f.read()
 
-        # --- LÓGICA DEL CORTE ---
-        # 1. Buscamos la marca invisible nueva
-        if HIDDEN_MARKER in current_content:
-            parts = current_content.split(HIDDEN_MARKER)
-            manual_content = parts[0].strip()
-        
-        # 2. Compatibilidad: Si no hay marca, buscamos el título antiguo para borrarlo
-        elif "## 📑 Índice de Archivos (Automático)" in current_content:
-            parts = current_content.split("## 📑 Índice de Archivos (Automático)")
-            manual_content = parts[0].strip()
-        
-        # 3. Si es nuevo o no tiene nada
-        else:
-            manual_content = current_content.strip()
+        # --- LÓGICA DE LIMPIEZA ---
+        manual_content = current_content
 
-        # Si no hay contenido manual, ponemos título H1 por defecto
+        # 1. Si existe la marca nueva, cortamos por ahí
+        if HIDDEN_MARKER in manual_content:
+            manual_content = manual_content.split(HIDDEN_MARKER)[0]
+        
+        # 2. IMPERATIVO: Si existe el título viejo, cortamos por ahí TAMBIÉN
+        # Esto asegura que borramos el rastro del script anterior
+        if OLD_HEADER_TO_DELETE in manual_content:
+             manual_content = manual_content.split(OLD_HEADER_TO_DELETE)[0]
+
+        manual_content = manual_content.strip()
+
+        # Si después de limpiar no queda nada, ponemos título por defecto
         clean_name = get_clean_folder_name(dirpath)
-        if not manual_content.strip():
+        if not manual_content:
              manual_content = f"# {clean_name}"
 
-        # GENERAMOS EL TÍTULO DINÁMICO "MATERIAL DE..."
-        # Usamos ## para que sea un subtítulo dentro del README de la carpeta
+        # Título dinámico
         dynamic_header = f"## MATERIAL DE {clean_name}"
 
-        # Construimos el archivo final
-        # Manual + Marca Oculta + Título Dinámico + Lista
         final_content = f"{manual_content}\n\n{HIDDEN_MARKER}\n\n{dynamic_header}\n\n{new_list_content}\n"
 
         with open(readme_path, 'w', encoding='utf-8') as f:
@@ -111,9 +109,14 @@ def fix_links(content, folder_path):
         link_part = match.group(2)
         if link_part.startswith("http") or link_part.startswith("/") or link_part.startswith("#"):
             return match.group(0)
+        # Limpiamos ./
         clean_link = link_part.replace("./", "")
-        new_path = f"{folder_path}/{clean_link}".replace("\\", "/")
+        # Nos aseguramos de que folder_path usa barras normales
+        folder_path_clean = folder_path.replace("\\", "/")
+        # Construimos ruta: carpeta/archivo
+        new_path = f"{folder_path_clean}/{clean_link}"
         return f"{text_part}({new_path})"
+        
     pattern = r'(\[.*?\]|\!\[.*?\])\((.*?)\)'
     return re.sub(pattern, replace_match, content)
 
@@ -121,7 +124,6 @@ def adjust_headers(content, depth):
     def replace_header(match):
         hashes = match.group(1)
         text = match.group(2)
-        # El contenido será siempre más pequeño que la carpeta contenedora
         new_hashes = "#" * (len(hashes) + depth + 1)
         return f"{new_hashes} {text}"
     return re.sub(r'^(#+)\s+(.*)', replace_header, content, flags=re.MULTILINE)
@@ -150,20 +152,15 @@ def merge_readmes():
                         print(f"[SKIP] Ignorado: {folder_name}")
                         continue
 
-                    # Procesamos contenido
                     content = fix_links(content, relative_path)
                     content = adjust_headers(content, depth)
 
-                    # Estructura del Índice Principal
                     header_hashes = "#" * (depth + 1)
                     if depth == 1: full_content += "\n\n---\n\n"
                     else: full_content += "\n\n"
 
-                    # Título de la carpeta
-                    # .replace para quitar guiones bajos en el título principal también
-                    display_folder_name = folder_name.replace("_", " ").upper()
+                    display_folder_name = get_clean_folder_name(dirpath)
                     full_content += f"{header_hashes} 📂 {display_folder_name}\n\n"
-                    
                     full_content += content
                     print(f"[OK] Integrado: {folder_name}")
 
