@@ -19,11 +19,12 @@
   --Grey600: hsl(213, 9%, 39%);
   --Grey550: hsl(232, 10%, 55%);
   --Grey400: hsl(210, 4%, 67%);
+  --Boton: hsl(200.6, 100%, 72%);
   --White: hsl(0, 100%, 100%);
 }
 
 body {
-  font-size: 15px;
+  font-size: 18px;
   min-height: 100vh;
   display: grid;
   justify-items: center;
@@ -40,7 +41,7 @@ body {
   text-align: center;
   height: 780px;
   background-position: 100% 100%;
-  background-size: cover
+  background-size: cover;
 }
 
 .barraNavegacion {
@@ -51,7 +52,7 @@ body {
   padding: 45px;
 }
 
-.logo img{
+.logo img {
   width: 150px;
   margin-top: 15px;
 }
@@ -64,13 +65,12 @@ body {
 
 .enlaces a {
   color: var(--White);
-  font-size: 18px;
   text-decoration: none;
 }
 
 button {
   font-family: "Fraunces", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 30px;
@@ -80,7 +80,12 @@ button {
   width: 100%;
 }
 
-.tituloYFlecha h1{
+button:hover {
+  background-color: var(--Boton);
+  color: var(--White);
+}
+
+.tituloYFlecha h1 {
   font-family: "Fraunces", sans-serif;
   font-size: 60px;
   text-transform: uppercase;
@@ -94,12 +99,83 @@ button {
   display: grid;
 }
 
-.huevo, .copa, .cerezaYMandarina {
+.imagenesCentrales,
+.cerezaYMandarina {
   display: flex;
 }
 
-.cerezaYMandarina{
-  
+.textosCentrales {
+  display: grid;
+  place-content: center;
+  padding-left: 130px;
+  gap: 35px;
+}
+
+.textosCentrales h2 {
+  font-family: "Fraunces", sans-serif;
+  font-size: 45px;
+  font-weight: 900;
+  padding-right: 100px;
+  color: var(--Grey950);
+}
+
+.textosCentrales p {
+  color: var(--Grey550);
+  padding-right: 130px;
+  line-height: 1.5;
+}
+
+.textosCentrales h3 {
+  font-family: "Fraunces", sans-serif;
+  font-size: 20px;
+  color: var(--Grey950);
+  font-weight: 900;
+  text-transform: uppercase;
+  width: fit-content; /* Para que el ancho se ajuste al contenido */
+  cursor: pointer;
+  background-image: linear-gradient(var(--Yellow500), var(--Yellow500));
+  background-repeat: no-repeat;
+  background-size: 0% 40%;
+  background-position: left bottom;
+  transition: background-size 0.25s ease;
+}
+
+.textosCentrales h3:hover {
+  background-size: 100% 40%;
+  border-radius: 10%;
+}
+
+.textosCentrales h3.copa {
+  background-image: linear-gradient(var(--Red400), var(--Red400));
+}
+
+.textosCentrales h3.copa:hover {
+  background-size: 100% 40%;
+  border-radius: 10%;
+}
+
+.cerezaYMandarina {
+  height: 600px;
+}
+
+.cereza,
+.mandarina {
+  width: 50%;
+  display: grid;
+  place-content: end;
+  text-align: center;
+  padding: 0 170px;
+  line-height: 1.5;
+  gap: 35px;
+  color: var(--Green800);
+  padding-bottom: 70px;
+}
+
+.cereza h2,
+.mandarina h2 {
+  font-family: "Fraunces", sans-serif;
+  font-size: 30px;
+  font-weight: 900;
 }
 
 .cereza {
@@ -107,6 +183,107 @@ button {
 }
 
 .mandarina {
- background-image: url(./images/desktop/image-photography.jpg);
+  background-image: url(./images/desktop/image-photography.jpg);
+  color: var(--Blue800);
+}
 
+.parteOpiniones {
+  justify-items: center;
+  background-color: var(--White);
+  padding: 160px 120px;
+}
+
+.parteOpiniones h2 {
+  font-family: "Fraunces", sans-serif;
+  font-size: 25px;
+  letter-spacing: 4.5px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--Grey400);
+  margin-bottom: 60px;
+}
+
+.opiniones {
+  display: flex;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.opinion {
+  padding: 20px 8px;
+  display: grid;
+  justify-items: center;
+}
+
+.parrafoThomas {
+  padding: 0 45px;
+}
+
+.opinion img {
+  margin-bottom: 60px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.opinion p {
+  margin-bottom: 50px;
+  color: var(--Grey600);
+}
+
+.opinion h3 {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  color: var(--Grey950);
+}
+
+.opinion span {
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--Grey400);
+}
+
+.parteAbajo {
+  display: flex;
+}
+
+.parteAbajo img {
+  width: 25%;
+}
+
+footer {
+  padding: 70px;
+  background-color: var(--Green500);
+  width: 100%;
+  text-align: center;
+}
+
+.logoFooter {
+  width: 180px;
+  color: var(--Green800);
+}
+
+.enlacesFooter,
+.redes {
+  display: flex;
+  justify-content: center;
+}
+
+.enlacesFooter {
+  padding: 40px;
+  gap: 60px;
+}
+
+.enlacesFooter a {
+  color: var(--Green800);
+  text-decoration: none;
+}
+
+.redes {
+  margin-top: 40px;
+  gap: 30px;
+}
+
+.redes img {
+  width: 30px;
 }
