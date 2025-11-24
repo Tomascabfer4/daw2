@@ -29,6 +29,84 @@ body {
   justify-items: center;
   align-items: center;
   font-family: "Barlow", sans-serif;
-  background-color: var(--Grey950);
+  font-weight: 600;
+}
+
+.parteArriba {
+  background-image: url(images/desktop/image-header.jpg);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 780px;
+  background-position: 100% 100%;
+  background-size: cover
+}
+
+.barraNavegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   padding: 45px;
+}
+
+.logo img{
+  width: 150px;
+  margin-top: 15px;
+}
+
+.enlaces {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.enlaces a {
+  color: var(--White);
+  font-size: 18px;
+  text-decoration: none;
+}
+
+button {
+  font-family: "Fraunces", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 30px;
+  background-color: var(--White);
+  padding: 20px 30px;
+  border-style: none;
+  width: 100%;
+}
+
+.tituloYFlecha h1{
+  font-family: "Fraunces", sans-serif;
+  font-size: 60px;
+  text-transform: uppercase;
+  color: var(--White);
+  margin-top: 50px;
+  margin-bottom: 70px;
+  letter-spacing: 10px;
+}
+
+.parteCentral {
+  display: grid;
+}
+
+.huevo, .copa, .cerezaYMandarina {
+  display: flex;
+}
+
+.cerezaYMandarina{
+  
+}
+
+.cereza {
+  background-image: url(./images/desktop/image-graphic-design.jpg);
+}
+
+.mandarina {
+ background-image: url(./images/desktop/image-photography.jpg);
+
 }
