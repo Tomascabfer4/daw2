@@ -29,6 +29,7 @@
 
 ## [📂 SOSTENIBILIDAD](./sostenibilidad)
 
+- 📄 [Actividad22,23.docx](sostenibilidad/Actividad22%2C23.docx)
 - 📄 [Poster_ODS_Tomas_Cabello.png](sostenibilidad/Poster_ODS_Tomas_Cabello.png)
 
 ---
@@ -97,6 +98,7 @@
 
 - 📂 [RETO PROFESIONAL TEMA 2](digitalizacion/RETO%20PROFESIONAL%20TEMA%202)
 - 📄 [Actividad22,23.docx](digitalizacion/Actividad22%2C23.docx)
+- 📄 [Tema 2 Ejercicios repaso.docx](digitalizacion/Tema%202%20Ejercicios%20repaso.docx)
 - 📄 [Tema 2 F.pdf](digitalizacion/Tema%202%20F.pdf)
 
 ### [📂 RETO PROFESIONAL TEMA 2](./digitalizacion/RETO%20PROFESIONAL%20TEMA%202)
@@ -132,6 +134,7 @@
 
 ### [📂 APACHE](./despliegue_web/Apache)
 
+- 📄 [2DAW_U2_A1_Cabello_Fernández_Tomás.docx](despliegue_web/Apache/2DAW_U2_A1_Cabello_Fern%C3%A1ndez_Tom%C3%A1s.docx)
 - 📄 [2DAW_U2_A1_Cabello_Fernández_Tomás.pdf](despliegue_web/Apache/2DAW_U2_A1_Cabello_Fern%C3%A1ndez_Tom%C3%A1s.pdf)
 - 📄 [A1_Instalacion_Configuracion_apache.pdf](despliegue_web/Apache/A1_Instalacion_Configuracion_apache.pdf)
 - 📄 [apache.pdf](despliegue_web/Apache/apache.pdf)
