@@ -255,10 +255,10 @@ footer {
   padding: 70px;
   background-color: var(--Green500);
   width: 100%;
-  text-align: center;
+  justify-items: center;
 }
 
-.logoFooter {
+.logoFooter{
   width: 180px;
   color: var(--Green800);
 }
@@ -277,6 +277,12 @@ footer {
 .enlacesFooter a {
   color: var(--Green800);
   text-decoration: none;
+  cursor: pointer;
+}
+
+.enlacesFooter a:hover {
+  color: var(--White);
+  cursor: pointer;
 }
 
 .redes {
@@ -284,6 +290,12 @@ footer {
   gap: 30px;
 }
 
-.redes img {
-  width: 30px;
+.redes svg {
+  width: 25px;
+  cursor: pointer;
+  color: var(--Green800);
+}
+
+.redes svg:hover {
+  color: var(--White);
 }
