@@ -121,7 +121,7 @@
 - 📂 [1.6bis-results-summary-component-main_Tomas_Cabello](dise%C3%B1o_web/1.6bis-results-summary-component-main_Tomas_Cabello)
 - 📂 [2.1-social-proof-section-master_Tomas_Cabello](dise%C3%B1o_web/2.1-social-proof-section-master_Tomas_Cabello)
 - 📂 [2.2-product-preview-card-component-main_Tomas_Cabello](dise%C3%B1o_web/2.2-product-preview-card-component-main_Tomas_Cabello)
-- 📂 [3.1-sunnyside-agency-landing-page-main](dise%C3%B1o_web/3.1-sunnyside-agency-landing-page-main)
+- 📂 [3.1-sunnyside-agency-landing-page-main_Tomas_Cabello](dise%C3%B1o_web/3.1-sunnyside-agency-landing-page-main_Tomas_Cabello)
 - 📂 [3.2-news-homepage-main](dise%C3%B1o_web/3.2-news-homepage-main)
 - 📂 [four-card-feature-section-master_Tomas_Cabello](dise%C3%B1o_web/four-card-feature-section-master_Tomas_Cabello)
 - 📂 [position-css](dise%C3%B1o_web/position-css)
