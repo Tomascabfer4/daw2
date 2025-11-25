@@ -84,7 +84,7 @@
 /* --- ESTILOS DEL CONTENEDOR CENTRAL (La Rejilla/Grid) --- */
 .contenedorCentral {
     /* Centramos el contenedor en la página y le damos un ancho máximo */
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 40px auto; /* 40px arriba/abajo, auto a los lados */
     padding: 0 20px;
 
@@ -92,7 +92,7 @@
     display: grid;
     /* Esto crea columnas automáticas. Si no caben, bajan de línea.
        Mínimo 250px de ancho, máximo lo que sobre (1fr) */
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     
     /* Espacio entre las tarjetas */
     gap: 30px;
@@ -153,4 +153,15 @@
     font-size: 0.85rem;
     font-weight: 600;
     text-transform: capitalize;
+}
+
+#botonOrdenar {
+  padding: 8px 12px;
+  border-radius: 15px;
+  border: none;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  font-weight: 600;
 }

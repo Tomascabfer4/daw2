@@ -299,3 +299,189 @@ footer {
 .redes svg:hover {
   color: var(--White);
 }
+
+.hamburger {
+  display: none; /* Oculto por defecto en escritorio */
+  cursor: pointer;
+}
+
+/* MEDIA QUERY PARA MÓVILES */
+@media screen and (max-width: 768px) {
+
+  .parteArriba {
+    background-image: url(images/mobile/image-header.jpg);
+    background-position: center bottom; 
+    background-size: cover;
+    height: 100vh; 
+    padding-bottom: 50px; 
+  }
+
+  .barraNavegacion {
+    position: relative;
+    padding: 30px 20px;
+  }
+
+  .hamburger {
+    cursor: pointer;
+    display: block; 
+  }
+
+  /* Menu del Movil */
+  .enlaces {
+    display: none; 
+    position: absolute;
+    top: 100px;
+    left: 24px;
+    right: 24px;
+    background-color: var(--White);
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 30px;
+    z-index: 100; 
+    clip-path: polygon(0% 10px, 90% 10px, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  /* Para javascript */
+  .enlaces.activo {
+    display: flex;
+  }
+
+  .enlaces a {
+    color: var(--Grey600);
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  .enlaces button {
+    background-color: var(--Yellow500);
+    color: var(--Grey950);
+    font-family: "Fraunces", sans-serif;
+    width: auto;
+    padding: 15px 30px;
+  }
+
+  .tituloYFlecha h1 {
+    font-size: 40px;
+    letter-spacing: 5px;
+    margin-top: 50px;
+    padding: 0 10px;
+    line-height: 1.2;
+  }
+
+  .parteCentral {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imagenesCentrales {
+    flex-direction: column; 
+    text-align: center;
+  }
+
+  .imagenesCentrales:nth-child(1) {
+    flex-direction: column-reverse;
+  }
+
+  .imagenesCentrales img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .imagenesCentrales:nth-child(1) img {
+    content: url(./images/mobile/image-transform.jpg);
+  }
+  .imagenesCentrales:nth-child(2) img {
+    content: url(./images/mobile/image-stand-out.jpg);
+  }
+
+  .textosCentrales {
+    padding: 60px 24px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .textosCentrales h2 {
+    padding-right: 0;
+    font-size: 32px;
+    margin: 0;
+  }
+
+  .textosCentrales p {
+    padding-right: 0;
+    font-size: 18px;
+    color: var(--Grey600);
+  }
+  
+  .cerezaYMandarina {
+    flex-direction: column;
+    height: auto; 
+  }
+
+  .cereza,
+  .mandarina {
+    width: 100%;
+    height: 600px; 
+    background-position: center;
+    background-size: cover;
+    padding: 0 20px 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: center;
+  }
+  
+  .cereza {
+    background-image: url(./images/mobile/image-graphic-design.jpg);
+  }
+  .mandarina {
+    background-image: url(./images/mobile/image-photography.jpg);
+  }
+
+  .parteOpiniones {
+    padding: 60px 24px;
+  }
+  
+  .parteOpiniones h2 {
+    font-size: 18px;
+    margin-bottom: 60px;
+  }
+
+  .opiniones {
+    flex-direction: column;
+    gap: 60px;
+  }
+  
+  .parrafoThomas {
+    padding: 0;
+  }
+
+  .parteAbajo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .parteAbajo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .parteAbajo img:nth-child(1) { content: url(./images/mobile/image-gallery-milkbottles.jpg); }
+  .parteAbajo img:nth-child(2) { content: url(./images/mobile/image-gallery-orange.jpg); }
+  .parteAbajo img:nth-child(3) { content: url(./images/mobile/image-gallery-cone.jpg); }
+  .parteAbajo img:nth-child(4) { content: url(./images/mobile/image-gallery-sugar-cubes.jpg); }
+
+  footer {
+    padding: 60px 30px;
+  }
+
+  .enlacesFooter {
+    gap: 40px;
+    padding: 40px 0;
+    flex-direction: row;
+  }
+}

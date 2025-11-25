@@ -15,14 +15,21 @@
       <div class="nav-left">
         <a href="#" class="brand">Videojuegos</a>
 
-        <select name="plataforma" class="platform-select"></select>
+        <select
+          name="plataforma"
+          class="platform-select"
+          id="plataformas"
+        ></select>
       </div>
+
+      <button id="botonOrdenar">Ordenar de menor a mayor</button>
 
       <div class="search-container">
         <input
           type="text"
           class="search-input"
           placeholder="Buscar por nombre..."
+          id="buscar"
         />
         <svg
           class="search-icon"
@@ -35,8 +42,6 @@
         </svg>
       </div>
     </nav>
-    <div class="contenedorCentral" id="contenedorCentral">
-      
-    </div>
+    <div class="contenedorCentral" id="contenedorCentral"></div>
   </body>
 </html>
