@@ -315,6 +315,7 @@
 ### [📂 TEMA8](./desarrollo_entorno_cliente/Tema8)
 
 - 📂 [Practica1TiendaVideoJuegos](desarrollo_entorno_cliente/Tema8/Practica1TiendaVideoJuegos)
+- 📂 [Practica2ApiExterna](desarrollo_entorno_cliente/Tema8/Practica2ApiExterna)
 - 📂 [ejemplo1 JSON](desarrollo_entorno_cliente/Tema8/ejemplo1%20JSON)
 - 📂 [ejemplo2JSONTiendaVirtual](desarrollo_entorno_cliente/Tema8/ejemplo2JSONTiendaVirtual)
 - 📂 [ejemploJsonTiendaVirtual](desarrollo_entorno_cliente/Tema8/ejemploJsonTiendaVirtual)
