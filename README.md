@@ -10,7 +10,12 @@
 
 - 📂 [U1](optativa/U1)
 - 📂 [U2](optativa/U2)
+- 📂 [U3](optativa/U3)
 - 📄 [manual_python.pdf](optativa/manual_python.pdf)
+
+### [📂 U3](./optativa/U3)
+
+- 📂 [UT3A1](optativa/U3/UT3A1)
 
 ### [📂 U2](./optativa/U2)
 
