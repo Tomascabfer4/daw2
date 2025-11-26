@@ -1,0 +1,262 @@
+[
+  {
+    "id": 1,
+    "titulo": "Elden Ring",
+    "genero": "Action RPG",
+    "plataformas": ["PC", "PS5", "Xbox Series X"],
+    "desarrollador": {
+      "nombre": "FromSoftware",
+      "pais": "Japón",
+      "fundacion": 1986
+    },
+    "lanzamiento": {
+      "fecha": "2022-02-25",
+      "publicado_por": "Bandai Namco"
+    },
+    "clasificacion_edad": "16+",
+    "modo_de_juego": {
+      "singleplayer": true,
+      "multiplayer": true
+    },
+    "precio": {
+      "moneda": "EUR",
+      "valor": 59.99
+    },
+    "valoracion_media": 9.5,
+    "imagen": "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg"
+  },
+  {
+    "id": 2,
+    "titulo": "The Witcher 3: Wild Hunt",
+    "genero": "RPG",
+    "plataformas": ["PC", "PS4", "Xbox One", "Nintendo Switch"],
+    "desarrollador": {
+      "nombre": "CD Projekt Red",
+      "pais": "Polonia",
+      "fundacion": 2002
+    },
+    "lanzamiento": {
+      "fecha": "2015-05-19",
+      "publicado_por": "CD Projekt"
+    },
+    "clasificacion_edad": "18+",
+    "modo_de_juego": {
+      "singleplayer": true,
+      "multiplayer": false
+    },
+    "precio": {
+      "moneda": "EUR",
+      "valor": 39.99
+    },
+    "valoracion_media": 9.8,
+    "imagen": "https://images.pexels.com/photos/45246/witcher-hunt-wild-horse-45246.jpeg"
+  },
+  {
+    "id": 3,
+    "titulo": "Hollow Knight",
+    "genero": "Metroidvania",
+    "plataformas": ["PC", "Nintendo Switch", "PS4", "Xbox One"],
+    "desarrollador": {
+      "nombre": "Team Cherry",
+      "pais": "Australia",
+      "fundacion": 2014
+    },
+    "lanzamiento": {
+      "fecha": "2017-02-24",
+      "publicado_por": "Team Cherry"
+    },
+    "clasificacion_edad": "12+",
+    "modo_de_juego": {
+      "singleplayer": true,
+      "multiplayer": false
+    },
+    "precio": {
+      "moneda": "EUR",
+      "valor": 14.99
+    },
+    "valoracion_media": 9.0,
+    "imagen": "https://images.pexels.com/photos/1298601/pexels-photo-1298601.jpeg"
+  },
+  {
+    "id": 4,
+    "titulo": "Minecraft",
+    "genero": "Sandbox",
+    "plataformas": ["PC", "PS5", "Xbox Series X", "Nintendo Switch", "Mobile"],
+    "desarrollador": {
+      "nombre": "Mojang Studios",
+      "pais": "Suecia",
+      "fundacion": 2009
+    },
+    "lanzamiento": {
+      "fecha": "2011-11-18",
+      "publicado_por": "Mojang"
+    },
+    "clasificacion_edad": "7+",
+    "modo_de_juego": {
+      "singleplayer": true,
+      "multiplayer": true
+    },
+    "precio": {
+      "moneda": "EUR",
+      "valor": 26.95
+    },
+    "valoracion_media": 9.7,
+    "imagen": "https://images.pexels.com/photos/41949/pexels-photo-41949.jpeg"
+  },
+  {
+    "id": 5,
+    "titulo": "God of War",
+    "genero": "Acción / Aventura",
+    "plataformas": ["PS4", "PC"],
+    "desarrollador": {
+      "nombre": "Santa Monica Studio",
+      "pais": "Estados Unidos",
+      "fundacion": 1999
+    },
+    "lanzamiento": {
+      "fecha": "2018-04-20",
+      "publicado_por": "Sony Interactive Entertainment"
+    },
+    "clasificacion_edad": "18+",
+    "modo_de_juego": {
+      "singleplayer": true,
+      "multiplayer": false
+    },
+    "precio": {
+      "moneda": "EUR",
+      "valor": 49.99
+    },
+    "valoracion_media": 9.6,
+    "imagen": "https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg"
+  },
+  {
+    "id": 6,
+    "titulo": "Stardew Valley",
+    "genero": "Simulación / RPG",
+    "plataformas": ["PC", "PS4", "Xbox One", "Nintendo Switch", "Mobile"],
+    "desarrollador": {
+      "nombre": "ConcernedApe",
+      "pais": "Estados Unidos",
+      "fundacion": 2012
+    },
+    "lanzamiento": {
+      "fecha": "2016-02-26",
+      "publicado_por": "ConcernedApe"
+    },
+    "clasificacion_edad": "7+",
+    "modo_de_juego": {
+      "singleplayer": true,
+      "multiplayer": true
+    },
+    "precio": {
+      "moneda": "EUR",
+      "valor": 13.99
+    },
+    "valoracion_media": 9.3,
+    "imagen": "https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg"
+  },
+  {
+    "id": 7,
+    "titulo": "Cyberpunk 2077",
+    "genero": "RPG / Acción",
+    "plataformas": ["PC", "PS5", "Xbox Series X"],
+    "desarrollador": {
+      "nombre": "CD Projekt Red",
+      "pais": "Polonia",
+      "fundacion": 2002
+    },
+    "lanzamiento": {
+      "fecha": "2020-12-10",
+      "publicado_por": "CD Projekt"
+    },
+    "clasificacion_edad": "18+",
+    "modo_de_juego": {
+      "singleplayer": true,
+      "multiplayer": false
+    },
+    "precio": {
+      "moneda": "EUR",
+      "valor": 59.99
+    },
+    "valoracion_media": 8.5,
+    "imagen": "https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg"
+  },
+  {
+    "id": 8,
+    "titulo": "Red Dead Redemption 2",
+    "genero": "Acción / Mundo Abierto",
+    "plataformas": ["PC", "PS4", "Xbox One"],
+    "desarrollador": {
+      "nombre": "Rockstar Games",
+      "pais": "Estados Unidos",
+      "fundacion": 1998
+    },
+    "lanzamiento": {
+      "fecha": "2018-10-26",
+      "publicado_por": "Rockstar Games"
+    },
+    "clasificacion_edad": "18+",
+    "modo_de_juego": {
+      "singleplayer": true,
+      "multiplayer": true
+    },
+    "precio": {
+      "moneda": "EUR",
+      "valor": 59.99
+    },
+    "valoracion_media": 9.7,
+    "imagen": "https://images.pexels.com/photos/3030409/pexels-photo-3030409.jpeg"
+  },
+  {
+    "id": 9,
+    "titulo": "Celeste",
+    "genero": "Plataformas",
+    "plataformas": ["PC", "PS4", "Xbox One", "Nintendo Switch"],
+    "desarrollador": {
+      "nombre": "Matt Makes Games",
+      "pais": "Canadá",
+      "fundacion": 2013
+    },
+    "lanzamiento": {
+      "fecha": "2018-01-25",
+      "publicado_por": "Matt Makes Games"
+    },
+    "clasificacion_edad": "7+",
+    "modo_de_juego": {
+      "singleplayer": true,
+      "multiplayer": false
+    },
+    "precio": {
+      "moneda": "EUR",
+      "valor": 19.99
+    },
+    "valoracion_media": 9.2,
+    "imagen": "https://images.pexels.com/photos/1904769/pexels-photo-1904769.jpeg"
+  },
+  {
+    "id": 10,
+    "titulo": "Apex Legends",
+    "genero": "Battle Royale",
+    "plataformas": ["PC", "PS5", "Xbox Series X", "Nintendo Switch"],
+    "desarrollador": {
+      "nombre": "Respawn Entertainment",
+      "pais": "Estados Unidos",
+      "fundacion": 2010
+    },
+    "lanzamiento": {
+      "fecha": "2019-02-04",
+      "publicado_por": "Electronic Arts"
+    },
+    "clasificacion_edad": "16+",
+    "modo_de_juego": {
+      "singleplayer": false,
+      "multiplayer": true
+    },
+    "precio": {
+      "moneda": "EUR",
+      "valor": 0.00
+    },
+    "valoracion_media": 8.9,
+    "imagen": "https://images.pexels.com/photos/3945684/pexels-photo-3945684.jpeg"
+  }
+]
