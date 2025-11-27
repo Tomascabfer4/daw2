@@ -8,32 +8,24 @@
       content="Descubre nuestra colección premium de productos con diseño moderno y calidad excepcional"
     />
     <title>Productos API | Tienda Online</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet"
-    />
-
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
     <script src="practicaProductos.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar">
-      <a href="#" class="brand">Productos API</a>
+      <a href="#" class="tituloWeb">Productos API</a>
 
-      <div class="search-container">
+      <div class="contenedorBusqueda">
         <input
           type="text"
-          class="search-input"
+          class="inputBusqueda"
           placeholder="Buscar productos..."
           id="buscar"
         />
         <svg
-          class="search-icon"
+          class="iconoBusqueda"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
         >
@@ -45,57 +37,55 @@
     </nav>
 
     <!-- Main Container -->
-    <div class="main-container">
+    <div class="contenedorCentral">
       <!-- Sidebar -->
-      <aside class="sidebar">
-        <div class="sidebar-section">
-          <h3 class="sidebar-title">
-            <svg
-              class="sidebar-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-            >
-              <path
-                d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6V320.9L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"
-              />
-            </svg>
-            Filtros
-          </h3>
+      <aside class="barraLateral">
+        <h3 class="barraLateralTitulo">
+          <svg
+            class="iconoFiltros"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6V320.9L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"
+            />
+          </svg>
+          Filtros
+        </h3>
 
-          <div class="filter-group">
-            <label for="categorias" class="filter-label">Categorías</label>
-            <select
-              name="categoria"
-              class="category-select"
-              id="categorias"
-            ></select>
-          </div>
-
-          <div class="filter-group">
-            <label class="filter-label">Ordenar</label>
-            <button id="botonOrdenar" class="sort-button">
-              <svg
-                class="button-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 320 512"
-              >
-                <path
-                  d="M137.4 41.4c12.5-12.5 32.8-12.5 45.3 0l128 128c9.2 9.2 11.9 22.9 6.9 34.9s-16.6 19.8-29.6 19.8H32c-12.9 0-24.6-7.8-29.6-19.8s-2.2-25.7 6.9-34.9l128-128zm0 429.3l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128c-12.5 12.5-32.8 12.5-45.3 0z"
-                />
-              </svg>
-              Precio: Menor a Mayor
-            </button>
-          </div>
+        <div class="contenedorFiltro">
+          <label for="categorias" class="nombreFiltro">Categorías</label>
+          <select
+            name="categoria"
+            class="selectCategorias"
+            id="categorias"
+          ></select>
         </div>
 
-        <div class="sidebar-footer">
-          <p class="sidebar-info">Prod</p>
+        <div class="contenedorfiltro">
+          <label class="nombreFiltro">Ordenar</label>
+          <button id="botonOrdenar" class="botonOrdenar">
+            <svg
+              class="iconoFiltroOrdenar"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 320 512"
+            >
+              <path
+                d="M137.4 41.4c12.5-12.5 32.8-12.5 45.3 0l128 128c9.2 9.2 11.9 22.9 6.9 34.9s-16.6 19.8-29.6 19.8H32c-12.9 0-24.6-7.8-29.6-19.8s-2.2-25.7 6.9-34.9l128-128zm0 429.3l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128c-12.5 12.5-32.8 12.5-45.3 0z"
+              />
+            </svg>
+            Precio: Menor a Mayor
+          </button>
+        </div>
+
+        <div class="barraLateralFooter">
+          <p class="textoFooter">Productos API 2025</p>
         </div>
       </aside>
 
       <!-- Products Grid -->
-      <main class="content-area">
-        <div class="contenedorCentral" id="contenedorCentral"></div>
+      <main class="areaContenido">
+        <div class="contenedorProductos" id="contenedorProductos"></div>
       </main>
     </div>
   </body>

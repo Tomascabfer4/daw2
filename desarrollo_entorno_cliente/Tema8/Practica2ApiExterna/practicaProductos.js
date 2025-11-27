@@ -1,5 +1,5 @@
 let listadoProductos = [];
-const contenedorCentral = document.getElementById("contenedorCentral");
+const contenedorProductos = document.getElementById("contenedorProductos");
 const selectCategorias = document.getElementById("categorias");
 const buscar = document.getElementById("buscar");
 const botonOrdenar = document.getElementById("botonOrdenar");
@@ -46,7 +46,7 @@ const leerJson = async () => {
 };
 
 const mostrarProductos = (productosParaMostrar) => {
-  contenedorCentral.innerHTML = "";
+  contenedorProductos.innerHTML = "";
   productosParaMostrar.forEach((producto) => {
     const nuevoProducto = tarjetaProducto.cloneNode(true);
     nuevoProducto.children[0].src = producto.image;
@@ -56,7 +56,7 @@ const mostrarProductos = (productosParaMostrar) => {
     info.children[2].innerText = producto.category;
     info.children[3].innerHTML = `⭐ ${producto.rating.rate} (${producto.rating.count} opiniones)`;
     info.children[4].innerHTML = `<strong>Precio:</strong> $${producto.price}`;
-    contenedorCentral.appendChild(nuevoProducto);
+    contenedorProductos.appendChild(nuevoProducto);
   });
 };
 
