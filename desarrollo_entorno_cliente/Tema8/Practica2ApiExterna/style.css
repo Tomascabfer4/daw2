@@ -39,11 +39,15 @@ body {
   height: 70px;
   padding: 0 40px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  place-content: space-between;
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+.busquedaEIdiomas{
+  display: flex;
 }
 
 .tituloWeb {
@@ -119,7 +123,7 @@ body {
   padding-bottom: 10px;
 }
 
-.iconoFiltros {
+.iconosLateral {
   width: 18px;
   fill: var(--color-primary);
 }
@@ -139,7 +143,7 @@ body {
 }
 
 /* Select elegante */
-.selectCategorias{
+.selectCategorias {
   width: 100%;
   padding: 10px;
   border: 1px solid var(--color-border);
@@ -150,7 +154,7 @@ body {
 }
 
 /* Botón Ordenar */
-.botonOrdenar {
+.botonesLateral {
   width: 100%;
   padding: 12px;
   background-color: var(--color-primary);
@@ -166,7 +170,11 @@ body {
   transition: background 0.3s;
 }
 
-.botonOrdenar:hover {
+#botonAnnadir, #botonGraficos {
+  margin-bottom: 20px;
+}
+
+.botonesLateral:hover {
   background-color: #333;
 }
 
@@ -232,6 +240,7 @@ body {
 /* Contenedor de Info (Clase .tarjetaInfo generada por tu JS) */
 .tarjetaInfo {
   padding: 20px;
+  padding-bottom: 0;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -311,6 +320,46 @@ body {
   text-transform: uppercase;
   margin-right: 5px;
 }
+
+.idiomas {
+  margin: 20px 0px;
+  margin-left: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.idiomas button {
+  cursor: pointer;
+}
+
+.divBotonesProducto {
+  display: flex;
+  place-content: space-between;
+  padding: 0px 20px;
+  padding-bottom: 20px;
+  gap: 10px;
+}
+
+.botonProducto {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s;
+}
+
+.botonProducto:hover {
+  background-color: #333;
+}
+
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {

@@ -9,30 +9,39 @@
     />
     <title>Productos API | Tienda Online</title>
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+    <script src="https://unpkg.com/i18next/i18next.min.js"></script>
     <script src="practicaProductos.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar">
-      <a href="#" class="tituloWeb">Productos API</a>
+      <a href="#" class="tituloWeb" data-i18n="nav.titulo">Productos API</a>
 
-      <div class="contenedorBusqueda">
-        <input
-          type="text"
-          class="inputBusqueda"
-          placeholder="Buscar productos..."
-          id="buscar"
-        />
-        <svg
-          class="iconoBusqueda"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
-        >
-          <path
-            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+      <div class="busquedaEIdiomas">
+        <div class="contenedorBusqueda">
+          <input
+            type="text"
+            class="inputBusqueda"
+            placeholder="Buscar productos..."
+            data-i18n-placeholder="navbar.busquedaPlaceholder"
+            id="buscar"
           />
-        </svg>
+          <svg
+            class="iconoBusqueda"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+            />
+          </svg>
+        </div>
+
+        <!-- <div class="idiomas">
+          <button id="botonEspanol">ES</button>
+          <button id="botonIngles">US</button>
+        </div> -->
       </div>
     </nav>
 
@@ -42,7 +51,65 @@
       <aside class="barraLateral">
         <h3 class="barraLateralTitulo">
           <svg
+            version="1.0"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20px"
+            height="20px"
+            viewBox="0 0 1280 923"
+            preserveAspectRatio="xMidYMid meet"
             class="iconoFiltros"
+            fill="currentColor"
+            stroke="none"
+          >
+            <g
+              transform="translate(0.000000,923.000000) scale(0.100000,-0.100000)"
+              fill="#000000"
+              stroke="none"
+            >
+              <path
+                d="M11235 9211 c-70 -31 -125 -114 -125 -186 0 -11 32 -114 70 -229 38 -116 68 -212 66 -214 -2 -2 -2500 -835 -5550 -1852 -3050 -1016 -5561 -1857 -5580 -1869 -135 -84 -153 -286 -34 -397 53 -51 96 -68 168 -69 60 0 466 134 5605 1848 3047 1016 5545 1847 5552 1847 6 0 41 -89 77 -197 37 -108 78 -211 91 -229 54 -71 173 -95 253 -51 29 15 170 169 484 526 244 277 452 518 463 535 15 23 20 48 20 98 0 57 -4 72 -30 110 -18 26 -48 52 -75 65 -46 22 -1324 283 -1385 283 -16 0 -48 -9 -70 -19z"
+              />
+              <path
+                d="M9480 3075 l0 -3075 1280 0 1280 0 0 3075 0 3075 -1280 0 -1280 0 0 -3075z"
+              />
+              <path
+                d="M6410 2560 l0 -2560 1280 0 1280 0 0 2560 0 2560 -1280 0 -1280 0 0 -2560z"
+              />
+              <path
+                d="M3330 2050 l0 -2050 1280 0 1280 0 0 2050 0 2050 -1280 0 -1280 0 0 -2050z"
+              />
+              <path
+                d="M260 1535 l0 -1535 1280 0 1280 0 0 1535 0 1535 -1280 0 -1280 0 0 -1535z"
+              />
+            </g>
+          </svg>
+          <span data-i18n="barraLateral.estadisticas">Estadisticas</span>
+        </h3>
+
+        <button class="botonesLateral" id="botonGraficos">
+          Mostrar Gráficos
+        </button>
+
+        <h3 class="barraLateralTitulo">
+          <svg
+            class="iconosLateral"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+            />
+          </svg>
+          <span data-i18n="barraLateral.agregacion">Agregacion</span>
+        </h3>
+
+        <button class="botonesLateral" id="botonAnnadir">
+          Agregar Producto
+        </button>
+
+        <h3 class="barraLateralTitulo">
+          <svg
+            class="iconosLateral"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
           >
@@ -50,11 +117,13 @@
               d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6V320.9L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"
             />
           </svg>
-          Filtros
+          <span data-i18n="barraLateral.filtros">Filtros</span>
         </h3>
 
         <div class="contenedorFiltro">
-          <label for="categorias" class="nombreFiltro">Categorías</label>
+          <label class="nombreFiltro" data-i18n="barraLateral.categorias"
+            >Categorías</label
+          >
           <select
             name="categoria"
             class="selectCategorias"
@@ -63,8 +132,10 @@
         </div>
 
         <div class="contenedorfiltro">
-          <label class="nombreFiltro">Ordenar</label>
-          <button id="botonOrdenar" class="botonOrdenar">
+          <label class="nombreFiltro" data-i18n="barraLateral.ordenar"
+            >Ordenar</label
+          >
+          <button id="botonOrdenar" class="botonesLateral">
             <svg
               class="iconoFiltroOrdenar"
               xmlns="http://www.w3.org/2000/svg"
@@ -74,12 +145,14 @@
                 d="M137.4 41.4c12.5-12.5 32.8-12.5 45.3 0l128 128c9.2 9.2 11.9 22.9 6.9 34.9s-16.6 19.8-29.6 19.8H32c-12.9 0-24.6-7.8-29.6-19.8s-2.2-25.7 6.9-34.9l128-128zm0 429.3l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128c-12.5 12.5-32.8 12.5-45.3 0z"
               />
             </svg>
-            Precio: Menor a Mayor
+            <span data-i18n="barraLateral.botonOrdenar"
+              >Precio: Menor a Mayor</span
+            >
           </button>
         </div>
 
         <div class="barraLateralFooter">
-          <p class="textoFooter">Productos API 2025</p>
+          <p class="textoFooter" data-i18n="footer.texto">Productos API 2025</p>
         </div>
       </aside>
 
