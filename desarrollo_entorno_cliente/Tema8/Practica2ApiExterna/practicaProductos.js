@@ -253,8 +253,15 @@ const mostrarProductos = (productosParaMostrar) => {
       contenedorProductos.innerHTML = "";
     });
 
-    botonEliminar.addEventListener("click", () => {
-      eliminarProducto(producto);
+    botonEliminar.addEventListener("click", async () => {
+      const resultado = await eliminarProducto(producto);
+      if (resultado) {
+        // Filtramos por id de producto para hacer otro vector sin ese producto
+        listadoProductos = listadoProductos.filter((p) => p.id !== producto.id);
+        mostrarProductos(listadoProductos);
+      } else {
+        alert("Hubo un error al eliminar el producto de la API.");
+      }
     });
   });
 };
