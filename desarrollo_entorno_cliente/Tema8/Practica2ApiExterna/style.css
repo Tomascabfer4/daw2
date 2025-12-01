@@ -360,6 +360,89 @@ body {
   background-color: #333;
 }
 
+/* ===== ESTILOS DEL FORMULARIO (Equilibrado) ===== */
+
+.formulario {
+  /* 1. Centrado y Posicionamiento */
+  grid-column: 1 / -1; /* Obliga al formulario a ocupar todo el ancho del grid de productos */
+  width: 100%;
+  max-width: 700px; /* Un poco más ancho para que los datos quepan holgadamente */
+  margin: 40px auto; /* 40px arriba/abajo para separarlo del borde, AUTO a los lados para centrarlo */
+  
+  /* 2. Estructura Interna (Grid de 2 columnas) */
+  display: grid;
+  grid-template-columns: 160px 1fr; /* Columna 1 (Labels) fija y ancha, Columna 2 (Inputs) flexible */
+  gap: 25px 30px; /* Más espacio entre filas (25px) y entre label-input (30px) */
+  align-items: center; /* Centrado vertical perfecto entre texto e input */
+  
+  /* 3. Estética de Tarjeta Premium */
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 50px; /* Mucho espacio interno para dar sensación de lujo/limpieza */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1); /* Sombra elegante y difuminada */
+}
+
+/* Etiquetas (Labels) */
+.formulario label {
+  font-family: var(--font-body);
+  font-size: 0.85rem; /* Tamaño legible */
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Más espaciado entre letras */
+  text-align: right; /* Alineado a la derecha para conectar con el input */
+}
+
+/* Inputs del Formulario */
+.formulario input {
+  width: 100%;
+  padding: 12px 15px; /* Volvemos a un padding cómodo, no tan pequeño */
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-primary);
+  background-color: var(--color-bg); /* Fondo gris suave */
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  transition: all 0.3s ease;
+}
+
+/* Estado Focus (al escribir) */
+.formulario input:focus {
+  background-color: #fff;
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05); /* Resplandor suave */
+}
+
+.contenedorBotones {
+  grid-column: 1 / -1; /* Ocupa todo el ancho del formulario */
+  display: flex;       /* Pone los elementos en fila */
+  gap: 20px;           /* Espacio entre los dos botones */
+  margin-top: 20px;
+}
+
+/* Ajustes a los botones dentro del formulario */
+.formulario button {
+  width: 100%;         /* Hacemos que cada botón ocupe el espacio disponible (50% cada uno) */
+  margin-top: 0;       /* Quitamos márgenes individuales, lo controla el contenedor */
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #000000;
+  color: whitesmoke;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.formulario button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1); /* Efecto genérico de brillo al pasar el mouse */
+}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
@@ -389,5 +472,21 @@ body {
   }
   .areaContenido {
     padding: 20px;
+  }
+
+  .formulario {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+    gap: 10px;
+    padding: 25px;
+    margin: 20px 0;
+  }
+  
+  .formulario label {
+    text-align: left; /* Alineación natural a la izquierda en móvil */
+    margin-top: 15px;
+  }
+  
+  .formulario label:first-child {
+    margin-top: 0;
   }
 }

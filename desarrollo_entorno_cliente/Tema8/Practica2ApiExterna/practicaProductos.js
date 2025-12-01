@@ -188,6 +188,148 @@ const eliminarProducto = async (producto) => {
   }
 };
 
+const formularioProducto = (producto = null) => {
+  // 1. Limpiamos el contenedor para que solo se vea el formulario
+  contenedorProductos.innerHTML = "";
+
+  const modoEdicion = producto !== null;
+  const formulario = document.createElement("form");
+  formulario.className = "formulario";
+
+  // --- Título del Formulario (Opcional pero recomendado) ---
+  const tituloH2 = document.createElement("h2");
+  tituloH2.innerText = modoEdicion ? "Editar Producto" : "Nuevo Producto";
+  tituloH2.style.gridColumn = "1 / -1"; // Para que ocupe todo el ancho en el CSS nuevo
+  tituloH2.style.textAlign = "center";
+  formulario.appendChild(tituloH2);
+
+  // --- INPUTS ---
+  const labelTitulo = document.createElement("label");
+  labelTitulo.innerText = "Título";
+  const inputTitulo = document.createElement("input");
+  inputTitulo.type = "text";
+  inputTitulo.required = true;
+  formulario.appendChild(labelTitulo);
+  formulario.appendChild(inputTitulo);
+
+  const labelPrecio = document.createElement("label");
+  labelPrecio.innerText = "Precio";
+  const inputPrecio = document.createElement("input");
+  inputPrecio.type = "number";
+  inputPrecio.step = "0.01"; 
+  inputPrecio.required = true;
+  formulario.appendChild(labelPrecio);
+  formulario.appendChild(inputPrecio);
+
+  const labelDescripcion = document.createElement("label");
+  labelDescripcion.innerText = "Descripción";
+  const inputDescripcion = document.createElement("input");
+  inputDescripcion.type = "text";
+  inputDescripcion.required = true;
+  formulario.appendChild(labelDescripcion);
+  formulario.appendChild(inputDescripcion);
+
+  const labelCategoria = document.createElement("label");
+  labelCategoria.innerText = "Categoría";
+  const inputCategoria = document.createElement("input");
+  inputCategoria.type = "text";
+  inputCategoria.required = true;
+  formulario.appendChild(labelCategoria);
+  formulario.appendChild(inputCategoria);
+
+  const labelImagen = document.createElement("label");
+  labelImagen.innerText = "URL Imagen";
+  const inputImagen = document.createElement("input");
+  inputImagen.type = "text";
+  inputImagen.required = true;
+  formulario.appendChild(labelImagen);
+  formulario.appendChild(inputImagen);
+
+  const labelPuntuacion = document.createElement("label");
+  labelPuntuacion.innerText = "Puntuación";
+  const inputPuntuacion = document.createElement("input");
+  inputPuntuacion.type = "number";
+  inputPuntuacion.step = "0.1";
+  inputPuntuacion.required = true;
+  formulario.appendChild(labelPuntuacion);
+  formulario.appendChild(inputPuntuacion);
+
+  const labelNumeroOpiniones = document.createElement("label");
+  labelNumeroOpiniones.innerText = "Nº Opiniones";
+  const inputNumeroOpiniones = document.createElement("input");
+  inputNumeroOpiniones.type = "number";
+  formulario.appendChild(labelNumeroOpiniones);
+  formulario.appendChild(inputNumeroOpiniones);
+
+  const divBotones = document.createElement("div");
+  divBotones.className = "contenedorBotones";
+  const botonGuardar = document.createElement("button");
+  botonGuardar.innerText = modoEdicion ? "Guardar" : "Crear";
+  botonGuardar.type = "submit";
+  divBotones.appendChild(botonGuardar);
+  const botonCancelar = document.createElement("button");
+  botonCancelar.innerText = "Cancelar";
+  botonCancelar.type = "button";
+  botonCancelar.addEventListener("click", () => {
+      mostrarProductos(listadoProductos); 
+  });
+  divBotones.appendChild(botonCancelar);
+
+  formulario.appendChild(divBotones);
+
+  if (modoEdicion) {
+    inputTitulo.value = producto.title;
+    inputPrecio.value = producto.price;
+    inputDescripcion.value = producto.description;
+    inputCategoria.value = producto.category;
+    inputImagen.value = producto.image;
+    inputPuntuacion.value = producto.rating.rate;
+    inputNumeroOpiniones.value = producto.rating.count;
+  }
+
+  formulario.addEventListener("submit", async (e) => {
+    e.preventDefault(); // Para que no recargue la pagina
+
+    const datosFormulario = {
+      title: inputTitulo.value,
+      price: parseFloat(inputPrecio.value),
+      description: inputDescripcion.value,
+      image: inputImagen.value,
+      category: inputCategoria.value,
+      rating: {
+          rate: parseFloat(inputPuntuacion.value),
+          count: parseInt(inputNumeroOpiniones.value)
+      }
+    };
+
+    if (modoEdicion) {
+      datosFormulario.id = producto.id;
+      const resultado = await editarProducto(datosFormulario);
+      if (resultado) {
+          const indiceProducto = listadoProductos.findIndex(p => p.id === producto.id); // Buscamos el indice del producto a modificar
+          if (indiceProducto !== -1) {
+              listadoProductos[indiceProducto] = datosFormulario;
+          }
+          alert("Producto editado correctamente");
+          mostrarProductos(listadoProductos);
+      }
+
+    } else {
+      const resultado = await crearProducto(datosFormulario);
+      
+      if (resultado) {
+          resultado.id = listadoProductos.length + 1; 
+          const nuevoProductoLocal = { ...datosFormulario, id: resultado.id };
+          listadoProductos.push(nuevoProductoLocal);
+          alert("Producto creado correctamente");
+          mostrarProductos(listadoProductos);
+      }
+    }
+  });
+
+  contenedorProductos.appendChild(formulario);
+};
+
 // Borro el contenedor donde alojo todos los productos y recorro el vector por parametro clonando cada tarjeta del producto y asignandole cada valor.
 const mostrarProductos = (productosParaMostrar) => {
   contenedorProductos.innerHTML = "";
@@ -251,6 +393,7 @@ const mostrarProductos = (productosParaMostrar) => {
 
     botonEditar.addEventListener("click", () => {
       contenedorProductos.innerHTML = "";
+      formularioProducto(producto);
     });
 
     botonEliminar.addEventListener("click", async () => {
@@ -325,6 +468,7 @@ const ordenar = () => {
 const formularioAnnadirProducto = () => {
   botonAnnadir.addEventListener("click", () => {
     contenedorProductos.innerHTML = "";
+    formularioProducto();
   });
 };
 
