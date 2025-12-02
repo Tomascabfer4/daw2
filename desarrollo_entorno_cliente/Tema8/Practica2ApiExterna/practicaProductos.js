@@ -8,6 +8,7 @@ const botonAnnadir = document.getElementById("botonAnnadir");
 const botonGraficos = document.getElementById("botonGraficos");
 const botonEspanol = document.getElementById("botonEspanol");
 const botonIngles = document.getElementById("botonIngles");
+let grafico;
 
 // CONFIGURACIÓN I18N
 // Se configuran las traducciones para cada uno de los idiomas soportados.
@@ -189,21 +190,18 @@ const eliminarProducto = async (producto) => {
 };
 
 const formularioProducto = (producto = null) => {
-  // 1. Limpiamos el contenedor para que solo se vea el formulario
   contenedorProductos.innerHTML = "";
-
   const modoEdicion = producto !== null;
+
   const formulario = document.createElement("form");
   formulario.className = "formulario";
 
-  // --- Título del Formulario (Opcional pero recomendado) ---
   const tituloH2 = document.createElement("h2");
   tituloH2.innerText = modoEdicion ? "Editar Producto" : "Nuevo Producto";
-  tituloH2.style.gridColumn = "1 / -1"; // Para que ocupe todo el ancho en el CSS nuevo
+  tituloH2.style.gridColumn = "1 / -1";
   tituloH2.style.textAlign = "center";
   formulario.appendChild(tituloH2);
 
-  // --- INPUTS ---
   const labelTitulo = document.createElement("label");
   labelTitulo.innerText = "Título";
   const inputTitulo = document.createElement("input");
@@ -216,7 +214,7 @@ const formularioProducto = (producto = null) => {
   labelPrecio.innerText = "Precio";
   const inputPrecio = document.createElement("input");
   inputPrecio.type = "number";
-  inputPrecio.step = "0.01"; 
+  inputPrecio.step = "0.01";
   inputPrecio.required = true;
   formulario.appendChild(labelPrecio);
   formulario.appendChild(inputPrecio);
@@ -271,7 +269,7 @@ const formularioProducto = (producto = null) => {
   botonCancelar.innerText = "Cancelar";
   botonCancelar.type = "button";
   botonCancelar.addEventListener("click", () => {
-      mostrarProductos(listadoProductos); 
+    mostrarProductos(listadoProductos);
   });
   divBotones.appendChild(botonCancelar);
 
@@ -297,32 +295,33 @@ const formularioProducto = (producto = null) => {
       image: inputImagen.value,
       category: inputCategoria.value,
       rating: {
-          rate: parseFloat(inputPuntuacion.value),
-          count: parseInt(inputNumeroOpiniones.value)
-      }
+        rate: parseFloat(inputPuntuacion.value),
+        count: parseInt(inputNumeroOpiniones.value),
+      },
     };
 
     if (modoEdicion) {
       datosFormulario.id = producto.id;
       const resultado = await editarProducto(datosFormulario);
       if (resultado) {
-          const indiceProducto = listadoProductos.findIndex(p => p.id === producto.id); // Buscamos el indice del producto a modificar
-          if (indiceProducto !== -1) {
-              listadoProductos[indiceProducto] = datosFormulario;
-          }
-          alert("Producto editado correctamente");
-          mostrarProductos(listadoProductos);
+        const indiceProducto = listadoProductos.findIndex(
+          (p) => p.id === producto.id
+        ); // Buscamos el indice del producto a modificar
+        if (indiceProducto !== -1) {
+          listadoProductos[indiceProducto] = datosFormulario;
+        }
+        alert("Producto editado correctamente");
+        mostrarProductos(listadoProductos);
       }
-
     } else {
       const resultado = await crearProducto(datosFormulario);
-      
+
       if (resultado) {
-          resultado.id = listadoProductos.length + 1; 
-          const nuevoProductoLocal = { ...datosFormulario, id: resultado.id };
-          listadoProductos.push(nuevoProductoLocal);
-          alert("Producto creado correctamente");
-          mostrarProductos(listadoProductos);
+        resultado.id = listadoProductos.length + 1;
+        const nuevoProductoLocal = { ...datosFormulario, id: resultado.id };
+        listadoProductos.push(nuevoProductoLocal);
+        alert("Producto creado correctamente");
+        mostrarProductos(listadoProductos);
       }
     }
   });
@@ -472,9 +471,171 @@ const formularioAnnadirProducto = () => {
   });
 };
 
+const pintarGrafico = (coloresDeFondo, coloresDeBorde, tipo) => {
+  const ctx = document.getElementById("grafico").getContext("2d");
+
+  // Si existe el grafico lo eliminamos
+  if (grafico) {
+    grafico.destroy();
+  }
+
+  let datosGrafico;
+
+  if (tipo === "bubble") {
+    datosGrafico = listadoProductos.map((p, index) => ({
+      x: index,
+      y: p.rating.rate,
+      r: p.rating.rate * 5,
+    }));
+  } else if (tipo === "scatter") {
+    datosGrafico = listadoProductos.map((p, index) => ({
+      x: index,
+      y: p.rating.rate,
+    }));
+  } else {
+    datosGrafico = listadoProductos.map((p) => p.rating.rate);
+  }
+
+  grafico = new Chart(ctx, {
+    type: tipo,
+    data: {
+      labels: listadoProductos.map((p) => p.title.substring(0, 15) + "..."),
+      datasets: [
+        {
+          label: "Puntuación",
+          data: datosGrafico,
+          backgroundColor: coloresDeFondo,
+          borderColor: coloresDeBorde,
+          borderWidth: 1,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: "top",
+        },
+        title: {
+          display: true,
+          text: "Puntuación por Producto",
+        },
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: { display: true, text: "Puntuación" },
+        },
+        x: {
+          display: true,
+          title: {
+            display: tipo === "scatter" || tipo === "bubble",
+            text: "Posición del Producto",
+          },
+        },
+      },
+      animations: {
+        y: {
+          easing: "easeInOutElastic",
+          from: (ctx) => {
+            if (ctx.type === "data") {
+              if (ctx.mode === "default" && !ctx.dropped) {
+                ctx.dropped = true;
+                return 0;
+              }
+            }
+          },
+        },
+      },
+    },
+  });
+};
+
 const mostrarGraficos = () => {
   botonGraficos.addEventListener("click", () => {
     contenedorProductos.innerHTML = "";
+
+    const divGraficos = document.createElement("div");
+    divGraficos.className = "divGraficos";
+
+    const canvas = document.createElement("canvas");
+    canvas.id = "grafico";
+    divGraficos.appendChild(canvas);
+    contenedorProductos.appendChild(divGraficos);
+
+    const divBotones = document.createElement("div");
+    divBotones.className = "divBotones";
+
+    const botonGraficaBarras = document.createElement("button");
+    botonGraficaBarras.innerText = "Grafica de Barras";
+    divBotones.appendChild(botonGraficaBarras);
+    botonGraficaBarras.addEventListener("click", () => {
+      pintarGrafico(coloresDeFondo, coloresDeBorde, "bar");
+    });
+
+    const botonGraficaPastel = document.createElement("button");
+    botonGraficaPastel.innerText = "Grafica de Pastel";
+    divBotones.appendChild(botonGraficaPastel);
+    botonGraficaPastel.addEventListener("click", () => {
+      pintarGrafico(coloresDeFondo, coloresDeBorde, "pie");
+    });
+
+    const botonGraficaLineas = document.createElement("button");
+    botonGraficaLineas.innerText = "Grafica de Lineas";
+    divBotones.appendChild(botonGraficaLineas);
+    botonGraficaLineas.addEventListener("click", () => {
+      pintarGrafico(coloresDeFondo, coloresDeBorde, "line");
+    });
+
+    const botonGraficaDispersos = document.createElement("button");
+    botonGraficaDispersos.innerText = "Grafica de Dispersos";
+    divBotones.appendChild(botonGraficaDispersos);
+    botonGraficaDispersos.addEventListener("click", () => {
+      pintarGrafico(coloresDeFondo, coloresDeBorde, "scatter");
+    });
+
+    const botonGraficaRadar = document.createElement("button");
+    botonGraficaRadar.innerText = "Grafica de Radar";
+    divBotones.appendChild(botonGraficaRadar);
+    botonGraficaRadar.addEventListener("click", () => {
+      pintarGrafico(coloresDeFondo, coloresDeBorde, "radar");
+    });
+
+    const botonGraficaBurbujas = document.createElement("button");
+    botonGraficaBurbujas.innerText = "Grafica de Burbujas";
+    divBotones.appendChild(botonGraficaBurbujas);
+    botonGraficaBurbujas.addEventListener("click", () => {
+      pintarGrafico(coloresDeFondo, coloresDeBorde, "bubble");
+    });
+
+    const botonGraficaDonuts = document.createElement("button");
+    botonGraficaDonuts.innerText = "Grafica de Donuts";
+    divBotones.appendChild(botonGraficaDonuts);
+    botonGraficaDonuts.addEventListener("click", () => {
+      pintarGrafico(coloresDeFondo, coloresDeBorde, "doughnut");
+    });
+
+    const botonGraficaPolarArea = document.createElement("button");
+    botonGraficaPolarArea.innerText = "Grafica de Polar Area";
+    divBotones.appendChild(botonGraficaPolarArea);
+    botonGraficaPolarArea.addEventListener("click", () => {
+      pintarGrafico(coloresDeFondo, coloresDeBorde, "polarArea");
+    });
+
+    contenedorProductos.appendChild(divBotones);
+
+    const coloresDeFondo = [];
+    const coloresDeBorde = [];
+    listadoProductos.forEach(() => {
+      const r = Math.floor(Math.random() * 255);
+      const g = Math.floor(Math.random() * 255);
+      const b = Math.floor(Math.random() * 255);
+      coloresDeFondo.push(`rgba(${r}, ${g}, ${b}, 0.6)`);
+      coloresDeBorde.push(`rgba(${r}, ${g}, ${b}, 1)`);
+    });
+
+    pintarGrafico(coloresDeFondo, coloresDeBorde, "bar");
   });
 };
 
