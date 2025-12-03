@@ -101,6 +101,13 @@
 
 ---
 
+## [📂 PROYECTO INTERMODULAR](./proyecto_intermodular)
+
+- 📄 [Actividad1_Tomas_Cabello.pptx](proyecto_intermodular/Actividad1_Tomas_Cabello.pptx)
+- 📄 [Company Technical Report by Slidesgo - copia.pptx](proyecto_intermodular/Company%20Technical%20Report%20by%20Slidesgo%20-%20copia.pptx)
+
+---
+
 ## [📂 DIGITALIZACION](./digitalizacion)
 
 - 📂 [RETO PROFESIONAL TEMA 2](digitalizacion/RETO%20PROFESIONAL%20TEMA%202)
