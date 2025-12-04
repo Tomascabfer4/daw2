@@ -17,3 +17,101 @@
   --DarkGrayishBlue: hsl(236, 13%, 42%);
   --VeryDarkBlue: hsl(240, 100%, 5%);
 }
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--Off-White);
+  padding: 75px 150px;
+  font-size: 15px;
+}
+
+.barraNavegacion {
+  display: flex;
+  place-content: space-between;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.parteCentral {
+  margin-top: 50px;
+  display: flex;
+}
+
+.centralIzquierda {
+  display: grid;
+  width: 65%;
+}
+
+.imagenParteIzquierda img {
+  width: 100%;
+}
+
+.textoParteIzquierda {
+  display: flex;
+  padding: 40px 0;
+  gap: 20px;
+}
+
+.textoParteIzquierda h1 {
+  width: 55%;
+  font-size: 65px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.textoParteIzquierda p {
+  line-height: 2;
+  color: var(--DarkGrayishBlue);
+}
+
+.descripcionParteIzquierda {
+  width: 45%;
+  display: grid;
+}
+
+button {
+  background-color: var(--SoftRed);
+  color: var(--VeryDarkBlue);
+  font-weight: 700;
+  width: 180px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 15px;
+  border-style: none;
+  font-family: "Inter", sans-serif;
+}
+
+.centralDerecha {
+  width: 35%;
+  margin-left: 30px;
+  display: grid;
+  background-color: var(--VeryDarkBlue);
+}
+
+.centralDerecha h1 {
+  font-size: 50px;
+  padding: 0 35px;
+  padding-top: 25px;
+  margin-bottom: -40px;
+  color: var(--SoftOrange);
+}
+
+.noticia {
+  padding: 0 35px;
+}
+
+.noticia h2 {
+  color: var(--Off-White);
+  margin-bottom: 15px;
+}
+
+.noticia p {
+  color: var(--GrayishBlue);
+}
+
+.parteAbajo {
+  display: flex;
+}
