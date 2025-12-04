@@ -32,7 +32,19 @@ body {
 
 .menu {
   display: flex;
-  gap: 20px;
+  gap: 45px;
+}
+
+.menu h1 {
+  color: var(--DarkGrayishBlue);
+  font-size: 16px;
+  font-weight: 400;
+  place-content: end;
+}
+
+.menu h1:hover {
+  color: var(--SoftOrange);
+  cursor: pointer;
 }
 
 .parteCentral {
@@ -51,12 +63,11 @@ body {
 
 .textoParteIzquierda {
   display: flex;
-  padding: 40px 0;
-  gap: 20px;
+  margin-top: 20px;
 }
 
 .textoParteIzquierda h1 {
-  width: 55%;
+  width: 53%;
   font-size: 65px;
   font-weight: 800;
   line-height: 1;
@@ -68,7 +79,7 @@ body {
 }
 
 .descripcionParteIzquierda {
-  width: 45%;
+  width: 47%;
   display: grid;
 }
 
@@ -84,10 +95,17 @@ button {
   font-family: "Inter", sans-serif;
 }
 
+button:hover {
+  cursor: pointer;
+  color: var(--Off-White);
+  background-color: var(--VeryDarkBlue);
+}
+
 .centralDerecha {
   width: 35%;
   margin-left: 30px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   background-color: var(--VeryDarkBlue);
 }
 
@@ -95,12 +113,18 @@ button {
   font-size: 50px;
   padding: 0 35px;
   padding-top: 25px;
-  margin-bottom: -40px;
   color: var(--SoftOrange);
 }
 
 .noticia {
-  padding: 0 35px;
+  margin: 20px 39px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid var(--DarkGrayishBlue);
+}
+
+.noticia:last-child {
+  border-bottom: none;
+  padding-bottom: 15px;
 }
 
 .noticia h2 {
@@ -108,10 +132,198 @@ button {
   margin-bottom: 15px;
 }
 
+.noticia h2:hover {
+  cursor: pointer;
+  color: var(--SoftOrange);
+}
+
 .noticia p {
   color: var(--GrayishBlue);
 }
 
 .parteAbajo {
+  margin-top: 70px;
   display: flex;
+}
+
+.noticiaAbajo {
+  display: flex;
+  gap: 20px;
+}
+
+.noticiaAbajo h1 {
+  color: var(--SoftRed);
+  font-weight: 800;
+}
+
+.noticiaAbajo h2 {
+  color: var(--VeryDarkBlue);
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.noticiaAbajo h2:hover {
+  cursor: pointer;
+  color: var(--SoftRed);
+}
+
+.noticiaAbajo p {
+  color: var(--DarkGrayishBlue);
+}
+
+.noticiaAbajo2 {
+  margin-right: 45px;
+}
+
+.noticiaAbajo3 {
+  padding-right: 40px;
+}
+
+.noticiaAbajo1 p {
+  padding-right: 20px;
+}
+
+.noticiaAbajo img {
+  width: 30%;
+}
+
+.descripcionNoticiaAbajo {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* --- ESTILOS EXTRA PARA QUE FUNCIONE EL MENÚ --- */
+
+/* Ocultar botones de menú en escritorio por defecto */
+.open-menu,
+.close-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: auto; /* Resetear el width de 180px de los botones generales */
+}
+
+/* Fondo oscuro invisible por defecto */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 9;
+}
+
+/* --- MEDIA QUERY (VERSIÓN MÓVIL) --- */
+@media (max-width: 1000px) {
+  body {
+    padding: 20px; /* Reducir padding drásticamente */
+    overflow-x: hidden; /* Evitar scroll horizontal */
+  }
+
+  /* --- MENÚ MÓVIL (SIDEBAR) --- */
+  .open-menu {
+    display: block; /* Mostrar hamburguesa */
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Oculto a la derecha */
+    width: 70%; /* Ocupa el 70% de la pantalla */
+    height: 100vh;
+    background-color: var(--Off-White);
+    flex-direction: column;
+    padding: 140px 25px; /* Espacio superior para el botón cerrar */
+    gap: 25px;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 10;
+  }
+
+  button {
+    min-height: 50px;
+  }
+
+  /* Clase activa para abrir el menú */
+  .menu.active {
+    right: 0;
+  }
+
+  /* Mostrar el fondo oscuro cuando el menú está abierto */
+  body.menu-open .overlay {
+    display: block;
+  }
+
+  .close-menu {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
+
+  .menu h1 {
+    font-size: 18px;
+    color: var(--VeryDarkBlue);
+  }
+
+  /* --- LAYOUT PRINCIPAL --- */
+  .parteCentral {
+    flex-direction: column; /* Apilar verticalmente */
+    margin-top: 30px;
+  }
+
+  /* Parte Izquierda (Imagen + Texto) */
+  .centralIzquierda {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .textoParteIzquierda {
+    flex-direction: column; /* Título arriba, texto abajo */
+    margin-top: 20px;
+  }
+
+  .textoParteIzquierda h1 {
+    width: 100%;
+    font-size: 40px; /* Reducir tamaño de fuente */
+    margin-bottom: 20px;
+  }
+
+  .descripcionParteIzquierda {
+    width: 100%;
+  }
+
+  .descripcionParteIzquierda p {
+    margin-bottom: 25px;
+  }
+
+  /* Parte Derecha (Sección New) */
+  .centralDerecha {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 60px;
+  }
+
+  /* --- PARTE ABAJO (3 Noticias) --- */
+  .parteAbajo {
+    flex-direction: column; /* Apilar una debajo de otra */
+    margin-top: 60px;
+    gap: 30px;
+  }
+
+  .noticiaAbajo {
+    width: 100%;
+  }
+
+  .noticiaAbajo img {
+    width: 100px; /* Tamaño fijo para imágenes pequeñas */
+    height: auto;
+    object-fit: cover;
+  }
 }
