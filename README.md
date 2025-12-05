@@ -111,6 +111,7 @@
 ## [📂 DIGITALIZACION](./digitalizacion)
 
 - 📂 [RETO PROFESIONAL TEMA 2](digitalizacion/RETO%20PROFESIONAL%20TEMA%202)
+- 📂 [RETO PROFESIONAL TEMA 3](digitalizacion/RETO%20PROFESIONAL%20TEMA%203)
 - 📄 [Actividad22,23.docx](digitalizacion/Actividad22%2C23.docx)
 - 📄 [Tema 2 Ejercicios repaso.docx](digitalizacion/Tema%202%20Ejercicios%20repaso.docx)
 - 📄 [Tema 2 F.pdf](digitalizacion/Tema%202%20F.pdf)
@@ -119,6 +120,11 @@
 
 - 📄 [INFOGRAFIA RETO PROFESIONAL.pdf](digitalizacion/RETO%20PROFESIONAL%20TEMA%202/INFOGRAFIA%20RETO%20PROFESIONAL.pdf)
 - 📄 [RETO PROFESIONAL TEMA 2.pdf](digitalizacion/RETO%20PROFESIONAL%20TEMA%202/RETO%20PROFESIONAL%20TEMA%202.pdf)
+
+### [📂 RETO PROFESIONAL TEMA 3](./digitalizacion/RETO%20PROFESIONAL%20TEMA%203)
+
+- 📄 [Desafio Profesional Tema3 Digitalización.docx](digitalizacion/RETO%20PROFESIONAL%20TEMA%203/Desafio%20Profesional%20Tema3%20Digitalizaci%C3%B3n.docx)
+- 📄 [RETO PROFESIONAL TEMA 3.pdf](digitalizacion/RETO%20PROFESIONAL%20TEMA%203/RETO%20PROFESIONAL%20TEMA%203.pdf)
 
 ---
 
@@ -135,7 +141,8 @@
 - 📂 [2.1-social-proof-section-master_Tomas_Cabello](dise%C3%B1o_web/2.1-social-proof-section-master_Tomas_Cabello)
 - 📂 [2.2-product-preview-card-component-main_Tomas_Cabello](dise%C3%B1o_web/2.2-product-preview-card-component-main_Tomas_Cabello)
 - 📂 [3.1-sunnyside-agency-landing-page-main_Tomas_Cabello](dise%C3%B1o_web/3.1-sunnyside-agency-landing-page-main_Tomas_Cabello)
-- 📂 [3.2-news-homepage-main](dise%C3%B1o_web/3.2-news-homepage-main)
+- 📂 [3.2-news-homepage-main_Tomas_Cabello](dise%C3%B1o_web/3.2-news-homepage-main_Tomas_Cabello)
+- 📂 [3.3-product-list-with-cart-main_Tomas_Cabello](dise%C3%B1o_web/3.3-product-list-with-cart-main_Tomas_Cabello)
 - 📂 [four-card-feature-section-master_Tomas_Cabello](dise%C3%B1o_web/four-card-feature-section-master_Tomas_Cabello)
 - 📂 [position-css](dise%C3%B1o_web/position-css)
 - 📂 [prueba-stats-preview-card-component-main_Tomas_cabello](dise%C3%B1o_web/prueba-stats-preview-card-component-main_Tomas_cabello)
