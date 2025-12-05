@@ -103,7 +103,11 @@
 
 ## [📂 PROYECTO INTERMODULAR](./proyecto_intermodular)
 
+- 📄 [Actividad1Tema1.pdf](proyecto_intermodular/Actividad1Tema1.pdf)
 - 📄 [Actividad1_Tomas_Cabello.pptx](proyecto_intermodular/Actividad1_Tomas_Cabello.pptx)
+- 📄 [Actividad2Tema1.pdf](proyecto_intermodular/Actividad2Tema1.pdf)
+- 📄 [Actividad_2_Tomas_Cabello.docx](proyecto_intermodular/Actividad_2_Tomas_Cabello.docx)
+- 📄 [Actividad_2_Tomas_Cabello.pdf](proyecto_intermodular/Actividad_2_Tomas_Cabello.pdf)
 - 📄 [Company Technical Report by Slidesgo - copia.pptx](proyecto_intermodular/Company%20Technical%20Report%20by%20Slidesgo%20-%20copia.pptx)
 
 ---
@@ -125,7 +129,7 @@
 
 - 📄 [Desafio Profesional Tema3 Digitalización.docx](digitalizacion/RETO%20PROFESIONAL%20TEMA%203/Desafio%20Profesional%20Tema3%20Digitalizaci%C3%B3n.docx)
 - 📄 [Desafio Profesional Tema3 Digitalización.pdf](digitalizacion/RETO%20PROFESIONAL%20TEMA%203/Desafio%20Profesional%20Tema3%20Digitalizaci%C3%B3n.pdf)
-- 📄 [RETO PROFESIONAL TEMA 3.pdf](digitalizacion/RETO%20PROFESIONAL%20TEMA%203/RETO%20PROFESIONAL%20TEMA%203.pdf)
+- 📄 [RETO PROFESIONAL TEMA 3 CON NOMBRES.pdf](digitalizacion/RETO%20PROFESIONAL%20TEMA%203/RETO%20PROFESIONAL%20TEMA%203%20CON%20NOMBRES.pdf)
 
 ---
 
