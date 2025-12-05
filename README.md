@@ -124,6 +124,7 @@
 ### [📂 RETO PROFESIONAL TEMA 3](./digitalizacion/RETO%20PROFESIONAL%20TEMA%203)
 
 - 📄 [Desafio Profesional Tema3 Digitalización.docx](digitalizacion/RETO%20PROFESIONAL%20TEMA%203/Desafio%20Profesional%20Tema3%20Digitalizaci%C3%B3n.docx)
+- 📄 [Desafio Profesional Tema3 Digitalización.pdf](digitalizacion/RETO%20PROFESIONAL%20TEMA%203/Desafio%20Profesional%20Tema3%20Digitalizaci%C3%B3n.pdf)
 - 📄 [RETO PROFESIONAL TEMA 3.pdf](digitalizacion/RETO%20PROFESIONAL%20TEMA%203/RETO%20PROFESIONAL%20TEMA%203.pdf)
 
 ---
