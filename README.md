@@ -105,11 +105,13 @@
 ## [📂 PROYECTO INTERMODULAR](./proyecto_intermodular)
 
 - 📄 [Actividad1Tema1.pdf](proyecto_intermodular/Actividad1Tema1.pdf)
+- 📄 [Actividad1_Tomas_Cabello.pdf](proyecto_intermodular/Actividad1_Tomas_Cabello.pdf)
 - 📄 [Actividad1_Tomas_Cabello.pptx](proyecto_intermodular/Actividad1_Tomas_Cabello.pptx)
 - 📄 [Actividad2Tema1.pdf](proyecto_intermodular/Actividad2Tema1.pdf)
 - 📄 [Actividad_2_Tomas_Cabello.docx](proyecto_intermodular/Actividad_2_Tomas_Cabello.docx)
 - 📄 [Actividad_2_Tomas_Cabello.pdf](proyecto_intermodular/Actividad_2_Tomas_Cabello.pdf)
 - 📄 [Company Technical Report by Slidesgo - copia.pptx](proyecto_intermodular/Company%20Technical%20Report%20by%20Slidesgo%20-%20copia.pptx)
+- 📄 [~$Actividad1_Tomas_Cabello.pptx](proyecto_intermodular/~%24Actividad1_Tomas_Cabello.pptx)
 
 ---
 
