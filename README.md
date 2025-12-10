@@ -16,6 +16,7 @@
 ### [📂 U3](./optativa/U3)
 
 - 📂 [UT3A1](optativa/U3/UT3A1)
+- 📂 [UT3A2](optativa/U3/UT3A2)
 
 ### [📂 U2](./optativa/U2)
 
