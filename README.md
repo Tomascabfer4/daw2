@@ -156,6 +156,7 @@
 - 📂 [blogr-landing-page-main_Tomas_Cabello](dise%C3%B1o_web/blogr-landing-page-main_Tomas_Cabello)
 - 📂 [four-card-feature-section-master_Tomas_Cabello](dise%C3%B1o_web/four-card-feature-section-master_Tomas_Cabello)
 - 📂 [position-css](dise%C3%B1o_web/position-css)
+- 📂 [prueba-loopstudios-landing-page-main_Tomas_Cabello](dise%C3%B1o_web/prueba-loopstudios-landing-page-main_Tomas_Cabello)
 - 📂 [prueba-stats-preview-card-component-main_Tomas_cabello](dise%C3%B1o_web/prueba-stats-preview-card-component-main_Tomas_cabello)
 - 📂 [reloj-analogico_Tomas_Cabello](dise%C3%B1o_web/reloj-analogico_Tomas_Cabello)
 
