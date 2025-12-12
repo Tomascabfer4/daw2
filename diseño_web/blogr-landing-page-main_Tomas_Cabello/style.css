@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Primario */
+  --Red500: hsl(356, 100%, 66%);
+  --Red400: hsl(355, 100%, 74%);
+  --Blue900: hsl(208, 49%, 24%);
+  /* Neutral */
+  --White: hsl(0, 100%, 100%);
+  --Gray600: hsl(207, 13%, 34%);
+  --Gray900: hsl(240, 10%, 16%);
+  /* Gradiente */
+  --Orange300: hsl(13, 100%, 72%);
+  --Red550: hsl(353, 100%, 62%);
+  --Purple950: hsl(237, 17%, 21%);
+  --Purple900: hsl(237, 23%, 31%);
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  background-color: var(--Rosa100);
+  font-size: 16px;
+}
+
+.parteArriba {
+  padding: 70px 130px;
+  background-image: url("./images/bg-pattern-intro-desktop.svg"),
+    linear-gradient(to right, var(--Orange300), var(--Red550));
+  background-position: 25% 52%, center;
+  background-size: 200%, auto;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 100px;
+}
+
+.barraNavegacion {
+  display: flex;
+  place-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  margin-right: 20px;
+}
+
+.enlaces-nav {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  align-items: center;
+}
+
+.item-nav {
+  position: relative;
+}
+
+.botonTransparente {
+  background: none;
+  border: none;
+  color: var(--White);
+  opacity: 0.8;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-nav:hover {
+  text-decoration: underline;
+  color: var(--White);
+}
+
+.btn-nav img {
+  transition: transform 0.3s ease;
+}
+
+.item-nav.activo .btn-nav img {
+  transform: rotate(180deg);
+}
+
+.menu-desplegable {
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  background-color: var(--White);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  min-width: 170px;
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 10;
+  margin-top: 15px;
+}
+
+.item-nav.activo .menu-desplegable {
+  display: flex;
+}
+
+.menu-desplegable a {
+  text-decoration: none;
+  color: var(--Gray900);
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+  transition: font-weight 0.2s, color 0.2s;
+}
+
+.menu-desplegable a:hover {
+  font-weight: 600;
+}
+
+.botonesNavegacion {
+  display: flex;
+  gap: 20px;
+}
+
+.botonBlanco {
+  background-color: var(--White);
+  color: var(--Red500);
+  border: none;
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 15px 30px;
+  border-radius: 25px;
+  transition: background-color 0.2s;
+}
+
+.botonBlanco:hover {
+  background-color: var(--Red400);
+  color: var(--White);
+}
+
+.textoArriba {
+  text-align: center;
+  margin-top: 150px;
+  color: var(--White);
+}
+
+.textoArriba h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.textoArriba p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.textoArriba button {
+  margin-right: 10px;
+  margin-bottom: 100px;
+}
+
+.botonTransConBorde {
+  background-color: transparent;
+  color: var(--White);
+  border: 1px solid var(--White);
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 15px 30px;
+  border-radius: 25px;
+  transition: background-color 0.2s;
+}
+
+.botonTransConBorde:hover {
+  background-color: var(--White);
+  color: var(--Red500);
+}
+
+.parteCentral1 {
+  padding: 150px 0 150px 150px;
+}
+
+.parteCentral1 h2 {
+  font-size: 40px;
+  color: var(--Blue900);
+  margin-bottom: 80px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.textoEImagenCentral1 {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.textoEImagenCentral1 img {
+  position: absolute;
+  left: 66%;
+  top: 40%;
+  transform: translate(-15%, -50%);
+  width: 65%;
+  max-width: none;
+}
+
+.textoCentrales1 {
+  width: 42%;
+  position: relative;
+  z-index: 1;
+}
+
+.textoCentral1 {
+  margin-bottom: 50px;
+}
+
+.textoCentral1 h3 {
+  font-size: 28px;
+  color: var(--Blue900);
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.textoCentral1 p {
+  line-height: 28px;
+  color: var(--Gray600);
+  font-family: "Overpass", sans-serif;
+  letter-spacing: 0.5px;
+}
