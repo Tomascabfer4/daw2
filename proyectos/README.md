@@ -9,3 +9,6 @@
 - [Página Web estatica de practica para darle forma a Stressen(sitioEstaticoStressen-Servidor)](https://github.com/Tomascabfer4/sitioEstaticoStressen-Servidor)
 - [Ejemplo de Aplicación que muestra un formulario con diferentes acciones](https://github.com/Tomascabfer4/nxformulario-ejemplo-Servidor.git)
 - [Examen del Tema 4 Biblioteca, con gestion de operaciones CRUD en BBDD y API, y gestion de Cookies](https://github.com/Tomascabfer4/pruebaTema4DWESTomasCabello)
+- [Ejemplo de Aplicacion con formulario para subir imagenes a Cloudinary](https://github.com/Tomascabfer4/nxSubirImagenesCloudinary-Servidor)
+- [Ejemplo de aplicaion para mostrar imagenes subidas a Cloudinary](https://github.com/Tomascabfer4/nxVerImagenesCloudinary-Servidor)
+- [Ejemplo de Aplicacion para realizar operaciones CRUD sobre Cloudinary](https://github.com/Tomascabfer4/nxCRUDCloudinary-Servidor)
