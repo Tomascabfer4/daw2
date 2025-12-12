@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  --Grey200: hsl(0, 0%, 85%);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+body {
+  font-family: "Alata", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.parteArriba {
+  background-image: url("./images/desktop/image-hero.jpg");
+  padding: 60px 150px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 130px;
+}
+
+.enlaces {
+  display: flex;
+  gap: 15px;
+  color: var(--White);
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  border-bottom: 2px solid var(--White);
+}
+
+h1 {
+  font-size: 75px;
+  color: var(--White);
+  padding: 30px;
+  margin-bottom: 60px;
+  width: 58%;
+  border: 3px solid var(--White);
+}
+
+.parteCentral {
+  display: flex;
+  flex-direction: column;
+  padding: 160px 150px;
+}
+
+.parteCentral img {
+  width: 65%;
+}
+
+.tioConGafas {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 100px;
+}
+
+.tioConGafasTexto {
+  position: relative;
+  background-color: var(--White);
+  padding: 95px 0 0 95px;
+  margin-left: -160px;
+  max-width: 55%;
+}
+
+.tioConGafasTexto p {
+  margin-top: 30px;
+  opacity: 0.5;
+  line-height: 1.5;
+  letter-spacing: 0.55px;
+}
+
+h2 {
+  font-size: 55px;
+}
+
+.titulocuadrosImagenes {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 60px;
+}
+
+button {
+  padding: 10px 50px;
+  font-size: 20px;
+  background-color: var(--White);
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  letter-spacing: 3px;
+  word-spacing: 6px;
+  text-transform: uppercase;
+  border: 2px solid var(--Black);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--Black);
+  color: var(--White);
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.imagen {
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.imagen:hover {
+  opacity: 0.6;
+}
+
+.imagen h3 {
+  font-size: 32px;
+  color: var(--White);
+  z-index: 1;
+  width: 150px;
+  line-height: 1;
+}
+
+.imagen:hover h3 {
+  color: var(--Black);
+}
+
+.imagenDeepEarth {
+  background-image: url("./images/desktop/image-deep-earth.jpg");
+}
+.imagenNightArcade {
+  background-image: url("./images/desktop/image-night-arcade.jpg");
+}
+.imagenSoccerTeamVR {
+  background-image: url("./images/desktop/image-soccer-team.jpg");
+}
+.imagenTheGrid {
+  background-image: url("./images/desktop/image-grid.jpg");
+}
+.imagenFromUpAboveVR {
+  background-image: url("./images/desktop/image-from-above.jpg");
+}
+.imagenPocketBorealis {
+  background-image: url("./images/desktop/image-pocket-borealis.jpg");
+}
+.imagenTheCuriosity {
+  background-image: url("./images/desktop/image-curiosity.jpg");
+}
+.imagenMakeItFisheye {
+  background-image: url("./images/desktop/image-fisheye.jpg");
+}
+
+footer {
+  padding: 50px 150px;
+  background-color: var(--Black);
+}
+
+.logosFooter {
+  display: flex;
+  margin-bottom: 25px;
+  justify-content: space-between;
+}
+
+.redesSociales img {
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.redesSociales img:hover {
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--White);
+}
+
+.parteAbajoFooter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.parteAbajoFooter p {
+  color: var(--Grey200);
+}
+
+.iconoHamburguesa {
+  display: none;
+}
+
+@media (max-width: 1160px) {
+  body {
+    text-align: center;
+  }
+
+  .encabezado {
+    margin-bottom: 50px;
+    align-items: center;
+  }
+
+  .enlaces {
+    display: none;
+  }
+
+  .iconoHamburguesa {
+    display: block;
+    cursor: pointer;
+    z-index: 200;
+  }
+
+  .parteArriba {
+    background-image: url("./images/mobile/image-hero.jpg");
+    padding: 40px 25px;
+  }
+
+  h1 {
+    font-size: 40px;
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+  }
+
+  .parteCentral {
+    padding: 100px 25px;
+  }
+
+  .tioConGafas {
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+
+  .parteCentral img {
+    width: 100%;
+  }
+
+  .tioConGafasTexto {
+    padding: 40px 25px 0;
+    max-width: 100%;
+    padding: 40px 0 0 0;
+  }
+
+  .tioConGafasTexto h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .tioConGafasTexto p {
+    margin-top: 15px;
+  }
+
+  .cuadrosImagenes {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .titulocuadrosImagenes {
+    display: contents;
+  }
+
+  .cuadrosImagenes h2 {
+    order: 1;
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .galeria {
+    order: 2;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+
+  .cuadrosImagenes button {
+    order: 3;
+    align-self: center;
+  }
+
+  .imagen {
+    height: 120px;
+  }
+
+  .imagen h3 {
+    width: auto;
+    font-size: 24px;
+  }
+
+  .imagenDeepEarth {
+    background-image: url("./images/mobile/image-deep-earth.jpg");
+  }
+  .imagenNightArcade {
+    background-image: url("./images/mobile/image-night-arcade.jpg");
+  }
+  .imagenSoccerTeamVR {
+    background-image: url("./images/mobile/image-soccer-team.jpg");
+  }
+  .imagenTheGrid {
+    background-image: url("./images/mobile/image-grid.jpg");
+  }
+  .imagenFromUpAboveVR {
+    background-image: url("./images/mobile/image-from-above.jpg");
+  }
+  .imagenPocketBorealis {
+    background-image: url("./images/mobile/image-pocket-borealis.jpg");
+  }
+  .imagenTheCuriosity {
+    background-image: url("./images/mobile/image-curiosity.jpg");
+  }
+  .imagenMakeItFisheye {
+    background-image: url("./images/mobile/image-fisheye.jpg");
+  }
+
+  footer {
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .logosFooter {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .parteAbajoFooter {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .parteAbajoFooter .enlaces {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
