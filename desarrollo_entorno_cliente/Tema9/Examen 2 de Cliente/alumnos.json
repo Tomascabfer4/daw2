@@ -1,0 +1,114 @@
+[
+    {
+        "nombre": "José",
+        "curso": "Segundo",
+        "dwec": 7,
+        "dwes": 8,
+        "di": 6,
+        "imagen": "jose.jpg"
+    },
+    {
+        "nombre": "David",
+        "curso": "Segundo",
+        "dwec": 5,
+        "dwes": 6,
+        "di": 7,
+        "imagen": "david.jpg"
+    },
+    {
+        "nombre": "Carlos",
+        "curso": "Segundo",
+        "dwec": 9,
+        "dwes": 8,
+        "di": 7,
+        "imagen": "carlos.jpg"
+    },
+    {
+        "nombre": "Rafael",
+        "curso": "Segundo",
+        "dwec": 6,
+        "dwes": 7,
+        "di": 5,
+        "imagen": "rafael.jpg"
+    },
+    {
+        "nombre": "Juan",
+        "curso": "Segundo",
+        "dwec": 7,
+        "dwes": 9,
+        "di": 8,
+        "imagen": "juan.jpg"
+    },
+    {
+        "nombre": "Miguel",
+        "curso": "Segundo",
+        "dwec": 8,
+        "dwes": 6,
+        "di": 7,
+        "imagen": "miguel.jpg"
+    },
+    {
+        "nombre": "Manuel",
+        "curso": "Segundo",
+        "dwec": 6,
+        "dwes": 5,
+        "di": 8,
+        "imagen": "manuel.jpg"
+    },
+    {
+        "nombre": "Emilio",
+        "curso": "Segundo",
+        "dwec": 7,
+        "dwes": 6,
+        "di": 5,
+        "imagen": "emilio.jpg"
+    },
+    {
+        "nombre": "Antonio",
+        "curso": "Segundo",
+        "dwec": 8,
+        "dwes": 7,
+        "di": 9,
+        "imagen": "antonio.jpg"
+    },
+    {
+        "nombre": "Ismael",
+        "curso": "Segundo",
+        "dwec": 5,
+        "dwes": 6,
+        "di": 7,
+        "imagen": "ismael.jpg"
+    },
+    {
+        "nombre": "Rubén",
+        "curso": "Segundo",
+        "dwec": 7,
+        "dwes": 8,
+        "di": 6,
+        "imagen": "ruben.jpg"
+    },
+    {
+        "nombre": "Juan José",
+        "curso": "Segundo",
+        "dwec": 6,
+        "dwes": 7,
+        "di": 5,
+        "imagen": "juanjose.jpg"
+    },
+    {
+        "nombre": "Ana",
+        "curso": "Segundo",
+        "dwec": 8,
+        "dwes": 9,
+        "di": 7,
+        "imagen": "ana.jpg"
+    },
+    {
+        "nombre": "Daniel",
+        "curso": "Segundo",
+        "dwec": 7,
+        "dwes": 6,
+        "di": 8,
+        "imagen": "daniel.jpg"
+    }
+]
