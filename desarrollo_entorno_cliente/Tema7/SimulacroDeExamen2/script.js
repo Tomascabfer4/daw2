@@ -24,7 +24,6 @@ btnIniciar.addEventListener("click", function () {
     parrafo3.classList.add("resaltado");
   });
   contenedor.appendChild(parrafo3);
-
   let contador = 0;
   h2Contador = document.createElement("h2");
   botones.appendChild(h2Contador);
@@ -43,16 +42,15 @@ btnIniciar.addEventListener("click", function () {
 });
 
 btnReiniciar.addEventListener("click", function () {
-    if (h2Contador) { 
-        h2Contador.remove(); 
-    }
-    contenedor.innerHTML = "";
-    contador = 0;
-    btnIniciar.textContent = "Iniciar";
-    btnIniciar.disabled = false;
-    btnReiniciar.disabled = true;
+  if (h2Contador) {
+    h2Contador.remove();
+  }
+  contenedor.innerHTML = "";
+  contador = 0;
+  btnIniciar.textContent = "Iniciar";
+  btnIniciar.disabled = false;
+  btnReiniciar.disabled = true;
 });
-
 
 // const h2Anterior = botones.querySelector("h2");
 //   if (h2Anterior) {

@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "titulo": "El Gobierno aprueba una nueva ley de vivienda",
+    "resumen": "La nueva normativa busca facilitar el acceso a la vivienda a jóvenes y familias.",
+    "contenido": "El Consejo de Ministros ha aprobado una nueva ley de vivienda que incluye ayudas al alquiler y limitaciones a los precios en zonas tensionadas.",
+    "autor": "Ana Martínez",
+    "categoria": "Política",
+    "fechaPublicacion": "2025-12-10T09:00:00Z",
+    "imagen": "noticia_1.jpg",
+    "votos": 15
+  },
+  {
+    "id": 2,
+    "titulo": "La inflación baja por tercer mes consecutivo",
+    "resumen": "Los precios muestran una tendencia a la moderación según el último informe.",
+    "contenido": "El Instituto Nacional de Estadística ha publicado los datos de inflación correspondientes al mes de noviembre, confirmando una bajada sostenida.",
+    "autor": "Javier Ruiz",
+    "categoria": "Economía",
+    "fechaPublicacion": "2025-12-09T08:30:00Z",
+    "imagen": "noticia_2.jpg",
+    "votos": 12
+  },
+  {
+    "id": 3,
+    "titulo": "España gana el campeonato europeo de baloncesto",
+    "resumen": "La selección se impuso en la final con una gran actuación colectiva.",
+    "contenido": "España se proclamó campeona de Europa tras vencer en la final con una diferencia de diez puntos. El equipo destacó por su solidez defensiva.",
+    "autor": "Carlos Fernández",
+    "categoria": "Deportes",
+    "fechaPublicacion": "2025-12-08T22:15:00Z",
+    "imagen": "noticia_3.jpg",
+    "votos": 9
+  },
+  {
+    "id": 4,
+    "titulo": "Descubren un nuevo exoplaneta potencialmente habitable",
+    "resumen": "El planeta se encuentra a 120 años luz de la Tierra.",
+    "contenido": "Astrónomos europeos han identificado un nuevo exoplaneta que podría reunir las condiciones necesarias para albergar vida.",
+    "autor": "Laura Gómez",
+    "categoria": "Ciencia",
+    "fechaPublicacion": "2025-12-08T11:00:00Z",
+    "imagen": "noticia_4.jpg",
+    "votos": 8
+  },
+  {
+    "id": 5,
+    "titulo": "Aumenta el uso del transporte público en las grandes ciudades",
+    "resumen": "Las políticas de movilidad sostenible comienzan a dar resultados.",
+    "contenido": "El uso del transporte público ha crecido un 12% en el último año, especialmente en metro y autobuses urbanos.",
+    "autor": "Miguel Torres",
+    "categoria": "Sociedad",
+    "fechaPublicacion": "2025-12-07T10:20:00Z",
+    "imagen": "noticia_5.jpg",
+    "votos": 4
+  },
+  {
+    "id": 6,
+    "titulo": "Las energías renovables baten récords de producción",
+    "resumen": "La energía solar y eólica lideran el crecimiento.",
+    "contenido": "Durante el último trimestre, las energías renovables han alcanzado cifras históricas de producción eléctrica.",
+    "autor": "Sofía Navarro",
+    "categoria": "Medio Ambiente",
+    "fechaPublicacion": "2025-12-06T07:45:00Z",
+    "imagen": "noticia_6.jpg",
+    "votos": 15
+  },
+  {
+    "id": 7,
+    "titulo": "La inteligencia artificial transforma el mercado laboral",
+    "resumen": "Nuevos perfiles profesionales surgen en el sector tecnológico.",
+    "contenido": "Expertos señalan que la inteligencia artificial está generando nuevos empleos, aunque también plantea desafíos de adaptación.",
+    "autor": "David Romero",
+    "categoria": "Tecnología",
+    "fechaPublicacion": "2025-12-05T16:00:00Z",
+    "imagen": "noticia_7.jpg",
+    "votos": 7
+  },
+  {
+    "id": 8,
+    "titulo": "El turismo se recupera tras años de incertidumbre",
+    "resumen": "Las cifras de visitantes superan las previsiones.",
+    "contenido": "El sector turístico ha cerrado el año con un aumento significativo de visitantes internacionales.",
+    "autor": "Elena Cruz",
+    "categoria": "Turismo",
+    "fechaPublicacion": "2025-12-04T12:10:00Z",
+    "imagen": "noticia_8.jpg",
+    "votos": 6
+  },
+  {
+    "id": 9,
+    "titulo": "Nueva exposición de arte contemporáneo en Madrid",
+    "resumen": "La muestra reúne obras de artistas internacionales.",
+    "contenido": "El museo ha inaugurado una exposición que explora las nuevas corrientes del arte contemporáneo.",
+    "autor": "Pablo Ortega",
+    "categoria": "Cultura",
+    "fechaPublicacion": "2025-12-03T18:30:00Z",
+    "imagen": "noticia_9.jpg",
+    "votos": 18
+  },
+  {
+    "id": 10,
+    "titulo": "Consejos para mejorar la salud mental en el día a día",
+    "resumen": "Especialistas recomiendan hábitos sencillos y efectivos.",
+    "contenido": "Mantener rutinas saludables, hacer ejercicio y cuidar el descanso son claves para mejorar la salud mental.",
+    "autor": "Lucía Herrera",
+    "categoria": "Salud",
+    "fechaPublicacion": "2025-12-02T09:50:00Z",
+    "imagen": "noticia_10.jpg",
+    "votos": 1
+  }
+]
