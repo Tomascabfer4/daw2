@@ -323,6 +323,20 @@
 - 📂 [Examen 2 de Cliente](desarrollo_entorno_cliente/Tema9/Examen%202%20de%20Cliente)
 - 📂 [SegundoSimulacroExamen2Cliente](desarrollo_entorno_cliente/Tema9/SegundoSimulacroExamen2Cliente)
 - 📂 [solucionExamen8-9](desarrollo_entorno_cliente/Tema9/solucionExamen8-9)
+- 📂 [webExamen25-26](desarrollo_entorno_cliente/Tema9/webExamen25-26)
+
+##### [📂 IMAGENES](./desarrollo_entorno_cliente/Tema9/webExamen25-26/imagenes)
+
+- 📄 [noticia_1.jpg](desarrollo_entorno_cliente/Tema9/webExamen25-26/imagenes/noticia_1.jpg)
+- 📄 [noticia_10.jpg](desarrollo_entorno_cliente/Tema9/webExamen25-26/imagenes/noticia_10.jpg)
+- 📄 [noticia_2.jpg](desarrollo_entorno_cliente/Tema9/webExamen25-26/imagenes/noticia_2.jpg)
+- 📄 [noticia_3.jpg](desarrollo_entorno_cliente/Tema9/webExamen25-26/imagenes/noticia_3.jpg)
+- 📄 [noticia_4.jpg](desarrollo_entorno_cliente/Tema9/webExamen25-26/imagenes/noticia_4.jpg)
+- 📄 [noticia_5.jpg](desarrollo_entorno_cliente/Tema9/webExamen25-26/imagenes/noticia_5.jpg)
+- 📄 [noticia_6.jpg](desarrollo_entorno_cliente/Tema9/webExamen25-26/imagenes/noticia_6.jpg)
+- 📄 [noticia_7.jpg](desarrollo_entorno_cliente/Tema9/webExamen25-26/imagenes/noticia_7.jpg)
+- 📄 [noticia_8.jpg](desarrollo_entorno_cliente/Tema9/webExamen25-26/imagenes/noticia_8.jpg)
+- 📄 [noticia_9.jpg](desarrollo_entorno_cliente/Tema9/webExamen25-26/imagenes/noticia_9.jpg)
 
 ##### [📂 IMAGENES](./desarrollo_entorno_cliente/Tema9/Examen%202%20de%20Cliente/imagenes)
 
