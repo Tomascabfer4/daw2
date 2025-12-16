@@ -1,0 +1,170 @@
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+/* Header */
+header {
+  background-color: #5cb85c; /* Green color similar to image */
+  padding: 15px 0;
+  text-align: center;
+}
+
+.contenido-cabecera {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.contenedor-global {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Photos Grid Section */
+.cuadricula-fotos {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  align-content: start;
+}
+
+.tarjeta-foto {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-foto:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.marco-foto {
+  background-color: #f0f0f0;
+  height: 120px;
+  width: 120px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marco-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tarjeta-foto span {
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Student Info Section */
+.informacion-alumno {
+  flex: 1;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.informacion-alumno h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.informacion-alumno h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.informacion-alumno h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #000;
+  font-weight: bold;
+}
+
+.informacion-alumno p {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: auto;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+/* Controls in Global Container (Statistics View) */
+.contenedor-global select,
+.contenedor-global label {
+  align-self: flex-start;
+  margin: 20px 10px;
+  padding: 5px;
+}
+
+.contenedor-global canvas#grafico {
+  margin: 20px;
+  flex: 1 1 100%;
+  width: 100%;
+  height: 400px;
+  max-height: 400px;
+}
