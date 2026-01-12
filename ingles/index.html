@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Presentation: The Digital Restaurant</title>
+    <style>
+        /* --- ESTILO GENERAL Y FONDO LIQUID GLASS --- */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            /* Fondo degradado vibrante para que resalte el efecto cristal */
+            background: linear-gradient(45deg, #ff00cc, #333399, #00ccff);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animación suave del fondo */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* --- CONTENEDORES ESTILO CRISTAL (GLASSMORPHISM) --- */
+        .glass-container {
+            /* La magia del Liquid Glass */
+            background: rgba(255, 255, 255, 0.1); /* Blanco muy transparente */
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Sombra suave */
+            backdrop-filter: blur(12px); /* EFECTO DE DESENFOQUE CLAVE */
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 20px; /* Bordes redondeados */
+            border: 1px solid rgba(255, 255, 255, 0.18); /* Borde brillante sutil */
+            
+            padding: 40px;
+            margin: 50px auto;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        /* --- TIPOGRAFÍA Y ELEMENTOS --- */
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        h2 {
+            font-size: 2.2em;
+            color: #e0e0e0;
+            margin-top: 0;
+        }
+        p.lead {
+            font-size: 1.5em;
+            font-weight: 300;
+        }
+        .highlight {
+            font-weight: 700;
+            color: #00ccff;
+        }
+
+        /* --- SECCIONES --- */
+        /* Cada sección ocupa casi toda la pantalla para que parezca una diapositiva */
+        section {
+            min-height: 85vh; /* Altura mínima de cada "slide" */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* --- ELEMENTOS VISUALES (ICONOS Y CAJAS) --- */
+        .visual-row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            gap: 20px;
+        }
+        
+        .visual-card {
+            /* Pequeñas tarjetas de cristal dentro de la grande */
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            width: 200px;
+            transition: transform 0.3s ease;
+        }
+        .visual-card:hover {
+            transform: translateY(-10px); /* Pequeña animación al pasar el ratón */
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .emoji-icon {
+            font-size: 4em;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .card-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .card-text {
+            font-size: 0.9em;
+        }
+
+        /* --- CLASES ESPECÍFICAS --- */
+        .analogy-big {
+            font-size: 6em;
+            margin: 20px 0;
+        }
+        .arrow-down {
+            font-size: 2em;
+            margin-top: 40px;
+            animation: bounce 2s infinite;
+            opacity: 0.7;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-15px);}
+            60% {transform: translateY(-10px);}
+        }
+
+    </style>
+</head>
+<body>
+
+    <section>
+        <div class="glass-container">
+            <h1>Web Development</h1>
+            <h2>Behind the Screen</h2>
+            <p class="lead" style="margin-top: 50px;">We are: [Nombre 1], [Nombre 2] & [Nombre 3]</p>
+            <div class="arrow-down">⬇️ Scroll Down</div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="glass-container">
+            <h2>How to understand it?</h2>
+            <p class="lead">Computer science is complex...</p>
+            <p class="lead">Let's use a simple example:</p>
+            
+            <div class="analogy-big">🍽️ RESTAURANT</div>
+            
+            <p class="lead">A Web Application = A Digital Restaurant</p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="glass-container">
+            <h1>The Front-End</h1>
+            <h2 class="highlight">The Dining Room 🛋️</h2>
+            <p class="lead">What you see and touch on your screen.</p>
+
+            <div class="visual-row">
+                <div class="visual-card">
+                    <span class="emoji-icon">🧱</span>
+                    <div class="card-title">HTML</div>
+                    <div class="card-text">The Structure.<br>(Walls & Tables)</div>
+                </div>
+                <div class="visual-card">
+                    <span class="emoji-icon">🎨</span>
+                    <div class="card-title">CSS</div>
+                    <div class="card-text">The Style.<br>(Decoration & Paint)</div>
+                </div>
+                <div class="visual-card">
+                    <span class="emoji-icon">✨</span>
+                    <div class="card-title">JavaScript</div>
+                    <div class="card-text">The Magic.<br>(Movement & Action)</div>
+                </div>
+            </div>
+            <p style="margin-top: 30px;">*Don't forget the live demo here!*</p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="glass-container">
+            <h1>The Back-End</h1>
+            <h2 class="highlight">The Kitchen 👨‍🍳</h2>
+            <p class="lead">The hidden logic. Where the chefs cook.</p>
+
+            <div class="visual-row" style="align-items: center;">
+                 <div class="visual-card">
+                    <span class="emoji-icon">🧑‍💻</span>
+                    <div class="card-title">The User</div>
+                    <div class="card-text">Clicks a button.<br>(Orders food)</div>
+                </div>
+
+                <span style="font-size: 3em;">➡️</span>
+
+                 <div class="visual-card" style="background: rgba(255, 200, 0, 0.15);">
+                    <span class="emoji-icon">🍳</span>
+                    <div class="card-title">The Back-End</div>
+                    <div class="card-text">PHP / Java Chefs<br>follow recipes.</div>
+                </div>
+            </div>
+            <p class="lead" style="margin-top: 40px;">It's the brain of the computer.</p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="glass-container">
+            <h1>The Database</h1>
+            <h2 class="highlight">The Pantry / Fridge 🗄️</h2>
+            <p class="lead">Where we keep the ingredients organized.</p>
+
+            <div class="visual-row">
+                <div class="visual-card">
+                    <span class="emoji-icon">👤</span>
+                    <div class="card-text">Usernames</div>
+                </div>
+                <div class="visual-card">
+                    <span class="emoji-icon">🔑</span>
+                    <div class="card-text">Passwords<br>(Secure!)</div>
+                </div>
+                <div class="visual-card">
+                    <span class="emoji-icon">📸</span>
+                    <div class="card-text">Photos & Posts</div>
+                </div>
+            </div>
+            <p class="lead" style="margin-top: 30px;">Everything must be tidy and safe.</p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="glass-container">
+            <h1>The Full Picture</h1>
+            
+            <div class="visual-row" style="font-size: 1.5em;">
+                <div>🛋️ Dining Room<br>+(Front-End)</div>
+                <div>👨‍🍳 Kitchen<br>+(Back-End)</div>
+                <div>🗄️ Pantry<br>+(Database)</div>
+            </div>
+
+            <h2 class="highlight" style="margin-top: 40px; font-size: 3em;">= Web Application</h2>
+            <p class="lead" style="margin-top: 50px;">Thank you for listening!</p>
+        </div>
+    </section>
+
+</body>
+</html>
