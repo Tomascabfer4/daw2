@@ -63,6 +63,8 @@
 
 - 📂 [Tema1](desarrollo_entorno_servidor/Tema1)
 - 📂 [Tema2](desarrollo_entorno_servidor/Tema2)
+- 📄 [API_CLOUDINARY.txt](desarrollo_entorno_servidor/API_CLOUDINARY.txt)
+- 📄 [ComandosPrisma.txt](desarrollo_entorno_servidor/ComandosPrisma.txt)
 
 ### [📂 TEMA1](./desarrollo_entorno_servidor/Tema1)
 
@@ -153,6 +155,7 @@
 - 📂 [3.1-sunnyside-agency-landing-page-main_Tomas_Cabello](dise%C3%B1o_web/3.1-sunnyside-agency-landing-page-main_Tomas_Cabello)
 - 📂 [3.2-news-homepage-main_Tomas_Cabello](dise%C3%B1o_web/3.2-news-homepage-main_Tomas_Cabello)
 - 📂 [3.3-product-list-with-cart-main_Tomas_Cabello](dise%C3%B1o_web/3.3-product-list-with-cart-main_Tomas_Cabello)
+- 📂 [4.0-formulario-SignUp_SignIn_Tomas_Cabello](dise%C3%B1o_web/4.0-formulario-SignUp_SignIn_Tomas_Cabello)
 - 📂 [blogr-landing-page-main_Tomas_Cabello](dise%C3%B1o_web/blogr-landing-page-main_Tomas_Cabello)
 - 📂 [four-card-feature-section-master_Tomas_Cabello](dise%C3%B1o_web/four-card-feature-section-master_Tomas_Cabello)
 - 📂 [position-css](dise%C3%B1o_web/position-css)
