@@ -1,0 +1,38 @@
+npm i prisma@6 -D
+npm i @prisma/client@6
+npx prisma init
+
+Dentro de schema.prisma poner siguiente codigo:
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Grupo {
+  id     Int    @id @default(autoincrement())
+  nombre String @unique
+  tutor  String
+  aula   String
+}
+
+model Estudiante {
+  id               Int      @id @default(autoincrement())
+  nombre           String
+  fecha_nacimiento DateTime
+  foto             String
+  tutor_legal      String
+}
+
+model Asignatura {
+  id           Int     @id @default(autoincrement())
+  nombre       String  @unique
+  profesor     String?
+  horas_semana Int
+}
+
+npx prisma studio
+npx prisma db push
