@@ -181,7 +181,6 @@ Repositorio centralizado con ejemplos prácticos y proyectos de clase enfocados 
 - 📂 [4.0-formulario-SignUp_SignIn_Tomas_Cabello](dise%C3%B1o_web/4.0-formulario-SignUp_SignIn_Tomas_Cabello)
 - 📂 [4.1-searchbox-Personalizado_Tomas_Cabello](dise%C3%B1o_web/4.1-searchbox-Personalizado_Tomas_Cabello)
 - 📂 [4.2-flip-Card_Tomas_Cabello](dise%C3%B1o_web/4.2-flip-Card_Tomas_Cabello)
-- 📂 [4.3-Happy-New-Year_Tomas_Cabello.](dise%C3%B1o_web/4.3-Happy-New-Year_Tomas_Cabello.)
 - 📂 [4.3-Happy-New-Year_Tomas_Cabello](dise%C3%B1o_web/4.3-Happy-New-Year_Tomas_Cabello)
 - 📂 [blogr-landing-page-main_Tomas_Cabello](dise%C3%B1o_web/blogr-landing-page-main_Tomas_Cabello)
 - 📂 [four-card-feature-section-master_Tomas_Cabello](dise%C3%B1o_web/four-card-feature-section-master_Tomas_Cabello)
@@ -189,10 +188,6 @@ Repositorio centralizado con ejemplos prácticos y proyectos de clase enfocados 
 - 📂 [prueba-loopstudios-landing-page-main_Tomas_Cabello](dise%C3%B1o_web/prueba-loopstudios-landing-page-main_Tomas_Cabello)
 - 📂 [prueba-stats-preview-card-component-main_Tomas_cabello](dise%C3%B1o_web/prueba-stats-preview-card-component-main_Tomas_cabello)
 - 📂 [reloj-analogico_Tomas_Cabello](dise%C3%B1o_web/reloj-analogico_Tomas_Cabello)
-
-### [📂 4.3 HAPPY NEW YEAR TOMAS CABELLO.](./dise%C3%B1o_web/4.3-Happy-New-Year_Tomas_Cabello.)
-
-- 📂 [4.3-Happy-New-Year_Tomas_Cabello](dise%C3%B1o_web/4.3-Happy-New-Year_Tomas_Cabello./4.3-Happy-New-Year_Tomas_Cabello)
 
 ---
 
