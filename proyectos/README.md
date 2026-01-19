@@ -1,31 +1,37 @@
-\# PROYECTOS DE DESARROLLO DE APLICACIONES WEB
+# 🚀 Proyectos de Desarrollo de Aplicaciones Web (DWES)
 
+Repositorio centralizado con ejemplos prácticos y proyectos de clase enfocados en **Next.js**, gestión de estados, APIs y servicios en la nube.
 
+---
 
-\- \[Ejemplo de una App en Next.js(ejemploNextApp-Servidor)](https://github.com/Tomascabfer4/ejemploNextApp-Servidor)
+## 📁 Categorías de Proyectos
 
-\- \[Ejemplo de App con uso de Componentes de DaisyUI(nxDaisyUi-Servidor)](https://github.com/Tomascabfer4/nxDaisyUI-Servidor)
+### 🌐 Arquitectura y Renderizado
+* **[ejemploNextApp-Servidor](https://github.com/Tomascabfer4/ejemploNextApp-Servidor):** Estructura fundamental de una aplicación en Next.js.
+* **[nxDaisyUi-Servidor](https://github.com/Tomascabfer4/nxDaisyUI-Servidor):** Implementación de componentes de interfaz utilizando DaisyUI y TailwindCSS.
+* **[nxEjemploRenderizado-Servidor](https://github.com/Tomascabfer4/nxEjemploRenderizado-Servidor):** Demostración de las diferencias entre renderizado del lado del cliente (CSR) y del servidor (SSR).
+* **[sitioEstaticoStressen-Servidor](https://github.com/Tomascabfer4/sitioEstaticoStressen-Servidor):** Práctica de maquetación de sitio web estático.
 
-\- \[Aplicacion de ejemplo que usa una base de datos y una API para mostrar clientes y Productos(nx-Dynamic-BD-Y-API-Servidor)](https://github.com/Tomascabfer4/nx-Dynamic-BD-Y-API-Servidor)
+### 🗄️ Gestión de Datos y APIs
+* **[nx-Dynamic-BD-Y-API-Servidor](https://github.com/Tomascabfer4/nx-Dynamic-BD-Y-API-Servidor):** Aplicación dinámica para la gestión de Clientes y Productos mediante consumo de API.
+* **[nx-Ejemplo1-ORMPrisma-Servidor](https://github.com/Tomascabfer4/nx-Ejemplo1-ORMPrisma-Servidor):** Implementación de base de datos utilizando Prisma como ORM.
+* **[pruebaTema4DWESTomasCabello](https://github.com/Tomascabfer4/pruebaTema4DWESTomasCabello):** Proyecto de examen (Biblioteca) con operaciones CRUD completas y persistencia.
 
-\- \[Ejemplo de App que muestra el renderizado en lado cliente y en lado servidor(nxEjemploRenderizado-Servidor)](https://github.com/Tomascabfer4/nxEjemploRenderizado-Servidor)
+### 🔐 Formularios y Sesiones
+* **[nxSessionCookies-Servidor](https://github.com/Tomascabfer4/nxSessionCookies-Servidor):** Gestión de autenticación y persistencia de sesión mediante Cookies.
+* **[nxformulario-ejemplo-Servidor](https://github.com/Tomascabfer4/nxformulario-ejemplo-Servidor.git):** Ejemplo avanzado de manejo de formularios y acciones de servidor.
+* **[pruebas-Servidor](https://github.com/Tomascabfer4/pruebas-Servidor):** Entorno aislado para pruebas lógicas en el backend.
 
-\- \[Aplicacion de ejemplo que gestiona la sesión mediante Cookies(nxSessionCookies-Servidor)](https://github.com/Tomascabfer4/nxSessionCookies-Servidor)
+### ☁️ Integración con Cloudinary (Multimedia)
+* **[nxSubirImagenesCloudinary-Servidor](https://github.com/Tomascabfer4/nxSubirImagenesCloudinary-Servidor):** Funcionalidad para la subida de archivos multimedia a la nube.
+* **[nxVerImagenesCloudinary-Servidor](https://github.com/Tomascabfer4/nxVerImagenesCloudinary-Servidor):** Renderizado y visualización de recursos almacenados en Cloudinary.
+* **[nxCRUDCloudinary-Servidor](https://github.com/Tomascabfer4/nxCRUDCloudinary-Servidor):** Gestión completa (subida, edición y borrado) de activos multimedia.
 
-\- \[Aplicacion que es usadas para hacer pruebas en lado servidor(pruebas-Servido)](https://github.com/Tomascabfer4/pruebas-Servidor)
+---
 
-\- \[Página Web estatica de practica para darle forma a Stressen(sitioEstaticoStressen-Servidor)](https://github.com/Tomascabfer4/sitioEstaticoStressen-Servidor)
+## 🛠️ Tecnologías Utilizadas
+`Next.js` | `TypeScript` | `Prisma ORM` | `Cloudinary API` | `TailwindCSS` | `DaisyUI` | `Cookies & JWT`
 
-\- \[Ejemplo de Aplicación que muestra un formulario con diferentes acciones](https://github.com/Tomascabfer4/nxformulario-ejemplo-Servidor.git)
+---
 
-\- \[Examen del Tema 4 Biblioteca, con gestion de operaciones CRUD en BBDD y API, y gestion de Cookies](https://github.com/Tomascabfer4/pruebaTema4DWESTomasCabello)
-
-\- \[Ejemplo de Aplicacion con formulario para subir imagenes a Cloudinary](https://github.com/Tomascabfer4/nxSubirImagenesCloudinary-Servidor)
-
-\- \[Ejemplo de aplicaion para mostrar imagenes subidas a Cloudinary](https://github.com/Tomascabfer4/nxVerImagenesCloudinary-Servidor)
-
-\- \[Ejemplo de Aplicacion para realizar operaciones CRUD sobre Cloudinary](https://github.com/Tomascabfer4/nxCRUDCloudinary-Servidor)
-- \[Ejemplo de Aplicacion que utiliza prisma como orm](https://github.com/Tomascabfer4/nx-Ejemplo1-ORMPrisma-Servidor)
-
-
-
+> **Nota:** Estos proyectos forman parte del plan de estudios de Desarrollo de Aplicaciones Web.
