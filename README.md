@@ -182,6 +182,7 @@ Repositorio centralizado con ejemplos prácticos y proyectos de clase enfocados 
 - 📂 [4.1-searchbox-Personalizado_Tomas_Cabello](dise%C3%B1o_web/4.1-searchbox-Personalizado_Tomas_Cabello)
 - 📂 [4.2-flip-Card_Tomas_Cabello](dise%C3%B1o_web/4.2-flip-Card_Tomas_Cabello)
 - 📂 [4.3-Happy-New-Year_Tomas_Cabello.](dise%C3%B1o_web/4.3-Happy-New-Year_Tomas_Cabello.)
+- 📂 [4.3-Happy-New-Year_Tomas_Cabello](dise%C3%B1o_web/4.3-Happy-New-Year_Tomas_Cabello)
 - 📂 [blogr-landing-page-main_Tomas_Cabello](dise%C3%B1o_web/blogr-landing-page-main_Tomas_Cabello)
 - 📂 [four-card-feature-section-master_Tomas_Cabello](dise%C3%B1o_web/four-card-feature-section-master_Tomas_Cabello)
 - 📂 [position-css](dise%C3%B1o_web/position-css)
