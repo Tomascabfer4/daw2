@@ -34,5 +34,7 @@ model Asignatura {
   horas_semana Int
 }
 
-npx prisma studio
 npx prisma db push
+npx prisma generate
+npx prisma studio
+
