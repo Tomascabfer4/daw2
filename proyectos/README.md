@@ -1,6 +1,6 @@
 # 🚀 Proyectos de Desarrollo de Aplicaciones Web (DWES)
 
-Repositorio centralizado con ejemplos prácticos y proyectos de clase enfocados en **Next.js**, gestión de estados, APIs y servicios en la nube.
+Repositorio centralizado con ejemplos prácticos y proyectos de clase enfocados en **Next.js**, gestión de estados, APIs, servicios en la nube y desarrollo frontend con **React**.
 
 ---
 
@@ -11,6 +11,10 @@ Repositorio centralizado con ejemplos prácticos y proyectos de clase enfocados 
 * **[nxDaisyUi-Servidor](https://github.com/Tomascabfer4/nxDaisyUI-Servidor):** Implementación de componentes de interfaz utilizando DaisyUI y TailwindCSS.
 * **[nxEjemploRenderizado-Servidor](https://github.com/Tomascabfer4/nxEjemploRenderizado-Servidor):** Demostración de las diferencias entre renderizado del lado del cliente (CSR) y del servidor (SSR).
 * **[sitioEstaticoStressen-Servidor](https://github.com/Tomascabfer4/sitioEstaticoStressen-Servidor):** Práctica de maquetación de sitio web estático.
+
+### ⚛️ Desarrollo Cliente (React & Vite)
+* **[aplicacion_prueba_vite-Cliente](https://github.com/Tomascabfer4/aplicacion_prueba_vite-Cliente):** Configuración inicial y primera aplicación de prueba construida con Vite.
+* **[tarea2_react-Cliente](https://github.com/Tomascabfer4/tarea2_react-Cliente):** Prácticas de componentes, props y estado en React.
 
 ### 🗄️ Gestión de Datos y APIs
 * **[nx-Dynamic-BD-Y-API-Servidor](https://github.com/Tomascabfer4/nx-Dynamic-BD-Y-API-Servidor):** Aplicación dinámica para la gestión de Clientes y Productos mediante consumo de API.
@@ -30,7 +34,7 @@ Repositorio centralizado con ejemplos prácticos y proyectos de clase enfocados 
 ---
 
 ## 🛠️ Tecnologías Utilizadas
-`Next.js` | `TypeScript` | `Prisma ORM` | `Cloudinary API` | `TailwindCSS` | `DaisyUI` | `Cookies & JWT`
+`Next.js` | `React` | `Vite` | `TypeScript` | `Prisma ORM` | `Cloudinary API` | `TailwindCSS` | `DaisyUI` | `Cookies & JWT`
 
 ---
 
