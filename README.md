@@ -59,6 +59,7 @@ Repositorio centralizado con ejemplos prácticos y proyectos de clase enfocados 
 ##### ⚛️ Desarrollo Cliente (React & Vite)
 * **[aplicacion_prueba_vite-Cliente](https://github.com/Tomascabfer4/aplicacion_prueba_vite-Cliente):** Configuración inicial y primera aplicación de prueba construida con Vite.
 * **[tarea2_react-Cliente](https://github.com/Tomascabfer4/tarea2_react-Cliente):** Prácticas de componentes, props y estado en React.
+* **[tarea3_react-Cliente](https://github.com/Tomascabfer4/tarea3_react-Cliente):** Renderizado de listas, manejo de estructuras de datos (Arrays, Maps, JSON) y uso de props.
 
 ##### 🗄️ Gestión de Datos y APIs
 * **[nx-Dynamic-BD-Y-API-Servidor](https://github.com/Tomascabfer4/nx-Dynamic-BD-Y-API-Servidor):** Aplicación dinámica para la gestión de Clientes y Productos mediante consumo de API.
