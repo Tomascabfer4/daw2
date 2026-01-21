@@ -182,6 +182,7 @@ Repositorio centralizado con ejemplos prácticos y proyectos de clase enfocados 
 - 📂 [4.1-searchbox-Personalizado_Tomas_Cabello](dise%C3%B1o_web/4.1-searchbox-Personalizado_Tomas_Cabello)
 - 📂 [4.2-flip-Card_Tomas_Cabello](dise%C3%B1o_web/4.2-flip-Card_Tomas_Cabello)
 - 📂 [4.3-Happy-New-Year_Tomas_Cabello](dise%C3%B1o_web/4.3-Happy-New-Year_Tomas_Cabello)
+- 📂 [4.4-Borde-Animado_Tomas_Cabello](dise%C3%B1o_web/4.4-Borde-Animado_Tomas_Cabello)
 - 📂 [blogr-landing-page-main_Tomas_Cabello](dise%C3%B1o_web/blogr-landing-page-main_Tomas_Cabello)
 - 📂 [four-card-feature-section-master_Tomas_Cabello](dise%C3%B1o_web/four-card-feature-section-master_Tomas_Cabello)
 - 📂 [position-css](dise%C3%B1o_web/position-css)
@@ -216,6 +217,7 @@ Repositorio centralizado con ejemplos prácticos y proyectos de clase enfocados 
 ## [📂 DESARROLLO ENTORNO CLIENTE](./desarrollo_entorno_cliente)
 
 - 📂 [PracticaEjemplo](desarrollo_entorno_cliente/PracticaEjemplo)
+- 📂 [Tema10](desarrollo_entorno_cliente/Tema10)
 - 📂 [Tema2](desarrollo_entorno_cliente/Tema2)
 - 📂 [Tema3](desarrollo_entorno_cliente/Tema3)
 - 📂 [Tema4](desarrollo_entorno_cliente/Tema4)
@@ -421,6 +423,10 @@ Repositorio centralizado con ejemplos prácticos y proyectos de clase enfocados 
 ### [📂 TEMA2](./desarrollo_entorno_cliente/Tema2)
 
 - 📄 [ADT2Practica1.pdf](desarrollo_entorno_cliente/Tema2/ADT2Practica1.pdf)
+
+### [📂 TEMA10](./desarrollo_entorno_cliente/Tema10)
+
+- 📂 [src](desarrollo_entorno_cliente/Tema10/src)
 
 ### [📂 TEMA6](./desarrollo_entorno_cliente/Tema6)
 
