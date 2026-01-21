@@ -68,6 +68,7 @@ Repositorio centralizado con ejemplos prácticos y proyectos de clase enfocados 
 ##### 🔐 Formularios y Sesiones
 * **[nxSessionCookies-Servidor](https://github.com/Tomascabfer4/nxSessionCookies-Servidor):** Gestión de autenticación y persistencia de sesión mediante Cookies.
 * **[nxformulario-ejemplo-Servidor](https://github.com/Tomascabfer4/nxformulario-ejemplo-Servidor.git):** Ejemplo avanzado de manejo de formularios y acciones de servidor.
+* **[nxValidarEntradasDeFormulario-Servidor](https://github.com/Tomascabfer4/nxValidarEntradasDeFormulario-Servidor):** Implementación de validaciones de seguridad y tipos de datos en entradas de formularios.
 * **[pruebas-Servidor](https://github.com/Tomascabfer4/pruebas-Servidor):** Entorno aislado para pruebas lógicas en el backend.
 
 ##### ☁️ Integración con Cloudinary (Multimedia)
