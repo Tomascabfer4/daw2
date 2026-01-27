@@ -38,3 +38,9 @@ npx prisma db push
 npx prisma generate
 npx prisma studio
 
+////PARA NEON.DB
+
+npx prisma db push --force-reset
+npm run seed
+npx prisma generate
+npx prisma studio
