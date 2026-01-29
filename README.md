@@ -38,6 +38,7 @@
 ## [📂 SOSTENIBILIDAD](./sostenibilidad)
 
 - 📄 [Actividad22,23.docx](sostenibilidad/Actividad22%2C23.docx)
+- 📄 [Infografia_Retos_Medioambientales_Tomas_Jose_Manuel.pdf](sostenibilidad/Infografia_Retos_Medioambientales_Tomas_Jose_Manuel.pdf)
 - 📄 [Poster_ODS_Tomas_Cabello.png](sostenibilidad/Poster_ODS_Tomas_Cabello.png)
 
 ---
@@ -204,6 +205,7 @@ Repositorio centralizado con ejemplos prácticos y proyectos de clase enfocados 
 - 📂 [prueba-loopstudios-landing-page-main_Tomas_Cabello](dise%C3%B1o_web/prueba-loopstudios-landing-page-main_Tomas_Cabello)
 - 📂 [prueba-stats-preview-card-component-main_Tomas_cabello](dise%C3%B1o_web/prueba-stats-preview-card-component-main_Tomas_cabello)
 - 📂 [reloj-analogico_Tomas_Cabello](dise%C3%B1o_web/reloj-analogico_Tomas_Cabello)
+- 📄 [Flexbox Froggy completado.png](dise%C3%B1o_web/Flexbox%20Froggy%20completado.png)
 
 ---
 
