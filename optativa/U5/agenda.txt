@@ -1,0 +1,6 @@
+Juan;Perez;Garcia;Calle Mayor 1;Madrid;Madrid;28001;600123456
+Maria;Lopez;Martinez;Avda. Andalucia 45;Sevilla;Sevilla;41001;611987654
+Antonio;Ruiz;Fernandez;Plaza de la Constitucion;Valencia;Valencia;46002;963852741
+Laura;Sanchez;Gomez;C/ Pez 8 2B;Bilbao;Vizcaya;48005;777555333
+Carlos;Jimenez;Ruiz;Paseo de la Castellana 100;Madrid;Madrid;28046;655444333
+Ana;Torres;Vega;Calle Larios 5;Malaga;Malaga;29005;699888777
