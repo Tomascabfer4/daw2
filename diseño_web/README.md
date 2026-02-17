@@ -24,6 +24,7 @@
 - 📂 [4.4-Borde-Animado_Tomas_Cabello](./4.4-Borde-Animado_Tomas_Cabello)
 - 📂 [4.5-Texto-Animado_Tomas_Cabello](./4.5-Texto-Animado_Tomas_Cabello)
 - 📂 [4.6-Tarjetas-Transparentes_Tomas_Cabello](./4.6-Tarjetas-Transparentes_Tomas_Cabello)
+- 📂 [5.3-manage-landing-page-master_Tomas_Cabello](./5.3-manage-landing-page-master_Tomas_Cabello)
 - 📂 [blogr-landing-page-main_Tomas_Cabello](./blogr-landing-page-main_Tomas_Cabello)
 - 📂 [four-card-feature-section-master_Tomas_Cabello](./four-card-feature-section-master_Tomas_Cabello)
 - 📂 [position-css](./position-css)
